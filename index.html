@@ -221,7 +221,7 @@ body{
         .social-btn {
         margin: 0.5rem;
         min-width: 300px;
-        
+
         }
         .title{
             font-family: "Mozilla Headline", sans-serif; font-optical-sizing: auto; font-weight: 650; font-style: normal; font-variation-settings: "wdth" 100;
@@ -236,6 +236,195 @@ body{
         #networking{
            color:white; background:url('https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/1755326883497.jpg');
         }
+        
+        /* REDESIGNED Business Venture Section */
+        #business-venture {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            color: #333;
+        }
+
+        #business-venture .venture-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #business-venture .venture-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, #6ea8fe, #9ad0ff);
+            color: #0a0f1e;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        #business-venture .venture-title {
+            font-size: 1.8rem;
+            color: #222;
+            margin: 10px 0;
+            font-family: "Mozilla Headline", sans-serif;
+        }
+
+        #business-venture .venture-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        #business-venture .venture-stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        #business-venture .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: rgba(110, 168, 254, 0.1);
+            border-radius: 12px;
+            margin: 10px;
+            min-width: 150px;
+            flex: 1;
+        }
+
+        #business-venture .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+
+        #business-venture .stat-label {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        #business-venture .key-learnings {
+            background: rgba(110, 168, 254, 0.08);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #6ea8fe;
+            margin: 30px 0;
+        }
+
+        #business-venture .key-learnings h4 {
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        #business-venture .key-learnings ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        #business-venture .key-learnings li {
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        #business-venture .key-learnings strong {
+            color: #007bff;
+        }
+
+        #business-venture .venture-gallery {
+            margin: 30px 0;
+        }
+
+        #business-venture .gallery-summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(110, 168, 254, 0.1);
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #007bff;
+            transition: all 0.3s ease;
+        }
+
+        #business-venture .gallery-summary:hover {
+            background: rgba(110, 168, 254, 0.15);
+        }
+
+        #business-venture .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        #business-venture .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        #business-venture .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        #business-venture .venture-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        #business-venture .img-caption {
+            padding: 10px 15px;
+            background: #f8f9fa;
+            margin: 0;
+            font-size: 0.9rem;
+            color: #6c757d;
+            text-align: center;
+        }
+
+        #business-venture .venture-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            justify-content: center;
+        }
+
+        #business-venture .venture-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            background: linear-gradient(90deg, #6ea8fe, #9ad0ff);
+            color: #0a0f1e;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 200px;
+            justify-content: center;
+        }
+
+        #business-venture .venture-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(110, 168, 254, 0.3);
+        }
+
+        #business-venture .secondary-link {
+            background: linear-gradient(90deg, #a9b3cf, #c1c9e0);
+        }
+  
     </style>
 </head>
 <body>
@@ -296,6 +485,76 @@ body{
     </a>
   </div>
 </section>
+
+<!-- REDESIGNED Business Venture Section -->
+<div id="business-venture">
+  <div class="venture-header">
+    <span class="venture-badge">Entrepreneurship Journey</span>
+    <h2 class="venture-title">Poedagar 613 | E-Commerce Venture</h2>
+    <p class="venture-description">
+      In May 2025, I launched my first entrepreneurial venture with just 3,000 BDT capital. <strong>Poedagar 613</strong> specialized in curated watches and accessories sold via Facebook. Though the business didn't generate sales, it provided invaluable real-world lessons in digital marketing, customer acquisition, and bootstrapped e-commerce.
+    </p>
+  </div>
+
+  <div class="venture-stats">
+    <div class="stat-item">
+      <div class="stat-number">3,000 BDT</div>
+      <div class="stat-label">Initial Investment</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">0 Sales</div>
+      <div class="stat-label">Outcome</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">4+ Lessons</div>
+      <div class="stat-label">Key Learnings</div>
+    </div>
+  </div>
+
+  <div class="key-learnings">
+    <h4>📈 Key Learnings & Growth</h4>
+    <ul>
+      <li><strong>Market Validation:</strong> Understanding customer demand before inventory investment is crucial</li>
+      <li><strong>Data Analysis:</strong> Learning to interpret ad metrics beyond just clicks and impressions</li>
+      <li><strong>Resource Management:</strong> Maximizing impact with extremely limited capital</li>
+      <li><strong>Resilience:</strong> Embracing challenges as learning opportunities rather than failures</li>
+    </ul>
+  </div>
+
+  <div class="venture-gallery">
+    <div class="gallery-summary" onclick="toggleGallery()">
+      <span>View Business Images</span>
+      <span id="gallery-icon">+</span>
+    </div>
+    <div class="gallery-container" id="gallery-container" style="display: none;">
+      <div class="gallery-item">
+        <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/business/Screenshot_20250821-200403.jpg" 
+             alt="Poedagar Facebook Business Page" class="venture-img">
+        <p class="img-caption">Raw pics of watches</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/business/received_1013947974140555.jpeg" 
+             alt="Poedagar Product Example" class="venture-img">
+        <p class="img-caption">Watch Presentation</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/business/IMG_20250611_122303_000.jpg" 
+             alt="Poedagar Marketing Material" class="venture-img">
+        <p class="img-caption">Watch Boxes</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="venture-links">
+    <a class="venture-link" href="https://www.facebook.com/share/1CRU28nqrJ/" target="_blank" rel="noopener">
+      <i class="fab fa-facebook me-2"></i> Visit Facebook Page
+    </a>
+    <a class="venture-link secondary-link" href="https://s.daraz.com.bd/s.ZMFgZ" target="_blank" rel="noopener">
+      <i class="fas fa-shopping-bag me-2"></i> View Product Example
+    </a>
+  </div>
+</div>
+
 <div id="networking">
 <h3 class="title">Connect with me:</h3>
 <button onclick="window.location.href='mailto:iamitachi494@gmail.com'"class="btn btn-danger social-btn"><i class="fas fa-envelope me-2"></i> E-mail</button><br>
@@ -316,7 +575,7 @@ Feel free to check it out if you’re curious. I post random projects 🎨, idea
         style="background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D); color: white; border: none;">
   <i class="fab fa-instagram me-2"></i> Professional Insta
 </button>
-    
+
 </div>
     </div>
         <script>
@@ -336,6 +595,20 @@ Feel free to check it out if you’re curious. I post random projects 🎨, idea
 
             lastScroll = currentScroll;
         });
+        
+        // Gallery toggle function
+        function toggleGallery() {
+            const gallery = document.getElementById('gallery-container');
+            const icon = document.getElementById('gallery-icon');
+            
+            if (gallery.style.display === 'none' || gallery.style.display === '') {
+                gallery.style.display = 'grid';
+                icon.textContent = '-';
+            } else {
+                gallery.style.display = 'none';
+                icon.textContent = '+';
+            }
+        }
     </script>
 </body>
 </html>
