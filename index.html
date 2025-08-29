@@ -71,7 +71,27 @@
     width:90%;
     height:auto;
     display:block;
-    margin:0 auto;
+    margin:0 auto;    
+}
+img{
+    animation:imgreveal;
+    animation-timeline:view(10% 0%);
+}
+@keyframes imgreveal{
+    from{
+        filter: saturate(0) contrast(4) brightness(0.1) blur(5px);
+        opacity:0;
+        scale:0.95;
+      transform: translateX(20px) translateY(20px) scale(0.5);
+      
+    }
+    to{
+       filter:none;
+       opacity:1;
+       scale:1; 
+       translateX:0;
+       translateY:0;
+    }    
 }
 /* Certificate Caption Styles */
 #certificate-caption {
@@ -424,7 +444,36 @@ body{
         #business-venture .secondary-link {
             background: linear-gradient(90deg, #a9b3cf, #c1c9e0);
         }
-      
+.animation1 {
+  animation: fadeIn;
+  animation-timeline:view(10% 0%);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeUP{
+    animation: fadeUP both;
+    animation-timeline: view(10% 0%);
+}
+
+@keyframes fadeUP{
+    from{
+        opacity: 0;
+        transform: translateY(10px) scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
 
     </style>
 </head>
@@ -439,22 +488,22 @@ body{
 <div id="Welcome">
   <h1>Welcome to My Portfolio</h1>
    <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/IMG_20250815_232108.jpg" title=" Picture of Mahadi Islam Alif" alt="Image Loading Failed" id="pfp">
-  <h2>Mahadi Islam Alif — <em><a href="projects.html" class="marked">Web Developer</a> & <a href="#business-venture" class="marked">Entrepreneur</a></em></h2>
-  <p>I’m a passionate web developer from Bangladesh, dedicated to creating
+  <h2 class="animation1">Mahadi Islam Alif — <em><a href="projects.html" class="marked">Web Developer</a> & <a href="#business-venture" class="marked">Entrepreneur</a></em></h2>
+  <p class="animation1">I’m a passionate web developer from Bangladesh, dedicated to creating
     clean, efficient, and visually engaging digital solutions. My work blends
     technical precision with creative design to deliver user-friendly, impactful
     web experiences.
   </p>
-  <p>
+  <p class="animation1">
     This portfolio showcases my projects and achievements, reflecting my
     commitment to continuous learning and innovation. I take pride in turning
     ideas into functional products that provide real value.
   </p>
-  <p>
+  <p class="animation1">
     My long-term vision is achieving financial freedom through technology while
     contributing to meaningful projects that make a difference.
   </p>
-  <p>
+  <p class="animation1">
     Feel free to explore my work — I hope it inspires and informs.
   </p>
 </div>
@@ -467,13 +516,13 @@ body{
       <h2 id="cert-title">Responsive Web Design -<em><a href="https://www.freecodecamp.org/" class="marked"> freeCodeCamp</a></em></h2>
     </header>
 
-    <p class="cert-text">
+    <p class="cert-text animation1">
    <abbr>   This certification strengthened my skills in <b>HTML and CSS</b>, covering<b> semantic structure, responsive layouts, accessibility best practices, and cross-device optimization</b>. It concluded with building real-world projects that showcase the ability to design and develop user-friendly, fully responsive websites. </abbr>
     </p>
 
     <ul class="cert-meta" role="list">
-      <li><span class="meta-label">Name:</span> Mahadi Islam Alif</li>
-      <li><span class="meta-label">Date Earned:</span> August 14, 2025</li>
+      <li><span class="meta-label animation1">Name:</span> Mahadi Islam Alif</li>
+      <li><span class="meta-label animation1">Date Earned:</span> August 14, 2025</li>
     </ul>
 
     <a class="verify-link"
@@ -489,41 +538,41 @@ body{
 
 <div id="business-venture">
   <div class="venture-header">
-    <span class="venture-badge">Entrepreneurship Journey</span>
-    <h2 class="venture-title">Poedagar 613 | E-Commerce Venture</h2>
-    <p class="venture-description">
+    <span class="venture-badge animation1">Entrepreneurship Journey</span>
+    <h2 class="venture-title animation1">Poedagar 613 | E-Commerce Venture</h2>
+    <p class="venture-description animation1">
       In May 2025, I launched my first entrepreneurial venture, <a href="https://poedagar.store/product/poedagar-top-luxury-brand-man-watch-sports-waterproof-luminous-date-men-wristwatch-square-dial-quartz-mens-watches-high-quality/?v=84de8e2b14bb" class="marked">Poedagar 613</a>, with just 3,000 BDT (about $25 according to the conversion at that time). It was a manual dropshipping operation where I collected watches and accessories from <a href="https://daraz.com/" class="marked">Daraz</a> (Leading E-commerce platform in Bangladesh) and marketed them for sale on Facebook. Although the business didn't generate sales, it provided invaluable real-world lessons in product sourcing, digital marketing, customer acquisition, and the mechanics of bootstrapped e-commerce.
     </p>
   </div>
 
   <div class="venture-stats">
     <div class="stat-item">
-      <div class="stat-number">3,000 BDT</div>
-      <div class="stat-label">Initial Investment</div>
+      <div class="stat-number fadeUp">3,000 BDT</div>
+      <div class="stat-label fadeUp">Initial Investment</div>
     </div>
     <div class="stat-item">
-      <div class="stat-number">0 Sales</div>
-      <div class="stat-label">Outcome</div>
+      <div class="stat-number fadeUp">0 Sales</div>
+      <div class="stat-label fadeUp">Outcome</div>
     </div>
     <div class="stat-item">
-      <div class="stat-number">4+ Lessons</div>
-      <div class="stat-label">Key Learnings</div>
+      <div class="stat-number fadeUp">4+ Lessons</div>
+      <div class="stat-label fadeUP">Key Learnings</div>
     </div>
   </div>
 
   <div class="key-learnings">
-    <h4>📈 Key Learnings & Growth</h4>
+    <h4 class="fadeUp">📈 Key Learnings & Growth</h4>
     <ul>
-      <li><strong>Market Validation:</strong> Understanding customer demand before inventory investment is crucial</li>
-      <li><strong>Data Analysis:</strong> Learning to interpret ad metrics beyond just clicks and impressions</li>      <li><strong>Resource Management:</strong> Maximizing impact with extremely limited capital</li>
-      <li><strong>Resilience:</strong> Embracing challenges as learning opportunities rather than failures</li>
+      <li class="animation1"><strong>Market Validation:</strong> Understanding customer demand before inventory investment is crucial</li>
+      <li class="animation1"><strong>Data Analysis:</strong> Learning to interpret ad metrics beyond just clicks and impressions</li>      <li class="animation1"><strong>Resource Management:</strong> Maximizing impact with extremely limited capital</li>
+      <li class="animation1"><strong>Resilience:</strong> Embracing challenges as learning opportunities rather than failures</li>
     </ul>
   </div>
 
   <div class="venture-gallery">
     <div class="gallery-summary" onclick="toggleGallery()">
-      <span>View Business Images</span>
-      <span id="gallery-icon">+</span>
+      <span class="fadeUp">View Business Images</span>
+      <span id="gallery-icon" class="fadeUp">+</span>
     </div>
     <div class="gallery-container" id="gallery-container" style="display: none;">
         <div class="gallery-item">
@@ -548,30 +597,30 @@ body{
   </div>
 
   <div class="venture-links">
-    <a class="venture-link" href="https://www.facebook.com/share/1CRU28nqrJ/" target="_blank" rel="noopener">
+    <a class="venture-link animation1" href="https://www.facebook.com/share/1CRU28nqrJ/" target="_blank" rel="noopener">
       <i class="fab fa-facebook me-2"></i> View Facebook Business Page
     </a>
-    <a class="venture-link secondary-link" href="https://s.daraz.com.bd/s.ZMFgZ" target="_blank" rel="noopener">
+    <a class="venture-link secondary-link animation1" href="https://s.daraz.com.bd/s.ZMFgZ" target="_blank" rel="noopener">
       <i class="fas fa-shopping-bag me-2"></i> View Daraz Original Product 
     </a>
   </div>
 </div>
 
 <div id="professional-insta">
-    <h3 class="title">Instagram Professional Account</h3>
+    <h3 class="title animation1">Instagram Professional Account</h3>
     I launched a professional Instagram account with the intention of exploring opportunities for passive income. However, the account has not been growing as expected, and I may choose to discontinue it at any point. Still, I wanted to share it here, as I see value in treating it as a personal experiment and a reminder that not every initiative achieves immediate success.
 <br><br>
 For now, the account remains active as a space where I share projects, ideas, and creative pursuits. I welcome anyone interested to explore the content—there is always the possibility that it may develop in unexpected ways.<br><br> <em>16 Aug 2025</em>
 <br>
 <button onclick="window.location.href='https://www.instagram.com/nikawealth?igsh=d2pwOTlzYnV5dHE0'" 
-        class="btn social-btn" 
+        class="btn social-btn animation1" 
         style="background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D); color: white; border: none;">
   <i class="fab fa-instagram me-2"></i> Professional Insta
 </button>
 
 </div>
 <div id="networking">
-<h3 class="title">Connect with me:</h3>
+<h3 class="title animation1">Connect with me:</h3>
 <button onclick="window.location.href='mailto:iamitachi494@gmail.com'"class="btn btn-danger social-btn"><i class="fas fa-envelope me-2"></i> E-mail</button><br>
 <button onclick="window.location.href='https://github.com/AlifKhan1911391'" class="btn btn-dark social-btn"><i class="fab fa-github me-2"></i> Github</button><br>
 <button onclick="window.location.href='https://www.instagram.com/joy._.boy69?igsh=ZmNubzBqOGJxZmZi'" 
