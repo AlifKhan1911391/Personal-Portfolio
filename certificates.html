@@ -161,7 +161,6 @@
             margin-bottom: 8px;
         }
 
-        /* Fixed Organization Link Bug */
         .org-container {
             margin-bottom: 15px;
             font-size: 0.9rem;
@@ -184,7 +183,29 @@
         .cert-desc {
             color: var(--text-muted);
             font-size: 0.95rem;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
+        }
+
+        /* "See More" Styling */
+        .more-text {
+            display: none;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            border-left: 2px solid var(--accent);
+            padding-left: 12px;
+        }
+
+        .see-more-btn {
+            background: none;
+            border: none;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            padding: 0;
+            margin-bottom: 20px;
+            text-decoration: underline;
         }
 
         .meta-list {
@@ -209,7 +230,6 @@
             font-weight: 500;
         }
 
-        /* Action Buttons */
         .action-group {
             margin-top: auto;
             display: flex;
@@ -270,7 +290,7 @@
 
     <header class="page-header">
         <h1>Career & Self-Learning Assets</h1>
-        <p>A collection of my extra-curricular activities and technical certifications representing continuous skill acquisition.</p>
+        <p>A collection of technical milestones and extra-curricular achievements.</p>
     </header>
 
     <div class="cert-grid">
@@ -281,17 +301,17 @@
             <div class="cert-content">
                 <span class="badge-category">Web Development</span>
                 <div class="cert-title">Responsive Web Design</div>
-                <div class="org-container">
-                    <a href="https://www.freecodecamp.org/" target="_blank" class="cert-org-link">freeCodeCamp</a>
-                </div>
-                <p class="cert-desc">Achieved proficiency in modern front-end development through 300+ hours of curriculum. Mastered Semantic HTML5, CSS3, Flexbox, and CSS Grid to build accessibility-focused, responsive layouts that adapt seamlessly across all devices.</p>
+                <div class="org-container"><a href="#" class="cert-org-link">freeCodeCamp</a></div>
+                <p class="cert-desc">Comprehensive mastery of modern front-end development through 300+ hours of coding challenges.
+                    <span class="more-text">Focuses on building accessible, mobile-first websites. Key modules included Semantic HTML5, advanced CSS techniques (Flexbox, Grid), and Responsive Design principles. Successfully completed five certification projects including a Personal Portfolio and Technical Documentation page, ensuring cross-browser compatibility and UI/UX best practices.</span>
+                </p>
+                <button class="see-more-btn" onclick="toggleText(this)">See more</button>
                 <ul class="meta-list">
-                    <li><span class="meta-label">Languages</span><span>HTML5, CSS, JS</span></li>
-                    <li><span class="meta-label">Date Earned</span><span>Aug 14, 2025</span></li>
+                    <li><span class="meta-label">Skills</span><span>HTML5, CSS3, UX</span></li>
+                    <li><span class="meta-label">Date</span><span>Aug 14, 2025</span></li>
                 </ul>
                 <div class="action-group">
-                    <a href="https://freecodecamp.org/certification/fcc-b75b4c9e-713d-403c-9ada-e9b2306f2f1a/responsive-web-design" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                    <a href="https://drive.google.com/file/d/1yBTsaIGMNRxN9RZPEYCToeqH7YfY1R1I/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
+                    <a href="https://freecodecamp.org/certification/fcc-b75b4c9e-713d-403c-9ada-e9b2306f2f1a/responsive-web-design" class="btn-custom btn-verify" target="_blank">Verify Link</a>
                 </div>
             </div>
         </div>
@@ -303,17 +323,17 @@
             <div class="cert-content">
                 <span class="badge-category">Programming</span>
                 <div class="cert-title">Introduction to Python</div>
-                <div class="org-container">
-                    <a href="https://www.saylor.org/" target="_blank" class="cert-org-link">Saylor Academy</a>
-                </div>
-                <p class="cert-desc">A rigorous academic exploration of Python 3. Specialized in Object-Oriented Programming (OOP) principles, data structures, and algorithmic problem-solving. Developed a deep understanding of control flow, exception handling, and modular code design.</p>
+                <div class="org-container"><a href="#" class="cert-org-link">Saylor Academy</a></div>
+                <p class="cert-desc">A rigorous academic-grade programming course covering the foundational pillars of the Python language.
+                    <span class="more-text">This course (CS105) detailed the mechanics of Python 3, including variables, complex data structures (dictionaries, sets), and control flow. It emphasized Object-Oriented Programming (OOP), file I/O operations, and algorithmic efficiency. The certification culminated in a proctored exam requiring a high passing grade to prove technical competency.</span>
+                </p>
+                <button class="see-more-btn" onclick="toggleText(this)">See more</button>
                 <ul class="meta-list">
                     <li><span class="meta-label">Serial no.</span><span>1592724937MA</span></li>
-                    <li><span class="meta-label">Date Earned</span><span>Feb 13, 2026</span></li>
+                    <li><span class="meta-label">Date</span><span>Feb 13, 2026</span></li>
                 </ul>
                 <div class="action-group">
-                    <a href="https://learn.saylor.org/admin/tool/certificate/index.php?code=1592724937MA" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                    <a href="https://drive.google.com/file/d/13sWJJd041yFhAp_DpYkkSLVWQmST2_FZ/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
+                    <a href="https://learn.saylor.org/admin/tool/certificate/index.php?code=1592724937MA" class="btn-custom btn-verify" target="_blank">Verify Link</a>
                 </div>
             </div>
         </div>
@@ -325,17 +345,17 @@
             <div class="cert-content">
                 <span class="badge-category">Programming</span>
                 <div class="cert-title">Basics of Python</div>
-                <div class="org-container">
-                    <a href="https://uniathena.com/" target="_blank" class="cert-org-link">UniAthena</a> & <a href="https://ciqawards.com/" target="_blank" class="cert-org-link">CIQ</a>
-                </div>
-                <p class="cert-desc">Certified by Cambridge International Qualifications (UK). This program focuses on the practical application of Python syntax, logic building, and functional programming to automate tasks and process data efficiently in a professional environment.</p>
+                <div class="org-container"><a href="#" class="cert-org-link">UniAthena & CIQ</a></div>
+                <p class="cert-desc">Professional certification focused on the industrial application of Python for automation and logic.
+                    <span class="more-text">Developed in partnership with Cambridge International Qualifications (UK), this course bridges the gap between basic syntax and professional script-writing. It covered modular programming using functions and modules, debugging techniques, and implementing logical operators to solve real-world computational problems efficiently.</span>
+                </p>
+                <button class="see-more-btn" onclick="toggleText(this)">See more</button>
                 <ul class="meta-list">
                     <li><span class="meta-label">Blockchain ID</span><span>4627-1916-4570</span></li>
-                    <li><span class="meta-label">Date Earned</span><span>Feb 12, 2026</span></li>
+                    <li><span class="meta-label">Date</span><span>Feb 12, 2026</span></li>
                 </ul>
                 <div class="action-group">
-                    <a href="https://uniathena.com/verify/certificate?certID=4627-1916-4570" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                    <a href="https://drive.google.com/file/d/1wfQATkPWZd6tlLbNtvOgOWWaL8lEjGT4/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
+                    <a href="https://uniathena.com/verify/certificate?certID=4627-1916-4570" class="btn-custom btn-verify" target="_blank">Verify Link</a>
                 </div>
             </div>
         </div>
@@ -347,17 +367,17 @@
             <div class="cert-content">
                 <span class="badge-category">Artificial Intelligence</span>
                 <div class="cert-title">Basics of ML Algorithms</div>
-                <div class="org-container">
-                    <a href="https://uniathena.com/" target="_blank" class="cert-org-link">UniAthena</a> & <a href="https://ciqawards.com/" target="_blank" class="cert-org-link">CIQ</a>
-                </div>
-                <p class="cert-desc">An introduction to the mathematical foundations of AI. Learned to implement supervised and unsupervised learning models, focusing on linear and logistic regression, classification trees, and the logic behind predictive data modeling.</p>
+                <div class="org-container"><a href="#" class="cert-org-link">UniAthena & CIQ</a></div>
+                <p class="cert-desc">An introductory dive into the mathematical and algorithmic foundations of Machine Learning.
+                    <span class="more-text">Explored the primary categories of ML: Supervised, Unsupervised, and Reinforcement Learning. Detailed study of Regression analysis, K-Nearest Neighbors (KNN), and Decision Trees. Focuses on understanding how models are trained on historical data to make accurate future predictions and the importance of data cleaning in AI.</span>
+                </p>
+                <button class="see-more-btn" onclick="toggleText(this)">See more</button>
                 <ul class="meta-list">
                     <li><span class="meta-label">Blockchain ID</span><span>4982-1269-5777</span></li>
-                    <li><span class="meta-label">Date Earned</span><span>Feb 12, 2026</span></li>
+                    <li><span class="meta-label">Date</span><span>Feb 12, 2026</span></li>
                 </ul>
                 <div class="action-group">
-                    <a href="https://uniathena.com/verify/certificate?certID=4982-1269-5777" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                    <a href="https://drive.google.com/file/d/1EodFM_2UP5PdfdAK73jZe-LgBccpjHOY/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
+                    <a href="https://uniathena.com/verify/certificate?certID=4982-1269-5777" class="btn-custom btn-verify" target="_blank">Verify Link</a>
                 </div>
             </div>
         </div>
@@ -369,17 +389,17 @@
             <div class="cert-content">
                 <span class="badge-category">Business Intelligence</span>
                 <div class="cert-title">Data Science & Analytics</div>
-                <div class="org-container">
-                    <a href="https://www.life-global.org/" target="_blank" class="cert-org-link">HP LIFE</a>
-                </div>
-                <p class="cert-desc">Focused on transforming raw datasets into actionable insights. Developed skills in data visualization, statistical analysis, and trend forecasting to support data-driven decision-making and identify market opportunities using analytical tools.</p>
+                <div class="org-container"><a href="#" class="cert-org-link">HP LIFE</a></div>
+                <p class="cert-desc">Strategic training on using statistical data to identify market trends and business opportunities.
+                    <span class="more-text">Teaches the "Data Life Cycle" from collection to visualization. Covered how to use predictive analytics to forecast demand, identify customer behavior patterns, and use statistical modeling to solve business challenges. Focuses on making data-driven decisions rather than relying on intuition.</span>
+                </p>
+                <button class="see-more-btn" onclick="toggleText(this)">See more</button>
                 <ul class="meta-list">
                     <li><span class="meta-label">Serial no.</span><span>d6e9f763-f5e0-408e</span></li>
-                    <li><span class="meta-label">Date Earned</span><span>Feb 11, 2026</span></li>
+                    <li><span class="meta-label">Date</span><span>Feb 11, 2026</span></li>
                 </ul>
                 <div class="action-group">
-                    <a href="https://www.life-global.org/certificate/d6e9f763-f5e0-408e-91b0-09a527aecaf9" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                    <a href="https://drive.google.com/file/d/1aRqcGloXkT_4x0A6NU5qFduBgSQiTMjw/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
+                    <a href="https://www.life-global.org/certificate/d6e9f763-f5e0-408e-91b0-09a527aecaf9" class="btn-custom btn-verify" target="_blank">Verify Link</a>
                 </div>
             </div>
         </div>
@@ -391,16 +411,17 @@
             <div class="cert-content">
                 <span class="badge-category">Competition</span>
                 <div class="cert-title">ACS National Medicup 2025</div>
-                <div class="org-container">
-                    <a href="https://aparsclassroom.com/" target="_blank" class="cert-org-link">Team ACS</a>
-                </div>
-                <p class="cert-desc">Represented as a Divisional Participant in a high-stakes national academic competition. Tested under rigorous constraints in subjects requiring advanced logical reasoning, scientific analysis, and collaborative problem-solving alongside top students nationwide.</p>
+                <div class="org-container"><a href="#" class="cert-org-link">Team ACS</a></div>
+                <p class="cert-desc">Recognition of high-level academic performance in a national-level competitive environment.
+                    <span class="more-text">Participated as a Divisional contestant in one of the most prestigious science-based competitions in the country. Required mastery of advanced scientific concepts and the ability to solve complex, interdisciplinary problems under extreme time constraints, fostering quick thinking and logical deduction.</span>
+                </p>
+                <button class="see-more-btn" onclick="toggleText(this)">See more</button>
                 <ul class="meta-list">
                     <li><span class="meta-label">Round</span><span>Divisional</span></li>
-                    <li><span class="meta-label">Date Earned</span><span>Mar 07, 2025</span></li>
+                    <li><span class="meta-label">Date</span><span>Mar 07, 2025</span></li>
                 </ul>
                 <div class="action-group">
-                    <span class="btn-custom" style="background:#f1f5f9; color:#64748b; border:1px solid #e2e8f0;"><i class="fa-solid fa-check"></i> Verified Participant</span>
+                    <span class="btn-custom" style="background:#f1f5f9; color:#64748b; border:1px solid #e2e8f0;">Verified Participant</span>
                 </div>
             </div>
         </div>
@@ -412,23 +433,36 @@
             <div class="cert-content">
                 <span class="badge-category">Strategic Thinking</span>
                 <div class="cert-title">Critical Thinking in the AI Era</div>
-                <div class="org-container">
-                    <a href="https://www.life-global.org/" target="_blank" class="cert-org-link">HP LIFE</a>
-                </div>
-                <p class="cert-desc">An essential course on information literacy in the age of generative AI. Learned to detect algorithmic bias, verify AI-generated content for factual accuracy, and apply ethical reasoning when integrating Large Language Models (LLMs) into professional workflows.</p>
+                <div class="org-container"><a href="#" class="cert-org-link">HP LIFE</a></div>
+                <p class="cert-desc">Essential training for navigating the ethical and practical challenges of Artificial Intelligence.
+                    <span class="more-text">Focused on information literacy, this course teaches how to identify AI bias, verify machine-generated output for factual accuracy, and apply human-centric logic to automated workflows. It highlights the importance of skeptical analysis when using LLMs and generative tools in professional settings.</span>
+                </p>
+                <button class="see-more-btn" onclick="toggleText(this)">See more</button>
                 <ul class="meta-list">
                     <li><span class="meta-label">Serial no.</span><span>db212d47-9c82-4b5b</span></li>
-                    <li><span class="meta-label">Date Earned</span><span>Feb 11, 2026</span></li>
+                    <li><span class="meta-label">Date</span><span>Feb 11, 2026</span></li>
                 </ul>
                 <div class="action-group">
-                    <a href="https://www.life-global.org/certificate/db212d47-9c82-4b5b-b009-098f01fed883" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                    <a href="https://drive.google.com/file/d/1YdXzijEMMGyGMIGgd_jt60R392vipPLr/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
+                    <a href="https://www.life-global.org/certificate/db212d47-9c82-4b5b-b009-098f01fed883" class="btn-custom btn-verify" target="_blank">Verify Link</a>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
+        // See More Functionality
+        function toggleText(btn) {
+            const moreText = btn.previousElementSibling.querySelector('.more-text');
+            if (moreText.style.display === "inline") {
+                moreText.style.display = "none";
+                btn.innerHTML = "See more";
+            } else {
+                moreText.style.display = "inline";
+                btn.innerHTML = "See less";
+            }
+        }
+
+        // Navigation Scroll Behavior
         let lastScroll = 0;
         const nav = document.getElementById('nav');
         window.addEventListener('scroll', () => {
