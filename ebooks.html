@@ -248,6 +248,15 @@
             color: var(--text-main);
         }
 
+        /* NEW CSS FOR THE SUB-TEXT */
+        .button-note {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            text-align: center;
+            margin-top: -5px;
+            font-style: italic;
+        }
+
         @media (max-width: 480px) {
             .book-grid { grid-template-columns: 1fr; }
             .book-img-container { height: 350px; }
@@ -271,7 +280,7 @@
     </header>
 
     <div class="book-grid">
-        
+
         <div class="book-card">
             <div class="book-img-container">
                 <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/E-books/1771216329557.jpg" alt="21 Manipulators of this Generation">
@@ -310,9 +319,13 @@
                     <a href="https://drive.google.com/file/d/1h4hiMqKQujTSl8zbx1hflR6MKxJV_HDe/view?usp=drivesdk" class="btn-read" target="_blank">
                         <i class="fa-solid fa-book-open"></i> Read Publication (BN)
                     </a>
-                    <a href="https://drive.google.com/file/d/1VvHrBteSDFlqy2_m3XNPXyHjFl1CSSJ8/view?usp=drivesdk" class="btn-outline" target="_blank">
-                        <i class="fa-solid fa-pen-nib"></i> English Manuscript (Fragment)
-                    </a>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <a href="https://drive.google.com/file/d/1VvHrBteSDFlqy2_m3XNPXyHjFl1CSSJ8/view?usp=drivesdk" class="btn-outline" target="_blank">
+                            <i class="fa-solid fa-pen-nib"></i> English Manuscript (Fragment)
+                        </a>
+                        <span class="button-note">* Note: Only the first 48 laws are translated and available in English.</span>
+                    </div>
                 </div>
             </div>
         </div>
