@@ -19,6 +19,7 @@
             --text-light: #64748b;
             --accent: #4169E1; 
             --accent-hover: #3153c4;
+            --secondary: #64748b;
             --border-color: #e2e8f0;
         }
 
@@ -31,7 +32,7 @@
             line-height: 1.6;
         }
 
-        /* Navigation - EXACT MATCH TO INDEX.HTML */
+        /* Navigation */
         #nav {
             position: fixed;
             top: 0;
@@ -96,7 +97,7 @@
             font-style: italic;
         }
 
-        /* Grid - PC Responsive Fix */
+        /* Grid */
         .book-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
@@ -124,11 +125,10 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
 
-        /* Cover Photo Fix - Smaller and fully visible */
         .book-img-container {
             position: relative;
-            background: #1a1a1a; /* Dark background for the book contrast */
-            height: 420px; /* Fixed height to keep cover small and neat */
+            background: #1a1a1a; 
+            height: 420px; 
             border-bottom: 1px solid var(--border-color);
             display: flex;
             justify-content: center;
@@ -139,7 +139,7 @@
         .book-img-container img {
             max-width: 100%;
             max-height: 100%;
-            object-fit: contain; /* Ensures the WHOLE photo is visible */
+            object-fit: contain;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
@@ -200,6 +200,12 @@
             font-weight: 500;
         }
 
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
         .btn-read {
             background: var(--accent);
             color: white;
@@ -218,6 +224,28 @@
         .btn-read:hover {
             background: var(--accent-hover);
             color: white;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--secondary);
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-outline:hover {
+            background: #f1f5f9;
+            color: var(--text-main);
         }
 
         @media (max-width: 480px) {
@@ -251,15 +279,17 @@
             <div class="book-content">
                 <span class="badge-category">Dark Psychology</span>
                 <div class="book-title">21 Manipulators of this Generation</div>
-                <p class="book-desc">A high-impact psychological survival guide designed for the modern social landscape. It serves as a definitive unmasking of the toxic archetypes that thrive in the era of social media, "therapy-speak," and digital intimacy.</p>
+                <p class="book-desc">A high-impact psychological survival guide designed for the modern social landscape. It serves as a definitive unmasking of the toxic archetypes that thrive in the era of social media and digital intimacy.</p>
                 <ul class="meta-list">
                     <li><span class="meta-label">Author</span><span>Mahadi Islam Alif</span></li>
                     <li><span class="meta-label">Language</span><span>English</span></li>
                     <li><span class="meta-label">Category</span><span>Psychological Survival</span></li>
                 </ul>
-                <a href="https://drive.google.com/file/d/1qEfHeqWg2_zFFqFboys3TapHjZzPOu8C/view?usp=drivesdk" class="btn-read" target="_blank">
-                    <i class="fa-solid fa-book-open"></i> Read Publication
-                </a>
+                <div class="button-group">
+                    <a href="https://drive.google.com/file/d/1TMC304DCDiwvh8An99xOSXNOaUxtCplP/view?usp=drivesdk" class="btn-read" target="_blank">
+                        <i class="fa-solid fa-book-open"></i> Read Publication
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -270,15 +300,20 @@
             <div class="book-content">
                 <span class="badge-category">Dark Psychology</span>
                 <div class="book-title">The Victor Protocol</div>
-                <p class="book-desc">Human life is nothing more than a high-stakes game. In this book, I reveal 53 laws of manipulation designed to strip away the illusion of free will and make anyone dance in your fingers like a puppet.</p>
+                <p class="book-desc">Human life is nothing more than a high-stakes game. In this book, I reveal 53 laws of manipulation designed to strip away the illusion of free will and control the narrative.</p>
                 <ul class="meta-list">
                     <li><span class="meta-label">Author</span><span>Mahadi Islam Alif</span></li>
                     <li><span class="meta-label">Language</span><span>Bangla</span></li>
                     <li><span class="meta-label">Category</span><span>Strategic Influence</span></li>
                 </ul>
-                <a href="https://drive.google.com/file/d/1TmK9qyrzsmfDc3ngx8D26SL9Q-xPLDNf/view?usp=drivesdk" class="btn-read" target="_blank">
-                    <i class="fa-solid fa-book-open"></i> Read Publication
-                </a>
+                <div class="button-group">
+                    <a href="https://drive.google.com/file/d/1TmK9qyrzsmfDc3ngx8D26SL9Q-xPLDNf/view?usp=drivesdk" class="btn-read" target="_blank">
+                        <i class="fa-solid fa-book-open"></i> Read Publication (BN)
+                    </a>
+                    <a href="https://drive.google.com/file/d/1XGM5DRTlR7RkYI061xNAH41EO05ve9vF/view?usp=drivesdk" class="btn-outline" target="_blank">
+                        <i class="fa-solid fa-pen-nib"></i> English Edition (In-Progress)
+                    </a>
+                </div>
             </div>
         </div>
 
