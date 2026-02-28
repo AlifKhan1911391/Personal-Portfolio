@@ -93,6 +93,30 @@
             font-size: 1.1rem;
         }
 
+        /* NEW CSS FOR ACCREDIBLE BUTTON */
+        .btn-accredible {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 25px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px rgba(65, 105, 225, 0.2);
+        }
+
+        .btn-accredible:hover {
+            background: var(--accent-hover);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(65, 105, 225, 0.3);
+        }
+
         .cert-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -267,6 +291,11 @@
     <header class="page-header">
         <h1>Career & Self-Learning Assets</h1>
         <p>A collection of my extra-curricular activities and technical certifications representing continuous skill acquisition.</p>
+        
+        <a href="https://www.credential.net/profile/mahadiislamalif292682/wallet" target="_blank" class="btn-accredible">
+            <i class="fa-solid fa-wallet"></i> View My Accredible Wallet
+        </a>
+
     </header>
 
     <div class="cert-grid">
