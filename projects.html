@@ -53,24 +53,20 @@
             overflow: hidden;
         }
 
-        #nav li {
-            float: left;
-        }
+        #nav li { float: left; }
 
         #nav li a {
             display: block;
             color: white;
             text-align: center;
-            padding: 13px 11px; /* Exact padding from certificates.html */
+            padding: 13px 11px;
             text-decoration: none;
             transition: background-color 0.3s;
             font-family: 'Inter', sans-serif;
             font-size: 16px;
         }
 
-        #nav li a:hover {
-            background-color: #111;
-        }
+        #nav li a:hover { background-color: #111; }
 
         .activenav {
             background-color: var(--accent);
@@ -92,7 +88,6 @@
             color: var(--text-main);
             margin-bottom: 15px;
             font-weight: 700;
-            text-transform: capitalize;
         }
 
         .hero-header p {
@@ -100,6 +95,13 @@
             margin: 0 auto 25px;
             color: var(--text-muted);
             font-size: 1.1rem;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .project-grid {
@@ -192,6 +194,23 @@
             background: #f1f5f9;
         }
 
+        .btn-verify-hero {
+            background: rgba(65, 105, 225, 0.05);
+            color: var(--accent);
+            border: 2px solid var(--accent);
+            border-radius: 30px;
+            padding: 10px 24px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .btn-verify-hero:hover {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 4px 15px rgba(65, 105, 225, 0.3);
+        }
+
         #status-msg {
             margin-top: 15px;
             font-size: 0.85rem;
@@ -204,6 +223,7 @@
             .project-grid { grid-template-columns: 1fr; }
             .btn-group-custom { flex-direction: column; }
             .hero-header h1 { font-size: 2.2rem; }
+            .btn-verify-hero { font-size: 0.9rem; padding: 10px 15px; }
         }
     </style>
 </head>
@@ -221,9 +241,15 @@
     <header class="hero-header">
         <h1>Web-Projects</h1>
         <p>A collection of front-end applications and design experiments showcasing my development progress.</p>
-        <a href="https://github.com/AlifKhan1911391" target="_blank" class="btn btn-dark px-4 py-2" style="border-radius: 30px;">
-            <i class="fab fa-github me-2"></i> Dive on my GitHub
-        </a>
+        
+        <div class="hero-cta-group">
+            <a href="https://github.com/AlifKhan1911391" target="_blank" class="btn btn-dark px-4 py-2" style="border-radius: 30px;">
+                <i class="fab fa-github me-2"></i> Dive on my GitHub
+            </a>
+            <a href="https://freecodecamp.org/certification/fcc-b75b4c9e-713d-403c-9ada-e9b2306f2f1a/responsive-web-design" target="_blank" class="btn-verify-hero">
+                <i class="fas fa-user-check me-2"></i> Official Responsive Web Design Certification by freeCodeCamp
+            </a>
+        </div>
     </header>
 
     <div class="project-grid">
