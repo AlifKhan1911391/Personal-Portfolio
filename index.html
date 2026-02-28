@@ -16,7 +16,65 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* --- UNTOUCHED NAVIGATION STYLES --- */
+        /* General Layout */
+        #main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Added #learning to your original shared styles */
+        #Welcome,
+        #learning,
+        #networking,
+        #professional-insta {
+            margin-top: 30px;
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Welcome Section */
+        #Welcome h1, #learning h2 {
+            font-size: 2.5rem;
+            color: #222;
+        }
+
+        #Welcome h2 {
+            color: #4a4a4a;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            font-family: "Mozilla Headline", sans-serif;
+            font-weight: 400;
+        }
+
+        #Welcome p, #learning p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        #Welcome:hover, #learning:hover {
+            transform: translateY(-5px);
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        #pfp {
+            width: 45%;
+            height: auto;
+            border-radius: 100px;
+            border: 5px solid #007BFF;
+        }
+
+        /* Navigation */
         #nav {
             position: fixed;
             top: 0;
@@ -55,120 +113,202 @@
             background-color: #4169E1;
             color: white;
         }
-        /* --- END UNTOUCHED NAVIGATION STYLES --- */
-
-        /* General Layout */
-        body { margin: 0; padding: 0; background-color: #f4f6f9; font-family: 'Segoe UI', Tahoma, sans-serif;}
-        html { scroll-behavior: smooth; }
-        
-        #main {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        .content-section {
-            margin-top: 30px;
-            max-width: 800px;
-            width: 100%;
-            margin: 40px auto;
-            padding: 40px;
-            background: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-            color: #333;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .content-section:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Typography */
-        h1, .venture-title, .title {
-            font-family: "Mozilla Headline", sans-serif;
-            color: #1a1a1a;
-        }
-        
-        #Welcome h1 { font-size: 2.8rem; margin-bottom: 5px; }
-        #Welcome h2 { color: #555; margin-bottom: 25px; font-weight: 400; font-size: 1.4rem; }
-        p { font-size: 1.05rem; line-height: 1.7; margin: 15px 0; color: #4a4a4a; }
-        .marked { color: #007BFF; text-decoration: none; font-weight: 600; transition: color 0.2s; }
-        .marked:hover { color: #0056b3; text-decoration: underline; }
-
-        #pfp {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #007BFF;
-            margin: 20px 0;
-            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
-        }
-
-        /* Badges & Highlights */
-        .badge-custom {
-            display: inline-block;
-            background: rgba(0, 123, 255, 0.1);
-            color: #007BFF;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-
-        /* Continuous Learning Section (New) */
-        #learning {
-            background: linear-gradient(135deg, #f0f7ff, #ffffff);
-            border-left: 5px solid #007BFF;
-        }
 
         /* Business Venture Section */
-        .venture-stats { display: flex; justify-content: space-around; margin: 30px 0; flex-wrap: wrap; gap: 15px; }
-        .stat-item { padding: 20px; background: #f8f9fa; border-radius: 12px; min-width: 140px; flex: 1; border: 1px solid #eee; }
-        .stat-number { font-size: 2rem; font-weight: 700; color: #007bff; margin-bottom: 5px; font-family: "Mozilla Headline", sans-serif;}
-        .stat-label { font-size: 0.9rem; color: #6c757d; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;}
-
-        .key-learnings { text-align: left; background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 30px 0; }
-        .key-learnings h4 { color: #1a1a1a; margin-top: 0; margin-bottom: 15px; font-weight: 700; }
-        .key-learnings ul { padding-left: 20px; margin-bottom: 0; }
-        .key-learnings li { margin-bottom: 10px; color: #4a4a4a; }
-
-        /* Gallery */
-        .gallery-summary {
-            display: flex; justify-content: space-between; align-items: center; padding: 15px 20px;
-            background: #f8f9fa; border-radius: 10px; cursor: pointer; font-weight: 600; color: #007bff;
-            border: 1px solid #eee;
+        #business-venture {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            color: #333;
         }
-        .gallery-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 15px; }
-        .gallery-item { border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); }
-        .venture-img { width: 100%; height: 200px; object-fit: cover; display: block; }
-        .img-caption { padding: 10px; background: #fff; margin: 0; font-size: 0.85rem; }
 
-        /* Buttons & Links */
-        .btn-custom-group { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 25px; }
-        .btn-custom {
-            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-            text-decoration: none; font-weight: 600; padding: 12px 24px; border-radius: 8px;
-            transition: all 0.2s ease; border: none; cursor: pointer; font-size: 1rem;
+        #business-venture .venture-header {
+            text-align: center;
+            margin-bottom: 30px;
         }
-        .btn-primary-custom { background: #007BFF; color: white; box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3); }
-        .btn-primary-custom:hover { background: #0056b3; color: white; transform: translateY(-2px); }
-        .btn-outline-custom { background: transparent; color: #333; border: 2px solid #ddd; }
-        .btn-outline-custom:hover { border-color: #007BFF; color: #007BFF; }
-        .btn-insta { background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D); color: white; }
-        .btn-insta:hover { opacity: 0.9; color: white; transform: translateY(-2px); }
 
-        #networking { background: #1a1a1a; color: white; margin-bottom: 80px; }
-        #networking h3 { color: white; }
-        #networking .btn-custom { min-width: 200px; }
+        #business-venture .venture-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, #6ea8fe, #9ad0ff);
+            color: #0a0f1e;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        #business-venture .venture-title {
+            font-size: 1.8rem;
+            color: #222;
+            margin: 10px 0;
+            font-family: "Mozilla Headline", sans-serif;
+        }
+
+        #business-venture .venture-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        #business-venture .venture-stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        #business-venture .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: rgba(110, 168, 254, 0.1);
+            border-radius: 12px;
+            margin: 10px;
+            min-width: 150px;
+            flex: 1;
+        }
+
+        #business-venture .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+
+        #business-venture .stat-label {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        #business-venture .key-learnings {
+            background: rgba(110, 168, 254, 0.08);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #6ea8fe;
+            margin: 30px 0;
+        }
+
+        #business-venture .key-learnings h4 {
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        #business-venture .key-learnings ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        #business-venture .key-learnings li {
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        #business-venture .venture-gallery {
+            margin: 30px 0;
+        }
+
+        #business-venture .gallery-summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(110, 168, 254, 0.1);
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #007bff;
+            transition: all 0.3s ease;
+        }
+
+        /* --- NEW ANIMATION CSS FOR GALLERY --- */
+        #business-venture .gallery-wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.4s ease-out;
+        }
+
+        #business-venture .gallery-wrapper.expanded {
+            grid-template-rows: 1fr;
+        }
+
+        #business-venture .gallery-container {
+            overflow: hidden;
+        }
+
+        #business-venture .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+            padding-bottom: 10px; /* Prevents shadow clipping */
+        }
+        /* --- END NEW ANIMATION CSS --- */
+
+        #business-venture .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        #business-venture .venture-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+
+        #business-venture .img-caption {
+            padding: 10px 15px;
+            background: #f8f9fa;
+            margin: 0;
+            font-size: 0.9rem;
+            color: #6c757d;
+            text-align: center;
+        }
+
+        #business-venture .venture-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            justify-content: center;
+        }
+
+        #business-venture .venture-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            background: linear-gradient(90deg, #6ea8fe, #9ad0ff);
+            color: #0a0f1e;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 200px;
+            justify-content: center;
+        }
+
+        #business-venture .secondary-link {
+            background: linear-gradient(90deg, #a9b3cf, #c1c9e0);
+        }
+
+        /* Helpers */
+        .social-btn { margin: 0.5rem; min-width: 300px; }
+        .title { font-family: "Mozilla Headline", sans-serif; font-weight: 650; margin-bottom: 30px; }
+        .marked { color: #4570b5; text-decoration: none; font-weight: 700; }
+        #networking { color: white; background: url('https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/1755326883497.jpg'); }
+        html { scroll-behavior: smooth; }
+        body { margin: 0; padding: 0; }
     </style>
 </head>
 
@@ -183,117 +323,117 @@
         </ol>
     </div>
 
-    <div id="main" style="margin-top: 80px;">
+    <div id="main">
 
-        <section id="Welcome" class="content-section">
+        <div id="Welcome">
+            <h1>Welcome to My Portfolio</h1>
             <img src="IMG_20251111_085231_821.webp" title="Picture of Mahadi Islam Alif" alt="Mahadi Islam Alif" id="pfp">
-            <h1>Mahadi Islam Alif</h1>
-            <h2><a class='marked' href='/projects'>Web Developer</a> & <a href="#business-venture" class="marked">Entrepreneur</a></h2>
-            <p>I build clean, efficient, and user-friendly digital solutions. Based in Bangladesh, my core professional focus is web development, where I blend technical precision with creative design to turn ideas into functional products.</p>
-            <p>Beyond code, I am an entrepreneur at heart. I believe the best way to learn is by building, launching, and analyzing real-world projects. My long-term vision is to achieve financial freedom through technology while contributing to meaningful initiatives.</p>
-        </section>
+            <h2>Mahadi Islam Alif — <em><a class='marked' href='/projects'>Web Developer</a> & <a href="#business-venture" class="marked">Entrepreneur</a></em></h2>
+            <p>I'm a passionate web developer from Bangladesh, dedicated to creating clean, efficient, and visually engaging digital solutions. My work blends technical precision with creative design to deliver user-friendly, impactful web experiences.</p>
+            <p>This portfolio showcases my projects and achievements, reflecting my commitment to continuous learning and innovation. I take pride in turning ideas into functional products that provide real value.</p>
+            <p>My long-term vision is achieving financial freedom through technology while contributing to meaningful projects that make a difference.</p>
+            <p>Feel free to explore my work — I hope it inspires and informs.</p>
+        </div>
 
-        <section id="learning" class="content-section">
-            <span class="badge-custom">Continuous Learning</span>
-            <h2 class="title">AI & Digital Marketing Explorations</h2>
-            <p>While my professional roots are in development, my natural curiosity has recently led me to explore the intersections of <strong>Artificial Intelligence</strong> and <strong>Digital Marketing</strong>. I am fascinated by how AI tools can optimize workflows and how digital marketing strategies can amplify a product's reach.</p>
-            <p>I don't claim to be a professional in these fields yet—I study them out of pure passion to broaden my entrepreneurial toolkit. From understanding AI prompting to analyzing marketing funnels, I am actively expanding my knowledge base.</p>
-            <div class="btn-custom-group">
-                <a href="/certificates" class="btn-custom btn-primary-custom">
-                    <i class="fas fa-certificate"></i> View My Certificates as Proof
-                </a>
+        <div id="learning">
+            <h2 class="title" style="margin-bottom: 10px;">AI & Digital Marketing</h2>
+            <p>While my core focus is web development and entrepreneurship, my curiosity has recently led me to explore <strong>Artificial Intelligence</strong> and <strong>Digital Marketing</strong>. I do not work professionally in these sectors yet; I am gaining knowledge out of pure passion and to broaden my entrepreneurial toolkit.</p>
+            <p>From understanding AI tools to exploring digital marketing strategies, I am actively expanding my knowledge base. As proof of my ongoing education, feel free to check out my <a href="/certificates" class="marked">Certificates</a>.</p>
+        </div>
+
+        <div id="business-venture">
+            <div class="venture-header">
+                <span class="venture-badge">Entrepreneurship Journey</span>
+                <h2 class="venture-title">Poedagar 613 | E-Commerce Venture</h2>
+                <p class="venture-description">In May 2025, I launched my first entrepreneurial venture, <a href="https://poedagar.store/product/poedagar-top-luxury-brand-man-watch-sports-waterproof-luminous-date-men-wristwatch-square-dial-quartz-mens-watches-high-quality/?v=84de8e2b14bb" class="marked">Poedagar 613</a>, with just 3,000 BDT (about $25 according to the conversion at that time). It was a manual dropshipping operation where I collected watches and accessories from <a href="https://daraz.com/" class="marked">Daraz</a> and marketed them for sale on Facebook. Although the business didn't generate sales, it provided invaluable real-world lessons in product sourcing, digital marketing, customer acquisition, and the mechanics of bootstrapped e-commerce.</p>
             </div>
-        </section>
 
-        <section id="business-venture" class="content-section">
-            <span class="badge-custom">Bootstrapped E-Commerce</span>
-            <h2 class="venture-title">Poedagar 613</h2>
-            <p>In May 2025, I launched my first entrepreneurial venture with just <strong>3,000 BDT (~$25)</strong>. It was a manual dropshipping operation sourcing watches from Daraz to sell via Facebook marketing. Although the business didn't generate immediate financial returns, the real-world education I received was invaluable.</p>
-            
             <div class="venture-stats">
                 <div class="stat-item">
-                    <div class="stat-number">3,000 ৳</div>
+                    <div class="stat-number">3,000 BDT</div>
                     <div class="stat-label">Initial Investment</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">0</div>
-                    <div class="stat-label">Sales Generated</div>
+                    <div class="stat-number">0 Sales</div>
+                    <div class="stat-label">Outcome</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">ROI in Knowledge</div>
+                    <div class="stat-number">4+ Lessons</div>
+                    <div class="stat-label">Key Learnings</div>
                 </div>
             </div>
 
             <div class="key-learnings">
-                <h4>📈 What I Learned</h4>
+                <h4>📈 Key Learnings & Growth</h4>
                 <ul>
-                    <li><strong>Market Validation:</strong> The importance of testing customer demand prior to investing in inventory.</li>
-                    <li><strong>Data Analysis:</strong> How to interpret ad metrics beyond surface-level clicks and impressions.</li>
-                    <li><strong>Resourcefulness:</strong> Maximizing operational impact with extremely limited capital.</li>
+                    <li><strong>Market Validation:</strong> Understanding customer demand before inventory investment is crucial</li>
+                    <li><strong>Data Analysis:</strong> Learning to interpret ad metrics beyond just clicks and impressions</li>
+                    <li><strong>Resource Management:</strong> Maximizing impact with extremely limited capital</li>
+                    <li><strong>Resilience:</strong> Embracing challenges as learning opportunities rather than failures</li>
                 </ul>
             </div>
 
             <div class="venture-gallery">
                 <div class="gallery-summary" onclick="toggleGallery()">
-                    <span><i class="fas fa-image me-2"></i> View Project Gallery</span>
+                    <span>View Business Images</span>
                     <span id="gallery-icon">+</span>
                 </div>
-                <div class="gallery-container" id="gallery-container" style="display: none;">
-                    <div class="gallery-item">
-                        <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/business/IMG_20250825_140614.jpg" alt="Watch" class="venture-img">
-                        <p class="img-caption">Product Sourcing</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/business/Screenshot_20250821-200403.jpg" alt="Watches" class="venture-img">
-                        <p class="img-caption">Raw Photography</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/business/received_1013947974140555.jpeg" alt="Watch Presentation" class="venture-img">
-                        <p class="img-caption">Presentation</p>
+                <div class="gallery-wrapper" id="gallery-wrapper">
+                    <div class="gallery-container">
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/business/IMG_20250825_140614.jpg" alt="Watch" class="venture-img">
+                                <p class="img-caption">Watch from Amazon & Daraz</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/business/Screenshot_20250821-200403.jpg" alt="Watches" class="venture-img">
+                                <p class="img-caption">Raw pics of watches</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/business/received_1013947974140555.jpeg" alt="Watch Presentation" class="venture-img">
+                                <p class="img-caption">Watch Presentation</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/business/IMG_20250611_122303_000.jpg" alt="Watch Boxes" class="venture-img">
+                                <p class="img-caption">Watch Boxes</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="btn-custom-group">
-                <a class="btn-custom btn-primary-custom" href="https://www.facebook.com/share/1CRU28nqrJ/" target="_blank">
-                    <i class="fab fa-facebook"></i> Facebook Page
+            <div class="venture-links">
+                <a class="venture-link" href="https://www.facebook.com/share/1CRU28nqrJ/" target="_blank" rel="noopener">
+                    <i class="fab fa-facebook me-2"></i> View Facebook Business Page
                 </a>
-                <a class="btn-custom btn-outline-custom" href="https://s.daraz.com.bd/s.ZMFgZ" target="_blank">
-                    <i class="fas fa-shopping-bag"></i> Original Product
+                <a class="venture-link secondary-link" href="https://s.daraz.com.bd/s.ZMFgZ" target="_blank" rel="noopener">
+                    <i class="fas fa-shopping-bag me-2"></i> View Daraz Original Product
                 </a>
             </div>
-        </section>
+        </div>
 
-        <section id="professional-insta" class="content-section">
-            <span class="badge-custom">Marketing Experiment</span>
-            <h3 class="title">My Professional Instagram</h3>
-            <p>Tying into my curiosity for digital marketing, I launched a professional Instagram account. Instead of viewing it strictly as an immediate income source, I treat it as a live laboratory to test content strategies, analyze engagement metrics, and understand algorithm behaviors.</p>
-            <p>While the growth hasn't been explosive yet, it serves as a public space where I share my projects, ideas, and creative pursuits. It's a continuous experiment in audience building.</p>
-            
-            <div class="btn-custom-group" style="margin-top: 20px;">
-                <button onclick="window.location.href='https://www.instagram.com/nikawealth?igsh=d2pwOTlzYnV5dHE0'" class="btn-custom btn-insta">
-                    <i class="fab fa-instagram"></i> Explore the Experiment
-                </button>
-            </div>
-        </section>
+        <div id="professional-insta">
+            <h3 class="title">Instagram Professional Account</h3>
+            <p>I launched a professional Instagram account with the intention of exploring opportunities for passive income. However, the account has not been growing as expected, and I may choose to discontinue it at any point. Still, I wanted to share it here, as I see value in treating it as a personal experiment and a reminder that not every initiative achieves immediate success.</p>
+            <p>For now, the account remains active as a space where I share projects, ideas, and creative pursuits. I welcome anyone interested to explore the content—there is always the possibility that it may develop in unexpected ways.</p>
+            <em>16 Aug 2025</em><br>
+            <button onclick="window.location.href='https://www.instagram.com/nikawealth?igsh=d2pwOTlzYnV5dHE0'" class="btn social-btn" style="background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D); color: white; border: none;">
+                <i class="fab fa-instagram me-2"></i> Professional Insta
+            </button>
+        </div>
 
-        <section id="networking" class="content-section">
-            <h3 class="title">Let's Connect</h3>
-            <p style="color: #ccc; margin-bottom: 25px;">Whether you want to discuss web development, startup ideas, or the latest AI trends, my inbox is open.</p>
-            <div class="btn-custom-group">
-                <button onclick="window.location.href='mailto:iamitachi494@gmail.com'" class="btn-custom" style="background: #ea4335; color: white;">
-                    <i class="fas fa-envelope"></i> E-mail Me
-                </button>
-                <button onclick="window.location.href='https://github.com/AlifKhan1911391'" class="btn-custom" style="background: #333; color: white;">
-                    <i class="fab fa-github"></i> GitHub
-                </button>
-                <button onclick="window.location.href='https://www.instagram.com/joy._.boy69?igsh=ZmNubzBqOGJxZmZi'" class="btn-custom btn-insta">
-                    <i class="fab fa-instagram"></i> Personal Insta
-                </button>
-            </div>
-        </section>
-
+        <div id="networking">
+            <h3 class="title">Connect with me:</h3>
+            <button onclick="window.location.href='mailto:iamitachi494@gmail.com'" class="btn btn-danger social-btn">
+                <i class="fas fa-envelope me-2"></i> E-mail
+            </button><br>
+            <button onclick="window.location.href='https://github.com/AlifKhan1911391'" class="btn btn-dark social-btn">
+                <i class="fab fa-github me-2"></i> Github
+            </button><br>
+            <button onclick="window.location.href='https://www.instagram.com/joy._.boy69?igsh=ZmNubzBqOGJxZmZi'" class="btn social-btn" style="background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D); color: white; border: none;">
+                <i class="fab fa-instagram me-2"></i> Instagram
+            </button>
+        </div>
     </div>
 
     <script>
@@ -310,15 +450,17 @@
             lastScroll = currentScroll;
         });
 
+        // UPDATED JS FOR SMOOTH ANIMATION
         function toggleGallery() {
-            const gallery = document.getElementById('gallery-container');
+            const wrapper = document.getElementById('gallery-wrapper');
             const icon = document.getElementById('gallery-icon');
-            if (gallery.style.display === 'none' || gallery.style.display === '') {
-                gallery.style.display = 'grid';
-                icon.textContent = '×';
-            } else {
-                gallery.style.display = 'none';
+            
+            if (wrapper.classList.contains('expanded')) {
+                wrapper.classList.remove('expanded');
                 icon.textContent = '+';
+            } else {
+                wrapper.classList.add('expanded');
+                icon.textContent = '×';
             }
         }
     </script>
