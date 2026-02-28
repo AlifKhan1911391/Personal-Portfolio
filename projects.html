@@ -16,24 +16,26 @@
        
     <style>
         :root {
-            --accent-color: #4169E1;
+            --bg-color: #f8fafc;
             --card-bg: #ffffff;
-            --text-dark: #0f172a;
+            --text-main: #0f172a;
             --text-muted: #475569;
+            --accent: #4169E1;   
             --border-color: #e2e8f0;
         }
 
         html { scroll-behavior: smooth; }
 
         body {
+            background-color: var(--bg-color);
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            color: var(--text-main);
             margin: 0;
             padding: 0;
-            background-color: #f8fafc;
-            font-family: 'Inter', sans-serif;
-            color: var(--text-dark);
+            line-height: 1.6;
         }
 
-        /* --- UNIFIED NAV BAR --- */
+        /* --- EXACT NAV BAR FROM CERTIFICATES.HTML --- */
         #nav {
             position: fixed;
             top: 0;
@@ -41,6 +43,7 @@
             background-color: #333;
             z-index: 1000;
             transition: transform 0.3s ease;
+            transform: translateY(0);
         }
 
         #nav ol {
@@ -50,234 +53,214 @@
             overflow: hidden;
         }
 
-        #nav li { float: left; }
+        #nav li {
+            float: left;
+        }
 
         #nav li a {
             display: block;
             color: white;
             text-align: center;
-            padding: 13px 15px;
+            padding: 13px 11px; /* Exact padding from certificates.html */
             text-decoration: none;
-            transition: 0.3s;
-            font-size: 15px;
+            transition: background-color 0.3s;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
         }
 
-        #nav li a:hover { background-color: #111; }
-        .activenav { background-color: var(--accent-color); color: white !important; }
+        #nav li a:hover {
+            background-color: #111;
+        }
 
-        /* --- HERO SECTION --- */
-        .hero-section {
-            padding: 120px 20px 60px;
-            background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/df148f54-6f54-4707-b9d1-98a33f596cc8.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+        .activenav {
+            background-color: var(--accent);
+            color: white !important;
+        }
+
+        /* --- PAGE CONTENT STYLES --- */
+        .hero-header {
             text-align: center;
+            padding: 130px 20px 60px;
+            background: #ffffff;
             border-bottom: 1px solid var(--border-color);
+            margin-bottom: 60px;
         }
 
-        #main-title {
-            font-family: "DM Serif Text", serif;
-            font-size: 3rem;
-            font-style: italic;
+        .hero-header h1 {
+            font-family: "Mozilla Headline", sans-serif;
+            font-size: 2.8rem;
+            color: var(--text-main);
             margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: capitalize;
         }
 
-        /* --- PROJECT GRID --- */
-        .project-container {
-            max-width: 1100px;
-            margin: -40px auto 60px;
-            padding: 0 20px;
+        .hero-header p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 25px 80px;
         }
 
         .project-card {
             background: var(--card-bg);
-            border-radius: 16px;
+            border-radius: 12px;
             padding: 30px;
+            display: flex;
+            flex-direction: column;
             border: 1px solid var(--border-color);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
         }
 
         .project-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-6px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            border-color: var(--accent-color);
-        }
-
-        .tech-tags {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-
-        .tag {
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            padding: 4px 10px;
-            border-radius: 6px;
-            background: rgba(65, 105, 225, 0.1);
-            color: var(--accent-color);
+            border-color: var(--accent);
         }
 
         .project-title {
             font-family: "Mozilla Headline", sans-serif;
+            color: var(--text-main);
             font-size: 1.4rem;
             font-weight: 700;
             margin-bottom: 15px;
-            color: var(--text-dark);
         }
 
         .project-desc {
-            font-size: 0.95rem;
             color: var(--text-muted);
-            line-height: 1.6;
+            font-size: 0.95rem;
             margin-bottom: 25px;
             flex-grow: 1;
         }
 
         .project-desc b {
-            color: var(--text-dark);
-            font-family: 'Karla', sans-serif;
+            font-family: "Karla", sans-serif;
+            color: var(--text-main);
+            font-weight: 700;
         }
 
         /* --- BUTTONS --- */
         .btn-group-custom {
             display: flex;
-            gap: 10px;
+            gap: 12px;
         }
 
-        .btn-main {
+        .btn-action {
             flex: 1;
-            background: var(--text-dark);
-            color: white;
-            border: none;
-            padding: 10px;
+            padding: 11px 12px;
             border-radius: 8px;
+            text-align: center;
             font-weight: 600;
             font-size: 0.85rem;
-            transition: 0.3s;
             text-decoration: none;
-            text-align: center;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
 
-        .btn-main:hover {
-            background: var(--accent-color);
+        .btn-primary-custom {
+            background: var(--text-main);
+            color: white;
+            border: 1px solid var(--text-main);
+        }
+
+        .btn-primary-custom:hover {
+            background: var(--accent);
+            border-color: var(--accent);
             color: white;
         }
 
-        .btn-outline {
-            flex: 1;
-            background: transparent;
-            color: var(--text-dark);
+        .btn-secondary-custom {
+            background: white;
+            color: var(--text-main);
             border: 1px solid var(--border-color);
-            padding: 10px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: 0.3s;
-            text-decoration: none;
-            text-align: center;
         }
 
-        .btn-outline:hover {
+        .btn-secondary-custom:hover {
             background: #f1f5f9;
-            border-color: var(--text-dark);
         }
 
         #status-msg {
+            margin-top: 15px;
+            font-size: 0.85rem;
             color: #b91c1c;
-            font-size: 0.8rem;
-            margin-top: 10px;
             font-weight: 500;
             text-align: center;
         }
 
         @media (max-width: 480px) {
-            .project-container { grid-template-columns: 1fr; }
-            #main-title { font-size: 2.2rem; }
+            .project-grid { grid-template-columns: 1fr; }
             .btn-group-custom { flex-direction: column; }
+            .hero-header h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
 
-    <nav id="nav">
+    <div id="nav">
         <ol>
-            <li><a href="/">Home</a></li>
-            <li><a href="/projects" class="activenav">Projects</a></li>
-            <li><a href="/certificates">Certificates</a></li>
+            <li><a href='/'>Home</a></li>
+            <li class="activenav"><a href="/projects">Projects</a></li>
+            <li><a href='/certificates'>Certificates</a></li>
             <li><a href='/ebooks'>E-books</a></li>
         </ol>
-    </nav>
+    </div>
 
-    <header class="hero-section">
-        <h1 id="main-title">Digital Creations</h1>
-        <p class="mb-4 text-muted">A showcase of my journey in web development, from e-commerce to scientific clones.</p>
+    <header class="hero-header">
+        <h1>Web-Projects</h1>
+        <p>A collection of front-end applications and design experiments showcasing my development progress.</p>
         <a href="https://github.com/AlifKhan1911391" target="_blank" class="btn btn-dark px-4 py-2" style="border-radius: 30px;">
-            <i class="fab fa-github me-2"></i> Explore my GitHub
+            <i class="fab fa-github me-2"></i> Dive on my GitHub
         </a>
     </header>
 
-    <main class="project-container">
+    <div class="project-grid">
         
         <article class="project-card">
-            <div class="tech-tags">
-                <span class="tag">HTML5</span>
-                <span class="tag">CSS3</span>
-                <span class="tag">JS</span>
-                <span class="tag">Responsive</span>
-            </div>
             <h3 class="project-title">Manga Shop Website</h3>
-            <p class="project-desc">As a budding web developer, I designed a <b>fully responsive manga e-commerce website</b>. This project features a product gallery, shopping cart functionality, and a sleek UI inspired by Japanese aesthetics. I leveraged modern front-end techniques like DOM manipulation for cart interactions.</p>
+            <p class="project-desc">As a budding web developer, I designed a <b>fully responsive manga e-commerce website</b> using HTML, CSS, and JavaScript. This project features a product gallery, shopping cart functionality, and a sleek UI inspired by Japanese aesthetics. Though I’m still learning, I leveraged modern front-end techniques to create an immersive shopping experience.</p>
             <div class="btn-group-custom">
-                <a href="https://emperorsmanga.netlify.app/" class="btn-main" target="_blank">View Live</a>
-                <a href="https://github.com/AlifKhan1911391/Emperor-s-Manga" class="btn-outline" target="_blank">Source Code</a>
+                <a href="https://emperorsmanga.netlify.app/" class="btn-action btn-primary-custom" target="_blank">View Project</a>
+                <a href="https://github.com/AlifKhan1911391/Emperor-s-Manga" class="btn-action btn-secondary-custom" target="_blank">Source Code</a>
             </div>
         </article>
 
         <article class="project-card">
-            <div class="tech-tags">
-                <span class="tag">E-Commerce</span>
-                <span class="tag">UI/UX</span>
-                <span class="tag">JavaScript</span>
-            </div>
-            <h3 class="project-title">Trendelier Fashion Store</h3>
-            <p class="project-desc">I designed <b>Trendelier</b>, a responsive fashion store, as part of my learning journey. Built with HTML, CSS, and JS, this project simulates a modern online clothing store with product listings and a functional cart system.</p>
+            <h3 class="project-title">Trendelier Fashion Store (Incomplete)</h3>
+            <p class="project-desc">I designed <b>Trendelier</b>, a responsive fashion e-commerce website, as part of my front-end development learning journey. Built with HTML, CSS, and JavaScript, this project simulates a modern online clothing store with product listings, a functional cart system, and a clean UI.</p>
             <div class="btn-group-custom">
-                <a href="https://trendelier.netlify.app/" class="btn-main" target="_blank">View Live</a>
-                <a href="https://github.com/AlifKhan1911391/Trend-Lier" class="btn-outline" target="_blank">Source Code</a>
+                <a href="https://trendelier.netlify.app/" class="btn-action btn-primary-custom" target="_blank">View Project</a>
+                <a href="https://github.com/AlifKhan1911391/Trend-Lier" class="btn-action btn-secondary-custom" target="_blank">Source Code</a>
             </div>
         </article>
 
         <article class="project-card">
-            <div class="tech-tags">
-                <span class="tag">Clone</span>
-                <span class="tag">Scientific UI</span>
-                <span class="tag">Layout</span>
-            </div>
             <h3 class="project-title">NASA Website Clone</h3>
-            <p class="project-desc">This project is a <b>partial front-end clone of NASA’s official website</b>. I focused on replicating the complex layout and responsiveness of selected sections, ensuring a clean and user-friendly interface that captures NASA's visual style with precision.</p>
+            <p class="project-desc">This project is a <b>partial front-end clone of NASA’s official website</b>, created to strengthen my web development skills. I focused on replicating the design, layout, and responsiveness of selected sections, ensuring a clean and user-friendly interface that captures the visual style of NASA's design with precision.</p>
             <div class="btn-group-custom">
-                <button class="btn-main" onclick="document.getElementById('status-msg').innerHTML='<i class=\'fas fa-info-circle\'></i> This project is currently not hosted. View the source code to run it locally.'">View Live</button>
-                <a href="https://github.com/AlifKhan1911391/NASA-Website-Clone" class="btn-outline" target="_blank">Source Code</a>
+                <button class="btn-action btn-primary-custom" onclick="document.getElementById('status-msg').innerHTML='<i class=\'fas fa-info-circle\'></i> This project is not hosted yet. Please check the source code.'">View Project</button>
+                <a href="https://github.com/AlifKhan1911391/NASA-Website-Clone" class="btn-action btn-secondary-custom" target="_blank">Source Code</a>
             </div>
             <div id="status-msg"></div>
         </article>
 
-    </main>
+    </div>
 
     <script>
         let lastScroll = 0;
         const nav = document.getElementById('nav');
-
         window.addEventListener('scroll', () => {
             const currentScroll = window.pageYOffset;
             if (currentScroll > lastScroll && currentScroll > 100) {
