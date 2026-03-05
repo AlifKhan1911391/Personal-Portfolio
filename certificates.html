@@ -7,35 +7,31 @@
     <link rel="icon" href="IMG_20251111_085231_821.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg:           #f0f2f7;
-            --card-bg:      #ffffff;
-            --text-main:    #0d1b2a;
-            --text-muted:   #4a5568;
-            --text-light:   #718096;
-            --accent:       #4169E1;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --text-light: #64748b;
+            --accent: #4169E1;   
             --accent-hover: #3153c4;
-            --border:       #e2e8f0;
-            --radius:       14px;
-            --shadow-sm:    0 2px 8px rgba(0,0,0,0.06);
-            --shadow-md:    0 8px 30px rgba(0,0,0,0.10);
+            --border-color: #e2e8f0;
         }
-
-        *, *::before, *::after { box-sizing: border-box; }
 
         body {
-            background: var(--bg);
-            font-family: 'DM Sans', 'Segoe UI', sans-serif;
+            background-color: var(--bg-color);
+            font-family: 'Inter', 'Segoe UI', sans-serif;
             color: var(--text-main);
-            margin: 0; padding: 0;
-            line-height: 1.65;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
 
-        /* ── NAV (untouched) ─────────────────────────────── */
+        /* --- DO NOT TOUCH NAV --- */
         #nav {
             position: fixed;
             top: 0;
@@ -45,335 +41,303 @@
             transition: transform 0.3s ease;
             transform: translateY(0);
         }
-        #nav ol { list-style-type:none; margin:0; padding:0; overflow:hidden; }
-        #nav li { float:left; }
-        #nav li a { display:block; color:white; text-align:center; padding:13px 11px; text-decoration:none; transition:background-color 0.3s; }
-        #nav li a:hover { background-color:#111; }
-        .activenav { background-color:#4169E1; color:white; }
 
-        /* ── PAGE HEADER ─────────────────────────────────── */
-        .page-header {
-            text-align: center;
-            padding: 130px 20px 70px;
-            background: linear-gradient(160deg, #ffffff 0%, #eef1f9 100%);
-            border-bottom: 1px solid var(--border);
-            margin-bottom: 70px;
-            position: relative;
+        #nav ol {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
             overflow: hidden;
         }
-        .page-header::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(ellipse 60% 40% at 20% 30%, rgba(65,105,225,0.07) 0%, transparent 70%),
-                radial-gradient(ellipse 50% 50% at 80% 70%, rgba(100,160,255,0.06) 0%, transparent 70%);
-            pointer-events: none;
+
+        #nav li {
+            float: left;
         }
+
+        #nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 13px 11px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        #nav li a:hover {
+            background-color: #111;
+        }
+
+        .activenav {
+            background-color: #4169E1;
+            color: white;
+        }
+        /* ------------------------ */
+
+        .page-header {
+            text-align: center;
+            padding: 130px 20px 60px;
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
+        }
+
         .page-header h1 {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(2rem, 5vw, 3.2rem);
-            font-weight: 800;
+            font-family: "Mozilla Headline", sans-serif;
+            font-size: 2.8rem;
             color: var(--text-main);
-            letter-spacing: -0.02em;
-            margin-bottom: 14px;
-            position: relative;
+            margin-bottom: 15px;
+            font-weight: 700;
         }
+
         .page-header p {
-            max-width: 620px;
+            max-width: 700px;
             margin: 0 auto;
             color: var(--text-muted);
-            font-size: 1.05rem;
-            position: relative;
+            font-size: 1.1rem;
         }
+
         .btn-accredible {
             display: inline-flex;
             align-items: center;
             gap: 8px;
             background: var(--accent);
             color: white;
-            padding: 12px 26px;
-            border-radius: 50px;
+            padding: 12px 24px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.95rem;
-            margin-top: 28px;
-            transition: all 0.25s ease;
-            box-shadow: 0 4px 18px rgba(65,105,225,0.3);
-            position: relative;
+            font-size: 1rem;
+            margin-top: 25px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px rgba(65, 105, 225, 0.2);
         }
+
         .btn-accredible:hover {
             background: var(--accent-hover);
             color: white;
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(65,105,225,0.38);
+            box-shadow: 0 6px 12px rgba(65, 105, 225, 0.3);
         }
 
-        /* ── SECTION WRAPPER ─────────────────────────────── */
-        .section-wrapper {
+        /* Accordion Styles */
+        .accordion-container {
             max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 25px 100px;
-        }
-
-        /* ── BRAND PANEL (Google / Microsoft) ───────────── */
-        .brand-panel {
-            border-radius: var(--radius);
-            overflow: hidden;
-            margin-bottom: 40px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border);
-        }
-
-        .brand-trigger {
+            margin: 0 auto 50px;
+            padding: 0 25px;
             display: flex;
-            align-items: center;
+            flex-direction: column;
             gap: 20px;
-            padding: 26px 32px;
-            cursor: pointer;
-            user-select: none;
-            position: relative;
-            transition: filter 0.2s;
-        }
-        .brand-trigger:hover { filter: brightness(0.97); }
-
-        /* Google panel */
-        .brand-panel.google .brand-trigger {
-            background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
-            border-bottom: 3px solid transparent;
-            border-image: linear-gradient(90deg, #4285F4, #34A853, #FBBC05, #EA4335) 1;
-        }
-        .brand-panel.microsoft .brand-trigger {
-            background: linear-gradient(135deg, #f0f6ff 0%, #e8f0fe 100%);
-            border-bottom: 3px solid #0078D4;
         }
 
-        .brand-logo-wrap {
-            width: 56px;
-            height: 56px;
+        .accordion {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .accordion:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-header {
+            padding: 20px 25px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            flex-shrink: 0;
+            cursor: pointer;
+            background: #f8fafc;
+            user-select: none;
+            border-bottom: 1px solid transparent;
+            transition: background 0.2s, border-color 0.2s;
         }
-        .brand-panel.google .brand-logo-wrap {
-            background: #fff;
-            box-shadow: 0 2px 12px rgba(66,133,244,0.18);
-        }
-        .brand-panel.google .brand-logo-wrap i { color: #4285F4; }
-        .brand-panel.microsoft .brand-logo-wrap {
-            background: #fff;
-            box-shadow: 0 2px 12px rgba(0,120,212,0.18);
-        }
-        .brand-panel.microsoft .brand-logo-wrap i { color: #0078D4; }
 
-        .brand-info { flex: 1; }
-        .brand-info h2 {
-            font-family: 'Syne', sans-serif;
+        .accordion-header:hover {
+            background: #f1f5f9;
+        }
+
+        .accordion.active .accordion-header {
+            border-bottom-color: var(--border-color);
+        }
+
+        .accordion-logo {
+            width: 28px;
+            height: 28px;
+            margin-right: 15px;
+            object-fit: contain;
+        }
+
+        .accordion-title {
             font-size: 1.25rem;
             font-weight: 700;
-            margin: 0 0 5px;
             color: var(--text-main);
+            margin: 0;
+            flex-grow: 1;
         }
-        .brand-info p {
-            font-size: 0.88rem;
+
+        .accordion-icon {
             color: var(--text-muted);
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-body {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.3s ease-out;
+            background: var(--bg-color);
+        }
+
+        .accordion-body-inner {
+            overflow: hidden;
+        }
+
+        .accordion .cert-grid {
+            padding: 30px 25px;
             margin: 0;
         }
 
-        .brand-meta {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-        .cert-count-badge {
-            font-family: 'Syne', sans-serif;
-            font-size: 0.78rem;
-            font-weight: 700;
-            padding: 5px 13px;
-            border-radius: 50px;
-            white-space: nowrap;
-        }
-        .brand-panel.google .cert-count-badge {
-            background: rgba(66,133,244,0.12);
-            color: #4285F4;
-        }
-        .brand-panel.microsoft .cert-count-badge {
-            background: rgba(0,120,212,0.12);
-            color: #0078D4;
-        }
-
-        .toggle-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.35s cubic-bezier(.4,0,.2,1), background 0.2s;
-            font-size: 0.9rem;
-            flex-shrink: 0;
-        }
-        .brand-panel.google .toggle-icon { background: rgba(66,133,244,0.1); color: #4285F4; }
-        .brand-panel.microsoft .toggle-icon { background: rgba(0,120,212,0.1); color: #0078D4; }
-        .brand-panel.open .toggle-icon { transform: rotate(180deg); }
-
-        /* Collapsible body */
-        .brand-body {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.55s cubic-bezier(.4,0,.2,1);
-            background: var(--bg);
-        }
-        .brand-panel.open .brand-body { max-height: 5000px; }
-
-        .brand-body-inner {
-            padding: 30px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 26px;
-        }
-
-        /* ── DIVIDER ─────────────────────────────────────── */
+        /* General Grid Styles */
         .section-divider {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            margin-bottom: 38px;
-        }
-        .section-divider::before, .section-divider::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: var(--border);
-        }
-        .section-divider span {
-            font-family: 'Syne', sans-serif;
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--text-light);
-            white-space: nowrap;
+            max-width: 1280px;
+            margin: 20px auto 30px;
+            padding: 0 25px;
+            font-family: "Mozilla Headline", sans-serif;
+            font-size: 1.8rem;
+            color: var(--text-main);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
         }
 
-        /* ── CERT GRID ───────────────────────────────────── */
         .cert-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 26px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 25px 80px;
         }
 
-        /* ── CERT CARD ───────────────────────────────────── */
         .cert-card {
             background: var(--card-bg);
-            border-radius: var(--radius);
+            border-radius: 12px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-sm);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
         }
+
         .cert-card:hover {
             transform: translateY(-6px);
-            box-shadow: var(--shadow-md);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
 
         .cert-img-container {
             position: relative;
-            background: #f4f6fb;
+            background: #f1f5f9;
             aspect-ratio: 16/10;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid var(--border-color);
             padding: 10px;
         }
+
         .cert-img-container img {
-            width: 100%; height: 100%;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
         }
 
         .cert-content {
-            padding: 22px 24px 24px;
+            padding: 25px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
 
         .badge-category {
-            font-size: 0.72rem;
-            font-weight: 700;
+            font-size: 0.75rem;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.06em;
             color: var(--accent);
-            background: rgba(65,105,225,0.09);
-            padding: 5px 11px;
-            border-radius: 50px;
+            background: rgba(65, 105, 225, 0.1);
+            padding: 6px 12px;
+            border-radius: 6px;
             width: fit-content;
-            margin-bottom: 13px;
+            margin-bottom: 15px;
         }
-        .badge-google { color: #4285F4; background: rgba(66,133,244,0.1); }
-        .badge-microsoft { color: #0078D4; background: rgba(0,120,212,0.1); }
 
         .cert-title {
             color: var(--text-main);
-            font-family: 'Syne', sans-serif;
-            font-size: 1.15rem;
+            font-size: 1.35rem;
             font-weight: 700;
-            margin-bottom: 7px;
-            line-height: 1.35;
+            margin-bottom: 8px;
         }
+
         .org-container {
-            margin-bottom: 13px;
-            font-size: 0.88rem;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
             font-weight: 500;
             color: var(--text-muted);
         }
+
         .cert-org-link {
-            color: var(--accent);
+            color: var(--accent);   
             text-decoration: none;
-            font-weight: 600;
             transition: 0.2s;
+            font-weight: 600;
         }
-        .cert-org-link:hover { text-decoration: underline; color: var(--accent-hover); }
+
+        .cert-org-link:hover {
+            text-decoration: underline;
+            color: var(--accent-hover);
+        }
 
         .cert-desc {
             color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 18px;
-            flex-grow: 1;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
         }
 
         .meta-list {
             list-style: none;
-            padding: 13px 15px;
-            margin: 0 0 18px;
-            font-size: 0.82rem;
+            padding: 0;
+            margin-bottom: 25px;
+            font-size: 0.85rem;
             background: #f8fafc;
+            padding: 15px;
             border-radius: 8px;
-            border: 1px solid var(--border);
+            border: 1px solid var(--border-color);
         }
+
         .meta-list li {
+            margin-bottom: 6px;
             display: flex;
             justify-content: space-between;
-            margin-bottom: 5px;
         }
-        .meta-list li:last-child { margin-bottom: 0; }
-        .meta-label { color: var(--text-light); font-weight: 500; }
+
+        .meta-label {
+            color: var(--text-light);
+            font-weight: 500;
+        }
 
         .action-group {
             margin-top: auto;
             display: flex;
-            gap: 10px;
+            gap: 12px;
         }
+
         .btn-custom {
             flex: 1;
-            padding: 10px 11px;
+            padding: 11px 12px;
             border-radius: 8px;
             text-align: center;
             font-weight: 600;
-            font-size: 0.82rem;
+            font-size: 0.85rem;
             text-decoration: none;
             transition: all 0.2s ease;
             display: flex;
@@ -381,41 +345,37 @@
             justify-content: center;
             gap: 6px;
         }
-        .btn-verify { background: var(--accent); color: white; border: 1px solid var(--accent); }
-        .btn-verify:hover { background: var(--accent-hover); color: white; }
-        .btn-pdf { background: white; color: var(--text-main); border: 1px solid var(--border); }
-        .btn-pdf:hover { background: #f1f5f9; }
 
-        /* Google-branded buttons */
-        .btn-google { background: #4285F4; color: white; border: 1px solid #4285F4; }
-        .btn-google:hover { background: #2b74e3; color: white; }
+        .btn-verify {
+            background: var(--accent);
+            color: white;
+            border: 1px solid var(--accent);
+        }
 
-        /* Microsoft-branded buttons */
-        .btn-msft { background: #0078D4; color: white; border: 1px solid #0078D4; }
-        .btn-msft:hover { background: #006cbd; color: white; }
+        .btn-verify:hover {
+            background: var(--accent-hover);
+            color: white;
+        }
 
-        /* Responsive */
-        @media (max-width: 600px) {
-            .cert-grid, .brand-body-inner { grid-template-columns: 1fr; }
+        .btn-pdf {
+            background: white;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-pdf:hover {
+            background: #f1f5f9;
+        }
+
+        @media (max-width: 480px) {
+            .cert-grid { grid-template-columns: 1fr; }
             .action-group { flex-direction: column; }
-            .brand-trigger { padding: 18px 20px; gap: 14px; }
-            .brand-body-inner { padding: 20px; }
-            .brand-info h2 { font-size: 1.05rem; }
-        }
-
-        /* Entrance animation for cards inside brand panel */
-        .brand-panel.open .cert-card {
-            animation: cardReveal 0.4s ease both;
-        }
-        @keyframes cardReveal {
-            from { opacity: 0; transform: translateY(16px); }
-            to   { opacity: 1; transform: translateY(0); }
+            .accordion-title { font-size: 1.1rem; }
         }
     </style>
 </head>
 
 <body>
-    <!-- NAV — untouched -->
     <div id="nav">
         <ol>
             <li><a href='/'>Home</a></li>
@@ -425,626 +385,576 @@
         </ol>
     </div>
 
-    <!-- PAGE HEADER -->
     <header class="page-header">
-        <h1>Career &amp; Self-Learning Assets</h1>
+        <h1>Career & Self-Learning Assets</h1>
         <p>A collection of my extra-curricular activities and technical certifications representing continuous skill acquisition.</p>
+
         <a href="https://www.credential.net/profile/mahadiislamalif292682/wallet" target="_blank" class="btn-accredible">
             <i class="fa-solid fa-wallet"></i> View My Accredible Wallet
         </a>
     </header>
 
-    <div class="section-wrapper">
+    <div class="accordion-container">
+        
+        <div class="accordion" id="acc-google">
+            <div class="accordion-header" onclick="toggleAccordion('acc-google')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" class="accordion-logo">
+                <h2 class="accordion-title">Digital Marketing Certifications by Google</h2>
+                <i class="fa-solid fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-body">
+                <div class="accordion-body-inner">
+                    <div class="cert-grid">
+                        
+                        <div class="cert-card">
+                            <div class="cert-img-container">
+                                <img src="Screenshot_20260302-223501.jpg" alt="Google Analytics Certification" loading="lazy">
+                            </div>
+                            <div class="cert-content">
+                                <span class="badge-category">Digital Marketing</span>
+                                <div class="cert-title">Google Analytics Certification</div>
+                                <div class="org-container">
+                                    <a href="https://skillshop.docebosaas.com/" target="_blank" class="cert-org-link">Google</a>
+                                </div>
+                                <p class="cert-desc">Demonstrated proficiency in Google Analytics 4 (GA4). Acquired skills in event-based data collection, user behavior analysis, and advanced reporting to drive measurable business growth through data-driven insights.</p>
+                                <ul class="meta-list">
+                                    <li><span class="meta-label">Certificate ID</span><span>175893522</span></li>
+                                    <li><span class="meta-label">Date Earned</span><span>Mar 02, 2026</span></li>
+                                </ul>
+                                <div class="action-group">
+                                    <a href="https://skillshop.credential.net/dfe454d9-c386-46da-808f-552d1a5ab786" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Credential</a>
+                                    <a href="https://drive.google.com/drive/folders/1_SgMFkJ_zGNDAPmftWGSU_uiAHKVHRCp" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-folder-open"></i> View Files</a>
+                                </div>
+                            </div>
+                        </div>
 
-        <!-- ══════════════════════════════════════════════ -->
-        <!--  GOOGLE DIGITAL MARKETING PANEL               -->
-        <!-- ══════════════════════════════════════════════ -->
-        <div class="brand-panel google" id="googlePanel">
-            <div class="brand-trigger" onclick="togglePanel('googlePanel')">
-                <div class="brand-logo-wrap">
-                    <i class="fa-brands fa-google"></i>
-                </div>
-                <div class="brand-info">
-                    <h2>Digital Marketing Certifications by Google</h2>
-                    <p>Issued via Google Skillshop — official Google certification program</p>
-                </div>
-                <div class="brand-meta">
-                    <span class="cert-count-badge">4 Certificates</span>
-                    <div class="toggle-icon">
-                        <i class="fa-solid fa-chevron-down"></i>
+                        <div class="cert-card">
+                            <div class="cert-img-container">
+                                <img src="Screenshot_20260301-000358.jpg" alt="Google Ads Display Certification" loading="lazy">
+                            </div>
+                            <div class="cert-content">
+                                <span class="badge-category">Digital Marketing</span>
+                                <div class="cert-title">Google Ads Display Certification</div>
+                                <div class="org-container">
+                                    <a href="https://skillshop.docebosaas.com/" target="_blank" class="cert-org-link">Google</a>
+                                </div>
+                                <p class="cert-desc">Demonstrated mastery of display advertising on the Google Display Network. Acquired skills to develop effective display strategies and campaigns that translate a vision for online marketing into specific, measurable business goals.</p>
+                                <ul class="meta-list">
+                                    <li><span class="meta-label">Certificate ID</span><span>175785405</span></li>
+                                    <li><span class="meta-label">Date Earned</span><span>Feb 28, 2026</span></li>
+                                </ul>
+                                <div class="action-group">
+                                    <a href="https://skillshop.credential.net/57426e46-22e9-46c0-9970-97b6873c3c91" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Credential</a>
+                                    <a href="https://drive.google.com/drive/folders/1js6SHz3bRrydcnzoTL6nkEEur85b9YsJ" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-folder-open"></i> View Files</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cert-card">
+                            <div class="cert-img-container">
+                                <img src="Screenshot_20260227-232512.jpg" alt="Conversion Optimization Certification" loading="lazy">
+                            </div>
+                            <div class="cert-content">
+                                <span class="badge-category">Digital Marketing</span>
+                                <div class="cert-title">Conversion Optimization Certification</div>
+                                <div class="org-container">
+                                    <a href="https://skillshop.docebosaas.com/" target="_blank" class="cert-org-link">Google</a>
+                                </div>
+                                <p class="cert-desc">Demonstrated expertise in Conversion Rate Optimization (CRO) by mastering strategies to improve website performance. Acquired skills in user behavior analysis, A/B testing methodology, and UX optimization to turn traffic into measurable business results.</p>
+                                <ul class="meta-list">
+                                    <li><span class="meta-label">Certificate ID</span><span>175709649</span></li>
+                                    <li><span class="meta-label">Date Earned</span><span>Feb 27, 2026</span></li>
+                                </ul>
+                                <div class="action-group">
+                                    <a href="https://skillshop.credential.net/fa7c347d-c155-4291-8b82-6ef1137782be" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Credential</a>
+                                    <a href="https://drive.google.com/drive/folders/1is12VngItBxcC_HYuV74Ot1lKHbhhMUe" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-folder-open"></i> View Files</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cert-card">
+                            <div class="cert-img-container">
+                                <img src="Screenshot_20260227-090858.jpg" alt="Google Ads Video Certification" loading="lazy">
+                            </div>
+                            <div class="cert-content">
+                                <span class="badge-category">Digital Marketing</span>
+                                <div class="cert-title">Google Ads Video Certification</div>
+                                <div class="org-container">
+                                    <a href="https://skillshop.docebosaas.com/" target="_blank" class="cert-org-link">Google</a>
+                                </div>
+                                <p class="cert-desc">Demonstrated mastery of video advertising on YouTube and Google Video partners. Acquired skills to drive results with personalized video campaigns, optimize performance, and understand audience behavior to meet marketing objectives.</p>
+                                <ul class="meta-list">
+                                    <li><span class="meta-label">Certificate ID</span><span>175593090</span></li>
+                                    <li><span class="meta-label">Date Earned</span><span>Feb 26, 2026</span></li>
+                                </ul>
+                                <div class="action-group">
+                                    <a href="https://skillshop.credential.net/a871f470-16e3-4851-988c-e30520693bb5" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Credential</a>
+                                    <a href="https://drive.google.com/drive/folders/1kLspMlu-H3Y-WEODBqyazSPEX-CU_DhG" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-folder-open"></i> View Files</a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-            <div class="brand-body">
-                <div class="brand-body-inner">
-
-                    <!-- Google Analytics -->
-                    <div class="cert-card">
-                        <div class="cert-img-container">
-                            <img src="Screenshot_20260302-223501.jpg" alt="Google Analytics Certification" loading="lazy">
-                        </div>
-                        <div class="cert-content">
-                            <span class="badge-category badge-google">Digital Marketing</span>
-                            <div class="cert-title">Google Analytics Certification</div>
-                            <div class="org-container">
-                                <a href="https://skillshop.docebosaas.com/" target="_blank" class="cert-org-link">Google Skillshop</a>
-                            </div>
-                            <p class="cert-desc">Demonstrated proficiency in Google Analytics 4 (GA4). Acquired skills in event-based data collection, user behavior analysis, and advanced reporting to drive measurable business growth through data-driven insights.</p>
-                            <ul class="meta-list">
-                                <li><span class="meta-label">Certificate ID</span><span>175893522</span></li>
-                                <li><span class="meta-label">Date Earned</span><span>Mar 02, 2026</span></li>
-                            </ul>
-                            <div class="action-group">
-                                <a href="https://skillshop.credential.net/dfe454d9-c386-46da-808f-552d1a5ab786" class="btn-custom btn-google" target="_blank"><i class="fa-solid fa-link"></i> Verify Credential</a>
-                                <a href="https://drive.google.com/drive/folders/1_SgMFkJ_zGNDAPmftWGSU_uiAHKVHRCp" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-folder-open"></i> View Files</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Google Ads Display -->
-                    <div class="cert-card">
-                        <div class="cert-img-container">
-                            <img src="Screenshot_20260301-000358.jpg" alt="Google Ads Display Certification" loading="lazy">
-                        </div>
-                        <div class="cert-content">
-                            <span class="badge-category badge-google">Digital Marketing</span>
-                            <div class="cert-title">Google Ads Display Certification</div>
-                            <div class="org-container">
-                                <a href="https://skillshop.docebosaas.com/" target="_blank" class="cert-org-link">Google Skillshop</a>
-                            </div>
-                            <p class="cert-desc">Demonstrated mastery of display advertising on the Google Display Network. Acquired skills to develop effective display strategies and campaigns that translate a vision for online marketing into specific, measurable business goals.</p>
-                            <ul class="meta-list">
-                                <li><span class="meta-label">Certificate ID</span><span>175785405</span></li>
-                                <li><span class="meta-label">Date Earned</span><span>Feb 28, 2026</span></li>
-                            </ul>
-                            <div class="action-group">
-                                <a href="https://skillshop.credential.net/57426e46-22e9-46c0-9970-97b6873c3c91" class="btn-custom btn-google" target="_blank"><i class="fa-solid fa-link"></i> Verify Credential</a>
-                                <a href="https://drive.google.com/drive/folders/1js6SHz3bRrydcnzoTL6nkEEur85b9YsJ" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-folder-open"></i> View Files</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Conversion Optimization -->
-                    <div class="cert-card">
-                        <div class="cert-img-container">
-                            <img src="Screenshot_20260227-232512.jpg" alt="Conversion Optimization Certification" loading="lazy">
-                        </div>
-                        <div class="cert-content">
-                            <span class="badge-category badge-google">Digital Marketing</span>
-                            <div class="cert-title">Conversion Optimization Certification</div>
-                            <div class="org-container">
-                                <a href="https://skillshop.docebosaas.com/" target="_blank" class="cert-org-link">Google Skillshop</a>
-                            </div>
-                            <p class="cert-desc">Demonstrated expertise in Conversion Rate Optimization (CRO) by mastering strategies to improve website performance. Acquired skills in user behavior analysis, A/B testing methodology, and UX optimization to turn traffic into measurable business results.</p>
-                            <ul class="meta-list">
-                                <li><span class="meta-label">Certificate ID</span><span>175709649</span></li>
-                                <li><span class="meta-label">Date Earned</span><span>Feb 27, 2026</span></li>
-                            </ul>
-                            <div class="action-group">
-                                <a href="https://skillshop.credential.net/fa7c347d-c155-4291-8b82-6ef1137782be" class="btn-custom btn-google" target="_blank"><i class="fa-solid fa-link"></i> Verify Credential</a>
-                                <a href="https://drive.google.com/drive/folders/1is12VngItBxcC_HYuV74Ot1lKHbhhMUe" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-folder-open"></i> View Files</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Google Ads Video -->
-                    <div class="cert-card">
-                        <div class="cert-img-container">
-                            <img src="Screenshot_20260227-090858.jpg" alt="Google Ads Video Certification" loading="lazy">
-                        </div>
-                        <div class="cert-content">
-                            <span class="badge-category badge-google">Digital Marketing</span>
-                            <div class="cert-title">Google Ads Video Certification</div>
-                            <div class="org-container">
-                                <a href="https://skillshop.docebosaas.com/" target="_blank" class="cert-org-link">Google Skillshop</a>
-                            </div>
-                            <p class="cert-desc">Demonstrated mastery of video advertising on YouTube and Google Video partners. Acquired skills to drive results with personalized video campaigns, optimize performance, and understand audience behavior to meet marketing objectives.</p>
-                            <ul class="meta-list">
-                                <li><span class="meta-label">Certificate ID</span><span>175593090</span></li>
-                                <li><span class="meta-label">Date Earned</span><span>Feb 26, 2026</span></li>
-                            </ul>
-                            <div class="action-group">
-                                <a href="https://skillshop.credential.net/a871f470-16e3-4851-988c-e30520693bb5" class="btn-custom btn-google" target="_blank"><i class="fa-solid fa-link"></i> Verify Credential</a>
-                                <a href="https://drive.google.com/drive/folders/1kLspMlu-H3Y-WEODBqyazSPEX-CU_DhG" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-folder-open"></i> View Files</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div><!-- /brand-body-inner -->
-            </div><!-- /brand-body -->
-        </div><!-- /google panel -->
-
-
-        <!-- ══════════════════════════════════════════════ -->
-        <!--  MICROSOFT AI PANEL                            -->
-        <!-- ══════════════════════════════════════════════ -->
-        <div class="brand-panel microsoft" id="microsoftPanel">
-            <div class="brand-trigger" onclick="togglePanel('microsoftPanel')">
-                <div class="brand-logo-wrap">
-                    <i class="fa-brands fa-microsoft"></i>
-                </div>
-                <div class="brand-info">
-                    <h2>Artificial Intelligence Certifications by Microsoft</h2>
-                    <p>Issued via Microsoft Learn — official Microsoft AI learning path</p>
-                </div>
-                <div class="brand-meta">
-                    <span class="cert-count-badge">5 Certificates</span>
-                    <div class="toggle-icon">
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="brand-body">
-                <div class="brand-body-inner">
-
-                    <!-- Introduction to AI concepts -->
-                    <div class="cert-card">
-                        <div class="cert-img-container">
-                            <img src="7434a150-17e2-11f1-823d-d1b3bb626f2d.png" alt="Introduction to AI concepts" loading="lazy">
-                        </div>
-                        <div class="cert-content">
-                            <span class="badge-category badge-microsoft">Artificial Intelligence</span>
-                            <div class="cert-title">Introduction to AI Concepts</div>
-                            <div class="org-container">
-                                <a href="https://learn.microsoft.com/" target="_blank" class="cert-org-link">Microsoft Learn</a>
-                            </div>
-                            <p class="cert-desc">Acquired foundational knowledge of Artificial Intelligence. Explored core AI principles and how they are applied in modern technologies to solve complex problems and drive digital transformation.</p>
-                            <ul class="meta-list">
-                                <li><span class="meta-label">Date Earned</span><span>Mar 04, 2026</span></li>
-                            </ul>
-                            <div class="action-group">
-                                <a href="https://learn.microsoft.com/api/achievements/share/en-us/MahadiIslamAlif-8838/FQCM992X?sharingId=23838C07FFF626CC" class="btn-custom btn-msft" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                                <a href="https://drive.google.com/file/d/150124tlm3aJeg6HTvB8fY4o91ebDsZtl/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Work smarter with Microsoft 365 Copilot -->
-                    <div class="cert-card">
-                        <div class="cert-img-container">
-                            <img src="45b625e0-17e9-11f1-8f5f-c5084baa2115.png" alt="Work smarter with Microsoft 365 Copilot Chat" loading="lazy">
-                        </div>
-                        <div class="cert-content">
-                            <span class="badge-category badge-microsoft">Artificial Intelligence</span>
-                            <div class="cert-title">Work Smarter with Microsoft 365 Copilot Chat</div>
-                            <div class="org-container">
-                                <a href="https://learn.microsoft.com/" target="_blank" class="cert-org-link">Microsoft Learn</a>
-                            </div>
-                            <p class="cert-desc">Mastered practical applications of Microsoft 365 Copilot Chat to enhance daily productivity. Learned how to craft effective prompts to summarize information, generate content, and streamline workflows using AI.</p>
-                            <ul class="meta-list">
-                                <li><span class="meta-label">Date Earned</span><span>Mar 04, 2026</span></li>
-                            </ul>
-                            <div class="action-group">
-                                <a href="https://learn.microsoft.com/api/achievements/share/en-us/MahadiIslamAlif-8838/9RJYTKXU?sharingId=23838C07FFF626CC" class="btn-custom btn-msft" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                                <a href="https://drive.google.com/file/d/1tELPEAkt0Rni9wa7Ich7eWI_9XfZDtPR/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Transform ideas into action with Copilot Chat -->
-                    <div class="cert-card">
-                        <div class="cert-img-container">
-                            <img src="Screenshot_20260305-163647.jpg" alt="Transform ideas into action with Copilot Chat" loading="lazy">
-                        </div>
-                        <div class="cert-content">
-                            <span class="badge-category badge-microsoft">Artificial Intelligence</span>
-                            <div class="cert-title">Transform Ideas into Action with Copilot Chat</div>
-                            <div class="org-container">
-                                <a href="https://learn.microsoft.com/" target="_blank" class="cert-org-link">Microsoft Learn</a>
-                            </div>
-                            <p class="cert-desc">Mastered the transition from ideation to execution using Microsoft Copilot Chat. Developed proficiency in using AI to refine creative concepts, draft project structures, and automate workflows to turn abstract ideas into measurable results.</p>
-                            <ul class="meta-list">
-                                <li><span class="meta-label">Date Earned</span><span>Mar 05, 2026</span></li>
-                            </ul>
-                            <div class="action-group">
-                                <a href="https://learn.microsoft.com/api/achievements/share/en-us/MahadiIslamAlif-8838/UATRSBR3?sharingId=23838C07FFF626CC" class="btn-custom btn-msft" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                                <a href="https://drive.google.com/file/d/1FBUlRoyJqRC-nzXXktK1wlkV_bTj6Ip9/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Use AI for everyday tasks -->
-                    <div class="cert-card">
-                        <div class="cert-img-container">
-                            <img src="Screenshot_20260305-164231.jpg" alt="Use AI for everyday tasks" loading="lazy">
-                        </div>
-                        <div class="cert-content">
-                            <span class="badge-category badge-microsoft">Artificial Intelligence</span>
-                            <div class="cert-title">Use AI for Everyday Tasks</div>
-                            <div class="org-container">
-                                <a href="https://learn.microsoft.com/" target="_blank" class="cert-org-link">Microsoft Learn</a>
-                            </div>
-                            <p class="cert-desc">Acquired expertise in integrating Artificial Intelligence into daily personal and professional routines. Focused on leveraging LLMs to optimize time management, automate repetitive tasks, and enhance information processing for maximum efficiency.</p>
-                            <ul class="meta-list">
-                                <li><span class="meta-label">Date Earned</span><span>Mar 05, 2026</span></li>
-                            </ul>
-                            <div class="action-group">
-                                <a href="https://learn.microsoft.com/api/achievements/share/en-us/MahadiIslamAlif-8838/PGA6NCL4?sharingId=23838C07FFF626CC" class="btn-custom btn-msft" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                                <a href="https://drive.google.com/file/d/1h0mwstavruDtqsnt4-YrZjB2nb0J_Rz8/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Intro to Prompt Engineering with GitHub Copilot -->
-                    <div class="cert-card">
-                        <div class="cert-img-container">
-                            <img src="50894680-13b8-11f1-a6c8-43c9eb6c11ce.png" alt="Introduction to Prompt Engineering with GitHub Copilot" loading="lazy">
-                        </div>
-                        <div class="cert-content">
-                            <span class="badge-category badge-microsoft">Artificial Intelligence</span>
-                            <div class="cert-title">Introduction to Prompt Engineering with GitHub Copilot</div>
-                            <div class="org-container">
-                                <a href="https://www.microsoft.com/" target="_blank" class="cert-org-link">Microsoft</a> &amp; <a href="https://www.simplilearn.com/" target="_blank" class="cert-org-link">Simplilearn</a>
-                            </div>
-                            <p class="cert-desc">Mastered the principles of prompt engineering specifically for AI-assisted development. Learned to provide clear, contextual instructions to GitHub Copilot to generate high-quality code, debug efficiently, and streamline development workflows.</p>
-                            <ul class="meta-list">
-                                <li><span class="meta-label">Certificate ID</span><span>9897732</span></li>
-                                <li><span class="meta-label">Date Earned</span><span>Feb 27, 2026</span></li>
-                            </ul>
-                            <div class="action-group">
-                                <a href="https://simpli.app.link/E9GfJ9bY50b" class="btn-custom btn-msft" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                                <a href="https://drive.google.com/file/d/1O4tRNK2P6goAnT-gPSd9dAxSxF33ET3Q/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div><!-- /brand-body-inner -->
-            </div><!-- /brand-body -->
-        </div><!-- /microsoft panel -->
-
-
-        <!-- ══════════════════════════════════════════════ -->
-        <!--  REMAINING CERTIFICATES                        -->
-        <!-- ══════════════════════════════════════════════ -->
-        <div class="section-divider">
-            <span>All Other Certifications</span>
         </div>
 
-        <div class="cert-grid">
+        <div class="accordion" id="acc-microsoft">
+            <div class="accordion-header" onclick="toggleAccordion('acc-microsoft')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo" class="accordion-logo">
+                <h2 class="accordion-title">Artificial Intelligence Certifications by Microsoft</h2>
+                <i class="fa-solid fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-body">
+                <div class="accordion-body-inner">
+                    <div class="cert-grid">
 
-            <!-- freeCodeCamp -->
-            <div class="cert-card">
-                <div class="cert-img-container">
-                    <img src="dea55f30-1723-11f1-9296-5991593cb3b3.png" alt="Web Design" loading="lazy">
-                </div>
-                <div class="cert-content">
-                    <span class="badge-category">Web Development</span>
-                    <div class="cert-title">Legacy Responsive Web Design V8</div>
-                    <div class="org-container">
-                        <a href="https://www.freecodecamp.org/" target="_blank" class="cert-org-link">freeCodeCamp</a>
-                    </div>
-                    <p class="cert-desc">Achieved proficiency in modern front-end development through 300+ hours of curriculum. Mastered Semantic HTML5, CSS3, Flexbox, and CSS Grid to build accessibility-focused, responsive layouts that adapt seamlessly across all devices.</p>
-                    <ul class="meta-list">
-                        <li><span class="meta-label">Languages</span><span>HTML5, CSS, JS</span></li>
-                        <li><span class="meta-label">Date Earned</span><span>Aug 14, 2025</span></li>
-                    </ul>
-                    <div class="action-group">
-                        <a href="https://freecodecamp.org/certification/fcc-b75b4c9e-713d-403c-9ada-e9b2306f2f1a/responsive-web-design" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                        <a href="https://drive.google.com/file/d/1-DPZKdxHaT1dhu9GDttS2EAsPzFtshQ2/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
-                        <a href="https://drive.google.com/file/d/1yBTsaIGMNRxN9RZPEYCToeqH7YfY1R1I/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-solid fa-clone"></i> Alt Layout</a>
+                        <div class="cert-card">
+                            <div class="cert-img-container">
+                                <img src="Screenshot_20260305-163647.jpg" alt="Transform ideas into action with Copilot Chat" loading="lazy">
+                            </div>
+                            <div class="cert-content">
+                                <span class="badge-category">Artificial Intelligence</span>
+                                <div class="cert-title">Transform ideas into action with Copilot Chat</div>
+                                <div class="org-container">
+                                    <a href="https://learn.microsoft.com/" target="_blank" class="cert-org-link">Microsoft</a>
+                                </div>
+                                <p class="cert-desc">Mastered the transition from ideation to execution using Microsoft Copilot Chat. Developed proficiency in using AI to refine creative concepts, draft project structures, and automate workflows to turn abstract ideas into measurable results.</p>
+                                <ul class="meta-list">
+                                    <li><span class="meta-label">Date Earned</span><span>Mar 05, 2026</span></li>
+                                </ul>
+                                <div class="action-group">
+                                    <a href="https://learn.microsoft.com/api/achievements/share/en-us/MahadiIslamAlif-8838/UATRSBR3?sharingId=23838C07FFF626CC" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
+                                    <a href="https://drive.google.com/file/d/1FBUlRoyJqRC-nzXXktK1wlkV_bTj6Ip9/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cert-card">
+                            <div class="cert-img-container">
+                                <img src="Screenshot_20260305-164231.jpg" alt="Use AI for everyday tasks" loading="lazy">
+                            </div>
+                            <div class="cert-content">
+                                <span class="badge-category">Artificial Intelligence</span>
+                                <div class="cert-title">Use AI for everyday tasks</div>
+                                <div class="org-container">
+                                    <a href="https://learn.microsoft.com/" target="_blank" class="cert-org-link">Microsoft</a>
+                                </div>
+                                <p class="cert-desc">Acquired expertise in integrating Artificial Intelligence into daily personal and professional routines. Focused on leveraging LLMs to optimize time management, automate repetitive tasks, and enhance information processing for maximum efficiency.</p>
+                                <ul class="meta-list">
+                                    <li><span class="meta-label">Date Earned</span><span>Mar 05, 2026</span></li>
+                                </ul>
+                                <div class="action-group">
+                                    <a href="https://learn.microsoft.com/api/achievements/share/en-us/MahadiIslamAlif-8838/PGA6NCL4?sharingId=23838C07FFF626CC" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
+                                    <a href="https://drive.google.com/file/d/1h0mwstavruDtqsnt4-YrZjB2nb0J_Rz8/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cert-card">
+                            <div class="cert-img-container">
+                                <img src="7434a150-17e2-11f1-823d-d1b3bb626f2d.png" alt="Introduction to AI concepts" loading="lazy">
+                            </div>
+                            <div class="cert-content">
+                                <span class="badge-category">Artificial Intelligence</span>
+                                <div class="cert-title">Introduction to AI concepts</div>
+                                <div class="org-container">
+                                    <a href="https://learn.microsoft.com/" target="_blank" class="cert-org-link">Microsoft</a>
+                                </div>
+                                <p class="cert-desc">Acquired foundational knowledge of Artificial Intelligence. Explored core AI principles and how they are applied in modern technologies to solve complex problems and drive digital transformation.</p>
+                                <ul class="meta-list">
+                                    <li><span class="meta-label">Date Earned</span><span>Mar 04, 2026</span></li>
+                                </ul>
+                                <div class="action-group">
+                                    <a href="https://learn.microsoft.com/api/achievements/share/en-us/MahadiIslamAlif-8838/FQCM992X?sharingId=23838C07FFF626CC" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
+                                    <a href="https://drive.google.com/file/d/150124tlm3aJeg6HTvB8fY4o91ebDsZtl/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cert-card">
+                            <div class="cert-img-container">
+                                <img src="45b625e0-17e9-11f1-8f5f-c5084baa2115.png" alt="Work smarter with Microsoft 365 Copilot Chat" loading="lazy">
+                            </div>
+                            <div class="cert-content">
+                                <span class="badge-category">Artificial Intelligence</span>
+                                <div class="cert-title">Work smarter with Microsoft 365 Copilot Chat</div>
+                                <div class="org-container">
+                                    <a href="https://learn.microsoft.com/" target="_blank" class="cert-org-link">Microsoft</a>
+                                </div>
+                                <p class="cert-desc">Mastered practical applications of Microsoft 365 Copilot Chat to enhance daily productivity. Learned how to craft effective prompts to summarize information, generate content, and streamline workflows using AI.</p>
+                                <ul class="meta-list">
+                                    <li><span class="meta-label">Date Earned</span><span>Mar 04, 2026</span></li>
+                                </ul>
+                                <div class="action-group">
+                                    <a href="https://learn.microsoft.com/api/achievements/share/en-us/MahadiIslamAlif-8838/9RJYTKXU?sharingId=23838C07FFF626CC" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
+                                    <a href="https://drive.google.com/file/d/1tELPEAkt0Rni9wa7Ich7eWI_9XfZDtPR/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cert-card">
+                            <div class="cert-img-container">
+                                <img src="50894680-13b8-11f1-a6c8-43c9eb6c11ce.png" alt="Introduction to Prompt Engineering with GitHub Copilot" loading="lazy">
+                            </div>
+                            <div class="cert-content">
+                                <span class="badge-category">Artificial Intelligence</span>
+                                <div class="cert-title">Introduction to Prompt Engineering with GitHub Copilot</div>
+                                <div class="org-container">
+                                    <a href="https://www.microsoft.com/" target="_blank" class="cert-org-link">Microsoft</a> & <a href="https://www.simplilearn.com/" target="_blank" class="cert-org-link">Simplilearn</a>
+                                </div>
+                                <p class="cert-desc">Mastered the principles of prompt engineering specifically for AI-assisted development. Learned to provide clear, contextual instructions to GitHub Copilot to generate high-quality code, debug efficiently, and streamline development workflows.</p>
+                                <ul class="meta-list">
+                                    <li><span class="meta-label">Certificate ID</span><span>9897732</span></li>
+                                    <li><span class="meta-label">Date Earned</span><span>Feb 27, 2026</span></li>
+                                </ul>
+                                <div class="action-group">
+                                    <a href="https://simpli.app.link/E9GfJ9bY50b" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
+                                    <a href="https://drive.google.com/file/d/1O4tRNK2P6goAnT-gPSd9dAxSxF33ET3Q/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Intro to Generative AI Studio (Google Cloud + Simplilearn) -->
-            <div class="cert-card">
-                <div class="cert-img-container">
-                    <img src="57ea47b1-13a1-11f1-8ec7-116f7eb89fed.png" alt="Introduction to Generative AI Studio" loading="lazy">
+    </div>
+
+    <h2 class="section-divider">Other Certifications</h2>
+
+    <div class="cert-grid">
+        <div class="cert-card">
+            <div class="cert-img-container">
+                <img src="dea55f30-1723-11f1-9296-5991593cb3b3.png" alt="Web Design" loading="lazy">
+            </div>
+            <div class="cert-content">
+                <span class="badge-category">Web Development</span>
+                <div class="cert-title">Legacy Responsive Web Design V8</div>
+                <div class="org-container">
+                    <a href="https://www.freecodecamp.org/" target="_blank" class="cert-org-link">freeCodeCamp</a>
                 </div>
-                <div class="cert-content">
-                    <span class="badge-category">Artificial Intelligence</span>
-                    <div class="cert-title">Introduction to Generative AI Studio</div>
-                    <div class="org-container">
-                        <a href="https://cloud.google.com/" target="_blank" class="cert-org-link">Google Cloud</a> &amp; <a href="https://www.simplilearn.com/" target="_blank" class="cert-org-link">Simplilearn</a>
-                    </div>
-                    <p class="cert-desc">Acquired foundational knowledge in Generative AI Studio on Google Cloud's Vertex AI platform. Explored prompt engineering, model tuning, and resource management to design and deploy AI-driven applications.</p>
-                    <ul class="meta-list">
-                        <li><span class="meta-label">Certificate ID</span><span>9896954</span></li>
-                        <li><span class="meta-label">Date Earned</span><span>Feb 27, 2026</span></li>
-                    </ul>
-                    <div class="action-group">
-                        <a href="https://simpli.app.link/UwljbMSL50b" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                        <a href="https://drive.google.com/file/d/1j_RmZhL8BKjszIoEIdS_nWetSBpq1eOR/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
-                    </div>
+                <p class="cert-desc">Achieved proficiency in modern front-end development through 300+ hours of curriculum. Mastered Semantic HTML5, CSS3, Flexbox, and CSS Grid to build accessibility-focused, responsive layouts that adapt seamlessly across all devices.</p>
+                <ul class="meta-list">
+                    <li><span class="meta-label">Languages</span><span>HTML5, CSS, JS</span></li>
+                    <li><span class="meta-label">Date Earned</span><span>Aug 14, 2025</span></li>
+                </ul>
+                <div class="action-group">
+                    <a href="https://freecodecamp.org/certification/fcc-b75b4c9e-713d-403c-9ada-e9b2306f2f1a/responsive-web-design" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
+                    <a href="https://drive.google.com/file/d/1-DPZKdxHaT1dhu9GDttS2EAsPzFtshQ2/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
+                    <a href="https://drive.google.com/file/d/1yBTsaIGMNRxN9RZPEYCToeqH7YfY1R1I/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-solid fa-clone"></i> View Alternative Layout</a>
                 </div>
             </div>
+        </div>
 
-            <!-- The Search for Water on Mars -->
-            <div class="cert-card">
-                <div class="cert-img-container">
-                    <img src="Screenshot_20260225-002301.jpg" alt="The Search for Water on Mars" loading="lazy">
+        <div class="cert-card">
+            <div class="cert-img-container">
+                <img src="57ea47b1-13a1-11f1-8ec7-116f7eb89fed.png" alt="Introduction to Generative AI Studio" loading="lazy">
+            </div>
+            <div class="cert-content">
+                <span class="badge-category">Artificial Intelligence</span>
+                <div class="cert-title">Introduction to Generative AI Studio</div>
+                <div class="org-container">
+                    <a href="https://cloud.google.com/" target="_blank" class="cert-org-link">Google Cloud</a> & <a href="https://www.simplilearn.com/" target="_blank" class="cert-org-link">Simplilearn</a>
                 </div>
-                <div class="cert-content">
-                    <span class="badge-category">Space Science</span>
-                    <div class="cert-title">The Search for Water on Mars</div>
-                    <div class="org-container">
-                        <a href="https://www.open.edu/openlearn/" target="_blank" class="cert-org-link">OpenLearn</a> by <a href="https://www.open.ac.uk/" target="_blank" class="cert-org-link">Open University</a>
-                    </div>
-                    <p class="cert-desc">Explored the scientific evidence for water on the Red Planet. Gained insights into Martian history, orbital/robotic detection techniques, and the critical link between water and the search for extraterrestrial life.</p>
-                    <ul class="meta-list">
-                        <li><span class="meta-label">Focus</span><span>Astrobiology &amp; Planetary Science</span></li>
-                        <li><span class="meta-label">Date Earned</span><span>Feb 24, 2026</span></li>
-                    </ul>
-                    <div class="action-group">
-                        <a href="https://www.open.edu/openlearn/science-maths-technology/the-search-water-on-mars/content-section-0" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Course Details</a>
-                        <a href="https://drive.google.com/file/d/1MBVOcieCDgs1qjJiAHddondfUnZDX1kz/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
-                    </div>
+                <p class="cert-desc">Acquired foundational knowledge in Generative AI Studio on Google Cloud's Vertex AI platform. Explored prompt engineering, model tuning, and resource management to design and deploy AI-driven applications.</p>
+                <ul class="meta-list">
+                    <li><span class="meta-label">Certificate ID</span><span>9896954</span></li>
+                    <li><span class="meta-label">Date Earned</span><span>Feb 27, 2026</span></li>
+                </ul>
+                <div class="action-group">
+                    <a href="https://simpli.app.link/UwljbMSL50b" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
+                    <a href="https://drive.google.com/file/d/1j_RmZhL8BKjszIoEIdS_nWetSBpq1eOR/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
                 </div>
             </div>
+        </div>
 
-            <!-- ChatGPT Full Course -->
-            <div class="cert-card">
-                <div class="cert-img-container">
-                    <img src="certificate (2).png" alt="ChatGPT Full Course" loading="lazy">
+        <div class="cert-card">
+            <div class="cert-img-container">
+                <img src="Screenshot_20260225-002301.jpg" alt="The Search for Water on Mars" loading="lazy">
+            </div>
+            <div class="cert-content">
+                <span class="badge-category">Space Science</span>
+                <div class="cert-title">The Search for Water on Mars</div>
+                <div class="org-container">
+                    <a href="https://www.open.edu/openlearn/" target="_blank" class="cert-org-link">OpenLearn</a> by <a href="https://www.open.ac.uk/" target="_blank" class="cert-org-link">Open University</a>
                 </div>
-                <div class="cert-content">
-                    <span class="badge-category">Artificial Intelligence</span>
-                    <div class="cert-title">ChatGPT Full Course by Simplilearn</div>
-                    <div class="org-container">
-                        <a href="https://cursa.app/en" target="_blank" class="cert-org-link">Cursa</a> &amp; <a href="https://www.simplilearn.com/" target="_blank" class="cert-org-link">Simplilearn</a>
-                    </div>
-                    <p class="cert-desc">Completed a comprehensive course on ChatGPT and generative AI. Developed practical skills in leveraging large language models for various applications, understanding prompt engineering, and exploring the capabilities and limitations of AI-powered tools.</p>
-                    <ul class="meta-list">
-                        <li><span class="meta-label">Duration</span><span>6 hours 50 minutes</span></li>
-                        <li><span class="meta-label">Date Earned</span><span>Feb 25, 2026</span></li>
-                        <li><span class="meta-label">Certificate ID</span><span>u7826424</span></li>
-                    </ul>
-                    <div class="action-group">
-                        <a href="https://cursa.app/en/my-certificate/cert5d6597bf352f0a6eb32eb2cf821fa00d" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                        <a href="https://drive.google.com/file/d/112JZ761gQ6ruHwyBXxNum_Bm-M38GJLu/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
-                    </div>
+                <p class="cert-desc">Explored the scientific evidence for water on the Red Planet. Gained insights into Martian history, orbital/robotic detection techniques, and the critical link between water and the search for extraterrestrial life.</p>
+                <ul class="meta-list">
+                    <li><span class="meta-label">Focus</span><span>Astrobiology & Planetary Science</span></li>
+                    <li><span class="meta-label">Date Earned</span><span>Feb 24, 2026</span></li>
+                </ul>
+                <div class="action-group">
+                    <a href="https://www.open.edu/openlearn/science-maths-technology/the-search-water-on-mars/content-section-0" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Course Details</a>
+                    <a href="https://drive.google.com/file/d/1MBVOcieCDgs1qjJiAHddondfUnZDX1kz/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
                 </div>
             </div>
+        </div>
 
-            <!-- CS105: Python -->
-            <div class="cert-card">
-                <div class="cert-img-container">
-                    <img src="Screenshot_20260213-233248.jpg" alt="Python" loading="lazy">
+        <div class="cert-card">
+            <div class="cert-img-container">
+                <img src="certificate (2).png" alt="ChatGPT Full Course" loading="lazy">
+            </div>
+            <div class="cert-content">
+                <span class="badge-category">Artificial Intelligence</span>
+                <div class="cert-title">ChatGPT Full Course by Simplilearn</div>
+                <div class="org-container">
+                    <a href="https://cursa.app/en" target="_blank" class="cert-org-link">Cursa</a> & <a href="https://www.simplilearn.com/" target="_blank" class="cert-org-link">Simplilearn</a>
                 </div>
-                <div class="cert-content">
-                    <span class="badge-category">Programming</span>
-                    <div class="cert-title">CS105: Introduction to Python</div>
-                    <div class="org-container">
-                        <a href="https://www.saylor.org/" target="_blank" class="cert-org-link">Saylor Academy</a>
-                    </div>
-                    <p class="cert-desc">A rigorous academic exploration of Python 3. Specialized in Object-Oriented Programming (OOP) principles, data structures, and algorithmic problem-solving. Developed a deep understanding of control flow and exception handling.</p>
-                    <ul class="meta-list">
-                        <li><span class="meta-label">Serial no.</span><span>1592724937MA</span></li>
-                        <li><span class="meta-label">Date Earned</span><span>Feb 13, 2026</span></li>
-                    </ul>
-                    <div class="action-group">
-                        <a href="https://learn.saylor.org/admin/tool/certificate/index.php?code=1592724937MA" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                        <a href="https://drive.google.com/file/d/13sWJJd041yFhAp_DpYkkSLVWQmST2_FZ/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
-                    </div>
+                <p class="cert-desc">Completed a comprehensive course on ChatGPT and generative AI. Developed practical skills in leveraging large language models for various applications, understanding prompt engineering, and exploring the capabilities and limitations of AI-powered tools.</p>
+                <ul class="meta-list">
+                    <li><span class="meta-label">Duration</span><span>6 hours 50 minutes</span></li>
+                    <li><span class="meta-label">Date Earned</span><span>Feb 25, 2026</span></li>
+                    <li><span class="meta-label">Certificate ID</span><span>u7826424</span></li>
+                </ul>
+                <div class="action-group">
+                    <a href="https://cursa.app/en/my-certificate/cert5d6597bf352f0a6eb32eb2cf821fa00d" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
+                    <a href="https://drive.google.com/file/d/112JZ761gQ6ruHwyBXxNum_Bm-M38GJLu/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
                 </div>
             </div>
+        </div>
 
-            <!-- Basics of Python -->
-            <div class="cert-card">
-                <div class="cert-img-container">
-                    <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/Screenshot_20260212-181521.jpg" alt="Python" loading="lazy">
+        <div class="cert-card">
+            <div class="cert-img-container">
+                <img src="Screenshot_20260213-233248.jpg" alt="Python" loading="lazy">
+            </div>
+            <div class="cert-content">
+                <span class="badge-category">Programming</span>
+                <div class="cert-title">CS105: Introduction to Python</div>
+                <div class="org-container">
+                    <a href="https://www.saylor.org/" target="_blank" class="cert-org-link">Saylor Academy</a>
                 </div>
-                <div class="cert-content">
-                    <span class="badge-category">Programming</span>
-                    <div class="cert-title">Basics of Python</div>
-                    <div class="org-container">
-                        <a href="https://uniathena.com/" target="_blank" class="cert-org-link">UniAthena</a> &amp; <a href="https://ciqawards.com/" target="_blank" class="cert-org-link">Cambridge International Qualifications</a>
-                    </div>
-                    <p class="cert-desc">Certified by Cambridge International Qualifications (UK). This program focuses on the practical application of Python syntax, logic building, and functional programming to automate tasks and process data efficiently.</p>
-                    <ul class="meta-list">
-                        <li><span class="meta-label">Blockchain ID</span><span>4627-1916-4570</span></li>
-                        <li><span class="meta-label">Date Earned</span><span>Feb 12, 2026</span></li>
-                    </ul>
-                    <div class="action-group">
-                        <a href="https://uniathena.com/verify/certificate?certID=4627-1916-4570" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                        <a href="https://drive.google.com/file/d/1wfQATkPWZd6tlLbNtvOgOWWaL8lEjGT4/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
-                    </div>
+                <p class="cert-desc">A rigorous academic exploration of Python 3. Specialized in Object-Oriented Programming (OOP) principles, data structures, and algorithmic problem-solving. Developed a deep understanding of control flow and exception handling.</p>
+                <ul class="meta-list">
+                    <li><span class="meta-label">Serial no.</span><span>1592724937MA</span></li>
+                    <li><span class="meta-label">Date Earned</span><span>Feb 13, 2026</span></li>
+                </ul>
+                <div class="action-group">
+                    <a href="https://learn.saylor.org/admin/tool/certificate/index.php?code=1592724937MA" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
+                    <a href="https://drive.google.com/file/d/13sWJJd041yFhAp_DpYkkSLVWQmST2_FZ/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
                 </div>
             </div>
+        </div>
 
-            <!-- CS250: Python for Data Science -->
-            <div class="cert-card">
-                <div class="cert-img-container">
-                    <img src="Screenshot_20260215-000237.jpg" alt="Python for Data Science" loading="lazy">
+        <div class="cert-card">
+            <div class="cert-img-container">
+                <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/Screenshot_20260212-181521.jpg" alt="Python" loading="lazy">
+            </div>
+            <div class="cert-content">
+                <span class="badge-category">Programming</span>
+                <div class="cert-title">Basics of Python</div>
+                <div class="org-container">
+                    <a href="https://uniathena.com/" target="_blank" class="cert-org-link">UniAthena</a> & <a href="https://ciqawards.com/" target="_blank" class="cert-org-link">Cambridge International Qualifications</a>
                 </div>
-                <div class="cert-content">
-                    <span class="badge-category">Data Science</span>
-                    <div class="cert-title">CS250: Python for Data Science</div>
-                    <div class="org-container">
-                        <a href="https://www.saylor.org/" target="_blank" class="cert-org-link">Saylor Academy</a>
-                    </div>
-                    <p class="cert-desc">An advanced exploration of Python's application in the data domain. Focused on utilizing powerful libraries such as Pandas, NumPy, and Matplotlib for data manipulation, statistical analysis, and complex visualization.</p>
-                    <ul class="meta-list">
-                        <li><span class="meta-label">Serial no.</span><span>1150654514MA</span></li>
-                        <li><span class="meta-label">Date Earned</span><span>Feb 15, 2026</span></li>
-                    </ul>
-                    <div class="action-group">
-                        <a href="https://learn.saylor.org/admin/tool/certificate/index.php?code=1150654514MA" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                        <a href="https://drive.google.com/file/d/1_lDH1NHjF6uUbe72E7Rsp5wZyUUCq6ex/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
-                    </div>
+                <p class="cert-desc">Certified by Cambridge International Qualifications (UK). This program focuses on the practical application of Python syntax, logic building, and functional programming to automate tasks and process data efficiently.</p>
+                <ul class="meta-list">
+                    <li><span class="meta-label">Blockchain ID</span><span>4627-1916-4570</span></li>
+                    <li><span class="meta-label">Date Earned</span><span>Feb 12, 2026</span></li>
+                </ul>
+                <div class="action-group">
+                    <a href="https://uniathena.com/verify/certificate?certID=4627-1916-4570" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
+                    <a href="https://drive.google.com/file/d/1wfQATkPWZd6tlLbNtvOgOWWaL8lEjGT4/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
                 </div>
             </div>
+        </div>
 
-            <!-- CS107: C++ -->
-            <div class="cert-card">
-                <div class="cert-img-container">
-                    <img src="Screenshot_20260214-212149.jpg" alt="C++ Programming" loading="lazy">
+        <div class="cert-card">
+            <div class="cert-img-container">
+                <img src="Screenshot_20260215-000237.jpg" alt="Python for Data Science" loading="lazy">
+            </div>
+            <div class="cert-content">
+                <span class="badge-category">Data Science</span>
+                <div class="cert-title">CS250: Python for Data Science</div>
+                <div class="org-container">
+                    <a href="https://www.saylor.org/" target="_blank" class="cert-org-link">Saylor Academy</a>
                 </div>
-                <div class="cert-content">
-                    <span class="badge-category">Programming</span>
-                    <div class="cert-title">CS107: C++ Programming</div>
-                    <div class="org-container">
-                        <a href="https://www.saylor.org/" target="_blank" class="cert-org-link">Saylor Academy</a>
-                    </div>
-                    <p class="cert-desc">A comprehensive study of C++ programming. Developed a strong foundation in core concepts including syntax, control structures, memory management, and Object-Oriented Programming (OOP) principles.</p>
-                    <ul class="meta-list">
-                        <li><span class="meta-label">Serial no.</span><span>6528032204MA</span></li>
-                        <li><span class="meta-label">Date Earned</span><span>Feb 14, 2026</span></li>
-                    </ul>
-                    <div class="action-group">
-                        <a href="https://learn.saylor.org/admin/tool/certificate/index.php?code=6528032204MA" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                        <a href="https://drive.google.com/file/d/1Db8qPKSv6ctemPzcMO_gQuZcljRU7T4b/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
-                    </div>
+                <p class="cert-desc">An advanced exploration of Python's application in the data domain. Focused on utilizing powerful libraries such as Pandas, NumPy, and Matplotlib for data manipulation, statistical analysis, and complex visualization.</p>
+                <ul class="meta-list">
+                    <li><span class="meta-label">Serial no.</span><span>1150654514MA</span></li>
+                    <li><span class="meta-label">Date Earned</span><span>Feb 15, 2026</span></li>
+                </ul>
+                <div class="action-group">
+                    <a href="https://learn.saylor.org/admin/tool/certificate/index.php?code=1150654514MA" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
+                    <a href="https://drive.google.com/file/d/1_lDH1NHjF6uUbe72E7Rsp5wZyUUCq6ex/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
                 </div>
             </div>
+        </div>
 
-            <!-- Basics of ML Algorithms -->
-            <div class="cert-card">
-                <div class="cert-img-container">
-                    <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/322_1770879551_certificate.jpg%20(850%C3%97606).jpg" alt="ML" loading="lazy">
+        <div class="cert-card">
+            <div class="cert-img-container">
+                <img src="Screenshot_20260214-212149.jpg" alt="C++ Programming" loading="lazy">
+            </div>
+            <div class="cert-content">
+                <span class="badge-category">Programming</span>
+                <div class="cert-title">CS107: C++ Programming</div>
+                <div class="org-container">
+                    <a href="https://www.saylor.org/" target="_blank" class="cert-org-link">Saylor Academy</a>
                 </div>
-                <div class="cert-content">
-                    <span class="badge-category">Artificial Intelligence</span>
-                    <div class="cert-title">Basics of ML Algorithms</div>
-                    <div class="org-container">
-                        <a href="https://uniathena.com/" target="_blank" class="cert-org-link">UniAthena</a> &amp; <a href="https://ciqawards.com/" target="_blank" class="cert-org-link">Cambridge International Qualifications</a>
-                    </div>
-                    <p class="cert-desc">An introduction to the mathematical foundations of AI. Learned to implement supervised and unsupervised learning models, focusing on linear and logistic regression and classification trees.</p>
-                    <ul class="meta-list">
-                        <li><span class="meta-label">Blockchain ID</span><span>4982-1269-5777</span></li>
-                        <li><span class="meta-label">Date Earned</span><span>Feb 12, 2026</span></li>
-                    </ul>
-                    <div class="action-group">
-                        <a href="https://uniathena.com/verify/certificate?certID=4982-1269-5777" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                        <a href="https://drive.google.com/file/d/1EodFM_2UP5PdfdAK73jZe-LgBccpjHOY/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
-                    </div>
+                <p class="cert-desc">A comprehensive study of C++ programming. Developed a strong foundation in core concepts including syntax, control structures, memory management, and Object-Oriented Programming (OOP) principles.</p>
+                <ul class="meta-list">
+                    <li><span class="meta-label">Serial no.</span><span>6528032204MA</span></li>
+                    <li><span class="meta-label">Date Earned</span><span>Feb 14, 2026</span></li>
+                </ul>
+                <div class="action-group">
+                    <a href="https://learn.saylor.org/admin/tool/certificate/index.php?code=6528032204MA" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
+                    <a href="https://drive.google.com/file/d/1Db8qPKSv6ctemPzcMO_gQuZcljRU7T4b/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
                 </div>
             </div>
+        </div>
 
-            <!-- Data Science & Analytics (HP LIFE) -->
-            <div class="cert-card">
-                <div class="cert-img-container">
-                    <img src="Screenshot_20260211-160828.jpg" alt="Data Science" loading="lazy">
+        <div class="cert-card">
+            <div class="cert-img-container">
+                <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/322_1770879551_certificate.jpg%20(850%C3%97606).jpg" alt="ML" loading="lazy">
+            </div>
+            <div class="cert-content">
+                <span class="badge-category">Artificial Intelligence</span>
+                <div class="cert-title">Basics of ML Algorithms</div>
+                <div class="org-container">
+                    <a href="https://uniathena.com/" target="_blank" class="cert-org-link">UniAthena</a> & <a href="https://ciqawards.com/" target="_blank" class="cert-org-link">Cambridge International Qualifications</a>
                 </div>
-                <div class="cert-content">
-                    <span class="badge-category">Business Intelligence</span>
-                    <div class="cert-title">Data Science &amp; Analytics</div>
-                    <div class="org-container">
-                        <a href="https://www.life-global.org/" target="_blank" class="cert-org-link">HP LIFE</a>
-                    </div>
-                    <p class="cert-desc">Focused on transforming raw datasets into actionable insights. Developed skills in data visualization, statistical analysis, and trend forecasting to support data-driven decision-making.</p>
-                    <ul class="meta-list">
-                        <li><span class="meta-label">Serial no.</span><span>d6e9f763-f5e0-408e</span></li>
-                        <li><span class="meta-label">Date Earned</span><span>Feb 11, 2026</span></li>
-                    </ul>
-                    <div class="action-group">
-                        <a href="https://www.life-global.org/certificate/d6e9f763-f5e0-408e-91b0-09a527aecaf9" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                        <a href="https://drive.google.com/file/d/1aRqcGloXkT_4x0A6NU5qFduBgSQiTMjw/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
-                    </div>
+                <p class="cert-desc">An introduction to the mathematical foundations of AI. Learned to implement supervised and unsupervised learning models, focusing on linear and logistic regression and classification trees.</p>
+                <ul class="meta-list">
+                    <li><span class="meta-label">Blockchain ID</span><span>4982-1269-5777</span></li>
+                    <li><span class="meta-label">Date Earned</span><span>Feb 12, 2026</span></li>
+                </ul>
+                <div class="action-group">
+                    <a href="https://uniathena.com/verify/certificate?certID=4982-1269-5777" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
+                    <a href="https://drive.google.com/file/d/1EodFM_2UP5PdfdAK73jZe-LgBccpjHOY/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
                 </div>
             </div>
+        </div>
 
-            <!-- ACS National Medicup -->
-            <div class="cert-card">
-                <div class="cert-img-container">
-                    <img src="1769436241921.jpg" alt="ACS Medicup" loading="lazy">
+        <div class="cert-card">
+            <div class="cert-img-container">
+                <img src="Screenshot_20260211-160828.jpg" alt="Data Science" loading="lazy">
+            </div>
+            <div class="cert-content">
+                <span class="badge-category">Business Intelligence</span>
+                <div class="cert-title">Data Science & Analytics</div>
+                <div class="org-container">
+                    <a href="https://www.life-global.org/" target="_blank" class="cert-org-link">HP LIFE</a>
                 </div>
-                <div class="cert-content">
-                    <span class="badge-category">Competition</span>
-                    <div class="cert-title">ACS National Medicup 2025</div>
-                    <div class="org-container">
-                        <a href="https://aparsclassroom.com/" target="_blank" class="cert-org-link">Team ACS</a>
-                    </div>
-                    <p class="cert-desc">Represented as a Divisional Participant in a high-stakes national academic competition. Tested under rigorous constraints in subjects requiring advanced logical reasoning and scientific analysis.</p>
-                    <ul class="meta-list">
-                        <li><span class="meta-label">Round</span><span>Divisional</span></li>
-                        <li><span class="meta-label">Date Earned</span><span>Mar 07, 2025</span></li>
-                    </ul>
-                    <div class="action-group">
-                        <span class="btn-custom" style="background:#f1f5f9; color:#64748b; border:1px solid #e2e8f0;"><i class="fa-solid fa-check"></i> Verified Participant</span>
-                    </div>
+                <p class="cert-desc">Focused on transforming raw datasets into actionable insights. Developed skills in data visualization, statistical analysis, and trend forecasting to support data-driven decision-making.</p>
+                <ul class="meta-list">
+                    <li><span class="meta-label">Serial no.</span><span>d6e9f763-f5e0-408e</span></li>
+                    <li><span class="meta-label">Date Earned</span><span>Feb 11, 2026</span></li>
+                </ul>
+                <div class="action-group">
+                    <a href="https://www.life-global.org/certificate/d6e9f763-f5e0-408e-91b0-09a527aecaf9" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
+                    <a href="https://drive.google.com/file/d/1aRqcGloXkT_4x0A6NU5qFduBgSQiTMjw/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
                 </div>
             </div>
+        </div>
 
-            <!-- Critical Thinking in the AI Era -->
-            <div class="cert-card">
-                <div class="cert-img-container">
-                    <img src="Screenshot_20260211-142102.jpg" alt="Critical Thinking" loading="lazy">
+        <div class="cert-card">
+            <div class="cert-img-container">
+                <img src="1769436241921.jpg" alt="ACS Medicup" loading="lazy">
+            </div>
+            <div class="cert-content">
+                <span class="badge-category">Competition</span>
+                <div class="cert-title">ACS National Medicup 2025</div>
+                <div class="org-container">
+                    <a href="https://aparsclassroom.com/" target="_blank" class="cert-org-link">Team ACS</a>
                 </div>
-                <div class="cert-content">
-                    <span class="badge-category">Strategic Thinking</span>
-                    <div class="cert-title">Critical Thinking in the AI Era</div>
-                    <div class="org-container">
-                        <a href="https://www.life-global.org/" target="_blank" class="cert-org-link">HP LIFE</a>
-                    </div>
-                    <p class="cert-desc">An essential course on information literacy in the age of generative AI. Learned to detect algorithmic bias and verify AI-generated content for factual accuracy.</p>
-                    <ul class="meta-list">
-                        <li><span class="meta-label">Serial no.</span><span>db212d47-9c82-4b5b</span></li>
-                        <li><span class="meta-label">Date Earned</span><span>Feb 11, 2026</span></li>
-                    </ul>
-                    <div class="action-group">
-                        <a href="https://www.life-global.org/certificate/db212d47-9c82-4b5b-b009-098f01fed883" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
-                        <a href="https://drive.google.com/file/d/1YdXzijEMMGyGMIGgd_jt60R392vipPLr/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
-                    </div>
+                <p class="cert-desc">Represented as a Divisional Participant in a high-stakes national academic competition. Tested under rigorous constraints in subjects requiring advanced logical reasoning and scientific analysis.</p>
+                <ul class="meta-list">
+                    <li><span class="meta-label">Round</span><span>Divisional</span></li>
+                    <li><span class="meta-label">Date Earned</span><span>Mar 07, 2025</span></li>
+                </ul>
+                <div class="action-group">
+                    <span class="btn-custom" style="background:#f1f5f9; color:#64748b; border:1px solid #e2e8f0;"><i class="fa-solid fa-check"></i> Verified Participant</span>
                 </div>
             </div>
+        </div>
 
-            <!-- Algorithmic Design -->
-            <div class="cert-card">
-                <div class="cert-img-container">
-                    <img src="Screenshot_20260225-141545.jpg" alt="Algorithmic Design" loading="lazy">
+        <div class="cert-card">
+            <div class="cert-img-container">
+                <img src="Screenshot_20260211-142102.jpg" alt="Critical Thinking" loading="lazy">
+            </div>
+            <div class="cert-content">
+                <span class="badge-category">Strategic Thinking</span>
+                <div class="cert-title">Critical Thinking in the AI Era</div>
+                <div class="org-container">
+                    <a href="https://www.life-global.org/" target="_blank" class="cert-org-link">HP LIFE</a>
                 </div>
-                <div class="cert-content">
-                    <span class="badge-category">Design &amp; Creative Coding</span>
-                    <div class="cert-title">Algorithmic Design</div>
-                    <div class="org-container">
-                        <a href="https://www.open.edu/openlearn/" target="_blank" class="cert-org-link">OpenLearn</a> by <a href="https://www.open.ac.uk/" target="_blank" class="cert-org-link">Open University</a>
-                    </div>
-                    <p class="cert-desc">Explored the creative potential of designing with algorithms through hands-on graphical experimentation using p5.js. Developed core design skills in repetition, serendipity, and modularity.</p>
-                    <ul class="meta-list">
-                        <li><span class="meta-label">Duration</span><span>12 hours</span></li>
-                        <li><span class="meta-label">Date Earned</span><span>Feb 25, 2026</span></li>
-                        <li><span class="meta-label">Course Code</span><span>T190_1</span></li>
-                    </ul>
-                    <div class="action-group">
-                        <a href="https://www.open.edu/openlearn/science-maths-technology/design-innovation/algorithmic-design/content-section-0" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Course Details</a>
-                        <a href="https://drive.google.com/file/d/1MmRC30pdkUOzflPTbD7nhXEYoiC-Iifj/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
-                    </div>
+                <p class="cert-desc">An essential course on information literacy in the age of generative AI. Learned to detect algorithmic bias and verify AI-generated content for factual accuracy.</p>
+                <ul class="meta-list">
+                    <li><span class="meta-label">Serial no.</span><span>db212d47-9c82-4b5b</span></li>
+                    <li><span class="meta-label">Date Earned</span><span>Feb 11, 2026</span></li>
+                </ul>
+                <div class="action-group">
+                    <a href="https://www.life-global.org/certificate/db212d47-9c82-4b5b-b009-098f01fed883" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Verify Certification</a>
+                    <a href="https://drive.google.com/file/d/1YdXzijEMMGyGMIGgd_jt60R392vipPLr/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
                 </div>
             </div>
+        </div>
 
-            <!-- Diagramming for development 1 -->
-            <div class="cert-card">
-                <div class="cert-img-container">
-                    <img src="Screenshot_20260225-234335.jpg" alt="Diagramming for development 1" loading="lazy">
+        <div class="cert-card">
+            <div class="cert-img-container">
+                <img src="Screenshot_20260225-141545.jpg" alt="Algorithmic Design" loading="lazy">
+            </div>
+            <div class="cert-content">
+                <span class="badge-category">Design & Creative Coding</span>
+                <div class="cert-title">Algorithmic Design</div>
+                <div class="org-container">
+                    <a href="https://www.open.edu/openlearn/" target="_blank" class="cert-org-link">OpenLearn</a> by <a href="https://www.open.ac.uk/" target="_blank" class="cert-org-link">Open University</a>
                 </div>
-                <div class="cert-content">
-                    <span class="badge-category">Systems Thinking</span>
-                    <div class="cert-title">Diagramming for Development 1: Bounding Realities</div>
-                    <div class="org-container">
-                        <a href="https://www.open.edu/openlearn/" target="_blank" class="cert-org-link">OpenLearn</a> by <a href="https://www.open.ac.uk/" target="_blank" class="cert-org-link">Open University</a>
-                    </div>
-                    <p class="cert-desc">Mastered systems diagramming techniques including Rich Pictures and Systems Maps. Applied these tools to complex international development case studies to explore relationships and intervention strategies.</p>
-                    <ul class="meta-list">
-                        <li><span class="meta-label">Duration</span><span>4 hours</span></li>
-                        <li><span class="meta-label">Date Earned</span><span>Feb 25, 2026</span></li>
-                        <li><span class="meta-label">Course Code</span><span>TU872_1</span></li>
-                    </ul>
-                    <div class="action-group">
-                        <a href="https://www.open.edu/openlearn/digital-computing/diagramming-development-1-bounding-realities/content-section-0" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Course Details</a>
-                        <a href="https://drive.google.com/file/d/1HG_CrJQZPbUIUyqHya22P5xm73CZyHnr/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
-                    </div>
+                <p class="cert-desc">Explored the creative potential of designing with algorithms through hands-on graphical experimentation using p5.js. Developed core design skills in repetition, serendipity, and modularity.</p>
+                <ul class="meta-list">
+                    <li><span class="meta-label">Duration</span><span>12 hours</span></li>
+                    <li><span class="meta-label">Date Earned</span><span>Feb 25, 2026</span></li>
+                    <li><span class="meta-label">Course Code</span><span>T190_1</span></li>
+                </ul>
+                <div class="action-group">
+                    <a href="https://www.open.edu/openlearn/science-maths-technology/design-innovation/algorithmic-design/content-section-0" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Course Details</a>
+                    <a href="https://drive.google.com/file/d/1MmRC30pdkUOzflPTbD7nhXEYoiC-Iifj/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
                 </div>
             </div>
+        </div>
 
-        </div><!-- /cert-grid -->
-    </div><!-- /section-wrapper -->
+        <div class="cert-card">
+            <div class="cert-img-container">
+                <img src="Screenshot_20260225-234335.jpg" alt="Diagramming for development 1" loading="lazy">
+            </div>
+            <div class="cert-content">
+                <span class="badge-category">Systems Thinking</span>
+                <div class="cert-title">Diagramming for development 1: bounding realities</div>
+                <div class="org-container">
+                    <a href="https://www.open.edu/openlearn/" target="_blank" class="cert-org-link">OpenLearn</a> by <a href="https://www.open.ac.uk/" target="_blank" class="cert-org-link">Open University</a>
+                </div>
+                <p class="cert-desc">Mastered systems diagramming techniques including Rich Pictures and Systems Maps. Applied these tools to complex international development case studies to explore relationships and intervention strategies.</p>
+                <ul class="meta-list">
+                    <li><span class="meta-label">Duration</span><span>4 hours</span></li>
+                    <li><span class="meta-label">Date Earned</span><span>Feb 25, 2026</span></li>
+                    <li><span class="meta-label">Course Code</span><span>TU872_1</span></li>
+                </ul>
+                <div class="action-group">
+                    <a href="https://www.open.edu/openlearn/digital-computing/diagramming-development-1-bounding-realities/content-section-0" class="btn-custom btn-verify" target="_blank"><i class="fa-solid fa-link"></i> Course Details</a>
+                    <a href="https://drive.google.com/file/d/1HG_CrJQZPbUIUyqHya22P5xm73CZyHnr/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> View PDF</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
-        /* ── Nav hide on scroll ── */
+        // Existing Nav Script
         let lastScroll = 0;
         const nav = document.getElementById('nav');
         window.addEventListener('scroll', () => {
-            const cur = window.pageYOffset;
-            nav.style.transform = (cur > lastScroll && cur > 100) ? 'translateY(-100%)' : 'translateY(0)';
-            lastScroll = cur;
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                nav.style.transform = 'translateY(0)';
+            }
+            lastScroll = currentScroll;
         });
 
-        /* ── Brand panel accordion ── */
-        function togglePanel(id) {
-            const panel = document.getElementById(id);
-            const isOpen = panel.classList.contains('open');
-            panel.classList.toggle('open', !isOpen);
+        // New Accordion Toggle Function
+        function toggleAccordion(id) {
+            const element = document.getElementById(id);
+            element.classList.toggle('active');
         }
     </script>
 </body>
