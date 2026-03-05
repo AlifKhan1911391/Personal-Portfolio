@@ -192,6 +192,11 @@
             background: var(--bg-color);
         }
 
+        /* --- FIX: make content visible when active --- */
+        .accordion.active .accordion-body {
+            grid-template-rows: 1fr;
+        }
+
         .accordion-body-inner {
             overflow: hidden;
         }
