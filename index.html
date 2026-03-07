@@ -31,7 +31,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTB8VKCK97"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -354,59 +353,50 @@
             max-width: 800px;
             margin: 60px auto;
             padding: 35px 30px;
-            background: linear-gradient(135deg, #0a0f1e, #1a2340);
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
             border-radius: 15px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
             font-family: 'Segoe UI', Tahoma, sans-serif;
-            color: #e0e8ff;
-            position: relative;
-            overflow: hidden;
-        }
-
-        #research-paper::before {
-            content: '';
-            position: absolute;
-            top: -40px;
-            right: -40px;
-            width: 180px;
-            height: 180px;
-            background: radial-gradient(circle, rgba(110, 168, 254, 0.15), transparent 70%);
-            border-radius: 50%;
+            color: #333;
         }
 
         #research-paper:hover {
             transform: translateY(-5px);
             transition: 0.3s ease-in-out;
-            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        #research-paper .rp-header {
+            text-align: center;
+            margin-bottom: 25px;
         }
 
         #research-paper .rp-badge {
             display: inline-block;
             background: linear-gradient(90deg, #6ea8fe, #9ad0ff);
             color: #0a0f1e;
-            padding: 5px 14px;
+            padding: 6px 14px;
             border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            margin-bottom: 16px;
-            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
         }
 
-        #research-paper h2 {
-            font-size: 1.6rem;
-            color: #ffffff;
-            margin: 0 0 12px 0;
+        #research-paper .rp-title {
+            font-size: 1.8rem;
+            color: #222;
+            margin: 10px 0;
             font-family: "Mozilla Headline", sans-serif;
             font-weight: 500;
             line-height: 1.3;
         }
 
         #research-paper .rp-meta {
-            font-size: 0.85rem;
-            color: #8aa0cc;
-            margin-bottom: 18px;
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 20px;
             display: flex;
+            justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
         }
@@ -417,29 +407,48 @@
             gap: 6px;
         }
 
+        #research-paper .rp-abstract-container {
+            background: rgba(110, 168, 254, 0.08);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #6ea8fe;
+            margin: 25px 0;
+        }
+
+        #research-paper .rp-abstract-container h4 {
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
         #research-paper .rp-abstract {
-            font-size: 0.97rem;
-            line-height: 1.7;
-            color: #c5d4f0;
-            border-left: 3px solid #6ea8fe;
-            padding-left: 16px;
-            margin: 20px 0 25px 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #4a4a4a;
+            margin: 0;
+            text-align: justify;
         }
 
         #research-paper .rp-keywords {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 28px;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
         }
 
         #research-paper .rp-keyword {
-            background: rgba(110, 168, 254, 0.12);
-            color: #9ad0ff;
-            border: 1px solid rgba(110, 168, 254, 0.3);
-            padding: 4px 12px;
+            background: rgba(110, 168, 254, 0.1);
+            color: #007bff;
+            padding: 6px 14px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        #research-paper .rp-actions {
+            text-align: center;
         }
 
         #research-paper .rp-btn {
@@ -449,27 +458,29 @@
             text-decoration: none;
             background: linear-gradient(90deg, #6ea8fe, #9ad0ff);
             color: #0a0f1e;
-            font-weight: 700;
+            font-weight: 600;
             padding: 12px 24px;
             border-radius: 12px;
             transition: all 0.3s ease;
-            font-size: 0.95rem;
+            font-size: 1rem;
+            justify-content: center;
         }
 
         #research-paper .rp-btn:hover {
-            opacity: 0.88;
-            transform: scale(1.03);
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(110, 168, 254, 0.3);
         }
 
         #research-paper .rp-doi {
-            margin-top: 18px;
-            font-size: 0.8rem;
-            color: #5a72a0;
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: #6c757d;
         }
 
         #research-paper .rp-doi a {
-            color: #6ea8fe;
+            color: #007bff;
             text-decoration: none;
+            font-weight: 600;
         }
 
         /* Helpers */
@@ -512,29 +523,37 @@
         </div>
 
         <div id="research-paper">
-            <div class="rp-badge">📄 Published Research</div>
-            <h2>AI-Assisted Manga Creation: A Workflow for Non-Artists</h2>
-            <div class="rp-meta">
-                <span><i class="fas fa-user"></i> Mahadi Islam Alif &nbsp;·&nbsp; Independent Researcher</span>
-                <span><i class="fas fa-calendar"></i> March 7, 2026</span>
-                <span><i class="fas fa-book-open"></i> Journal Article &nbsp;·&nbsp; Zenodo</span>
+            <div class="rp-header">
+                <span class="rp-badge">📄 Published Research</span>
+                <h2 class="rp-title">AI-Assisted Manga Creation: A Workflow for Non-Artists</h2>
+                <div class="rp-meta">
+                    <span><i class="fas fa-user"></i> Mahadi Islam Alif</span>
+                    <span><i class="fas fa-calendar"></i> March 7, 2026</span>
+                    <span><i class="fas fa-book-open"></i> Journal Article</span>
+                </div>
             </div>
-            <p class="rp-abstract">
-                Making manga has always required years of artistic training — a barrier that has kept countless storytellers from the medium. This paper asks whether generative AI can change that. I developed and tested a five-stage production pipeline combining large language models for narrative writing with diffusion-based image synthesis for visuals, and produced a complete five-page manga chapter from scratch — without any formal drawing training. The results show dramatically reduced production times and positive reader reception.
-            </p>
+
+            <div class="rp-abstract-container">
+                <h4><i class="fas fa-align-left me-2"></i> Abstract</h4>
+                <p class="rp-abstract">
+                    Making manga has traditionally required years of artistic training—a barrier that keeps countless storytellers from the medium. This paper explores whether generative AI can bridge that gap. I developed and tested a five-stage production pipeline combining large language models for narrative structuring with diffusion-based image synthesis for visuals. Using this workflow, I produced a complete five-page manga chapter entirely from scratch, without formal drawing training. The results demonstrate dramatically reduced production times alongside positive reader reception, opening new avenues for independent creators.
+                </p>
+            </div>
+
             <div class="rp-keywords">
-                <span class="rp-keyword">Artificial Intelligence</span>
                 <span class="rp-keyword">Generative AI</span>
                 <span class="rp-keyword">Manga Creation</span>
                 <span class="rp-keyword">Diffusion Models</span>
                 <span class="rp-keyword">Prompt Engineering</span>
-                <span class="rp-keyword">Digital Comics</span>
                 <span class="rp-keyword">Creative Automation</span>
             </div>
-            <a href="https://zenodo.org/records/18897457" target="_blank" rel="noopener" class="rp-btn">
-                <i class="fas fa-external-link-alt"></i> Read the Paper
-            </a>
-            <p class="rp-doi">DOI: <a href="https://doi.org/10.5281/zenodo.18897457" target="_blank" rel="noopener">10.5281/zenodo.18897457</a> &nbsp;·&nbsp; Licensed under CC BY 4.0</p>
+
+            <div class="rp-actions">
+                <a href="https://zenodo.org/records/18897457" target="_blank" rel="noopener" class="rp-btn">
+                    <i class="fas fa-external-link-alt"></i> Read the Full Paper
+                </a>
+                <p class="rp-doi">DOI: <a href="https://doi.org/10.5281/zenodo.18897457" target="_blank" rel="noopener">10.5281/zenodo.18897457</a> &nbsp;|&nbsp; Licensed under CC BY 4.0</p>
+            </div>
         </div>
 
         <div id="business-venture">
