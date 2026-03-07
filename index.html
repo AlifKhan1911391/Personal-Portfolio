@@ -71,7 +71,8 @@
         #learning,
         #research-paper,
         #networking,
-        #professional-insta {
+        #professional-insta,
+        #business-venture {
             margin-top: 30px;
             max-width: 800px;
             margin: 80px auto;
@@ -85,7 +86,7 @@
         }
 
         /* Headings and Paragraphs */
-        #Welcome h1, #learning h2, #research-paper h2 {
+        #Welcome h1, #learning h2, #research-paper h2, #business-venture .venture-title {
             font-size: 2.5rem;
             color: #222;
         }
@@ -98,13 +99,13 @@
             font-weight: 400;
         }
 
-        #Welcome p, #learning p, #research-paper p {
+        #Welcome p, #learning p, #research-paper p, #business-venture .venture-description {
             font-size: 1rem;
             line-height: 1.6;
             margin: 10px 0;
         }
 
-        #Welcome:hover, #learning:hover, #research-paper:hover {
+        #Welcome:hover, #learning:hover, #research-paper:hover, #business-venture:hover {
             transform: translateY(-5px);
             transition: 0.3s ease-in-out;
             box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
@@ -117,7 +118,7 @@
             border: 5px solid #007BFF;
         }
 
-        /* --- FIXED NAVIGATION TO MATCH CERTIFICATES/PROJECTS --- */
+        /* --- NAVIGATION --- */
         #nav {
             position: fixed;
             top: 0;
@@ -146,7 +147,6 @@
             padding: 13px 11px;
             text-decoration: none;
             transition: background-color 0.3s;
-            /* Sync font and size */
             font-family: 'Inter', sans-serif;
             font-size: 16px;
         }
@@ -159,26 +159,9 @@
             background-color: #4169E1;
             color: white !important;
         }
-        /* --- END NAV FIX --- */
 
-        /* Business Venture Section */
-        #business-venture {
-            max-width: 800px;
-            margin: 60px auto;
-            padding: 30px;
-            background: linear-gradient(135deg, #f8f9fa, #ffffff);
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            color: #333;
-        }
-
-        #business-venture .venture-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        #business-venture .venture-badge, #research-paper .rp-badge {
+        /* Shared Component Styles (Badges, Links) */
+        .venture-badge, .rp-badge {
             display: inline-block;
             background: linear-gradient(90deg, #6ea8fe, #9ad0ff);
             color: #0a0f1e;
@@ -189,20 +172,35 @@
             margin-bottom: 15px;
         }
 
-        #business-venture .venture-title {
-            font-size: 1.8rem;
-            color: #222;
-            margin: 10px 0;
-            font-family: "Mozilla Headline", sans-serif;
+        .venture-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            justify-content: center;
         }
 
-        #business-venture .venture-description {
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 25px;
-            text-align: center;
+        .venture-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            background: linear-gradient(90deg, #6ea8fe, #9ad0ff);
+            color: #0a0f1e;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 200px;
+            justify-content: center;
         }
 
+        .secondary-link {
+            background: linear-gradient(90deg, #a9b3cf, #c1c9e0);
+        }
+
+        /* Business Venture Specifics */
         #business-venture .venture-stats {
             display: flex;
             justify-content: space-around;
@@ -238,6 +236,7 @@
             border-radius: 12px;
             border-left: 4px solid #6ea8fe;
             margin: 30px 0;
+            text-align: left;
         }
 
         #business-venture .key-learnings h4 {
@@ -245,20 +244,7 @@
             margin-top: 0;
             margin-bottom: 20px;
             font-size: 1.2rem;
-        }
-
-        #business-venture .key-learnings ul {
-            padding-left: 20px;
-            margin-bottom: 0;
-        }
-
-        #business-venture .key-learnings li {
-            margin-bottom: 12px;
-            line-height: 1.5;
-        }
-
-        #business-venture .venture-gallery {
-            margin: 30px 0;
+            text-align: center;
         }
 
         #business-venture .gallery-summary {
@@ -274,7 +260,6 @@
             transition: all 0.3s ease;
         }
 
-        /* --- NEW ANIMATION CSS FOR GALLERY --- */
         #business-venture .gallery-wrapper {
             display: grid;
             grid-template-rows: 0fr;
@@ -294,9 +279,8 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             margin-top: 20px;
-            padding-bottom: 10px; /* Prevents shadow clipping */
+            padding-bottom: 10px;
         }
-        /* --- END NEW ANIMATION CSS --- */
 
         #business-venture .gallery-item {
             border-radius: 10px;
@@ -321,35 +305,7 @@
             text-align: center;
         }
 
-        #business-venture .venture-links {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-            justify-content: center;
-        }
-
-        #business-venture .venture-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            background: linear-gradient(90deg, #6ea8fe, #9ad0ff);
-            color: #0a0f1e;
-            font-weight: 600;
-            padding: 12px 20px;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            flex: 1;
-            min-width: 200px;
-            justify-content: center;
-        }
-
-        #business-venture .secondary-link {
-            background: linear-gradient(90deg, #a9b3cf, #c1c9e0);
-        }
-
-        /* Research Paper Specific Formatting */
+        /* Research Paper Metadata */
         #research-paper .rp-meta {
             font-size: 0.9rem;
             color: #6c757d;
@@ -358,20 +314,6 @@
             justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
-        }
-
-        #research-paper .rp-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            background: linear-gradient(90deg, #6ea8fe, #9ad0ff);
-            color: #0a0f1e;
-            font-weight: 600;
-            padding: 12px 24px;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            margin-top: 20px;
         }
 
         #research-paper .rp-doi {
@@ -413,12 +355,6 @@
             <p>Feel free to explore my work — I hope it inspires and informs.</p>
         </div>
 
-        <div id="learning">
-            <h2 class="title" style="margin-bottom: 10px;">AI & Digital Marketing</h2>
-            <p>While my core focus is web development and entrepreneurship, my curiosity has recently led me to explore <strong>Artificial Intelligence</strong> and <strong>Digital Marketing</strong>. I do not work professionally in these sectors yet; I am gaining knowledge out of pure passion and to broaden my entrepreneurial toolkit.</p>
-            <p>From understanding AI tools to exploring digital marketing strategies, I am actively expanding my knowledge base. As proof of my ongoing education, feel free to check out my <a href="/certificates" class="marked">Certificates</a>.</p>
-        </div>
-
         <div id="research-paper">
             <span class="rp-badge">📄 Published Research</span>
             <h2 class="title" style="margin-bottom: 10px;">AI-Assisted Manga Creation</h2>
@@ -429,17 +365,29 @@
             <p>Traditional manga production requires years of artistic mastery, often barring storytellers from the medium. This research explores an AI-driven pipeline that bridges this gap. By combining LLMs for narrative and diffusion models for visuals, I successfully produced a five-page manga chapter without formal training.</p>
             <p>The project demonstrates significantly reduced production times and positive reception, proving AI's potential to empower independent creators and democratize complex artistic mediums.</p>
             
-            <a href="https://zenodo.org/records/18897457" target="_blank" rel="noopener" class="rp-btn">
-                <i class="fas fa-external-link-alt"></i> Read Full Paper
-            </a>
+            <div class="venture-links">
+                <a href="https://zenodo.org/records/18897457" target="_blank" rel="noopener" class="venture-link">
+                    <i class="fas fa-external-link-alt"></i> Read Full Paper
+                </a>
+                <a href="https://drive.google.com/file/d/17tc4SXApaMLEg_p3w1ogQVRbtU5zY5xc/view?usp=drivesdk" target="_blank" rel="noopener" class="venture-link secondary-link">
+                    <i class="fas fa-code"></i> View JSON
+                </a>
+            </div>
             <p class="rp-doi">DOI: <a href="https://doi.org/10.5281/zenodo.18897457" target="_blank" rel="noopener">10.5281/zenodo.18897457</a></p>
+        </div>
+
+        <div id="learning">
+            <span class="venture-badge">Exploration & Growth</span>
+            <h2 class="title" style="margin-bottom: 10px;">AI & Digital Marketing</h2>
+            <p>While my core focus is web development and entrepreneurship, my curiosity has recently led me to explore <strong>Artificial Intelligence</strong> and <strong>Digital Marketing</strong>. I do not work professionally in these sectors yet; I am gaining knowledge out of pure passion and to broaden my entrepreneurial toolkit.</p>
+            <p>From understanding AI tools to exploring digital marketing strategies, I am actively expanding my knowledge base. As proof of my ongoing education, feel free to check out my <a href="/certificates" class="marked">Certificates</a>.</p>
         </div>
 
         <div id="business-venture">
             <div class="venture-header">
                 <span class="venture-badge">Entrepreneurship Journey</span>
                 <h2 class="venture-title">Poedagar 613 | E-Commerce Venture</h2>
-                <p class="venture-description">In May 2025, I launched my first entrepreneurial venture, <a href="https://poedagar.store/product/poedagar-top-luxury-brand-man-watch-sports-waterproof-luminous-date-men-wristwatch-square-dial-quartz-mens-watches-high-quality/?v=84de8e2b14bb" class="marked">Poedagar 613</a>, with just 3,000 BDT (about $25 according to the conversion at that time). It was a manual dropshipping operation where I collected watches and accessories from <a href="https://daraz.com/" class="marked">Daraz</a> and marketed them for sale on Facebook. Although the business didn't generate sales, it provided invaluable real-world lessons in product sourcing, digital marketing, customer acquisition, and the mechanics of bootstrapped e-commerce.</p>
+                <p class="venture-description">In May 2025, I launched my first entrepreneurial venture, <a href="https://poedagar.store/product/poedagar-top-luxury-brand-man-watch-sports-waterproof-luminous-date-men-wristwatch-square-dial-quartz-mens-watches-high-quality/?v=84de8e2b14bb" class="marked">Poedagar 613</a>, with just 3,000 BDT. It was a manual dropshipping operation where I collected items from <a href="https://daraz.com/" class="marked">Daraz</a> and marketed them on Facebook. Although the business didn't generate sales, it provided invaluable lessons in sourcing, acquisition, and the mechanics of bootstrapped e-commerce.</p>
             </div>
 
             <div class="venture-stats">
@@ -460,10 +408,10 @@
             <div class="key-learnings">
                 <h4>📈 Key Learnings & Growth</h4>
                 <ul>
-                    <li><strong>Market Validation:</strong> Understanding customer demand before inventory investment is crucial</li>
-                    <li><strong>Data Analysis:</strong> Learning to interpret ad metrics beyond just clicks and impressions</li>
-                    <li><strong>Resource Management:</strong> Maximizing impact with extremely limited capital</li>
-                    <li><strong>Resilience:</strong> Embracing challenges as learning opportunities rather than failures</li>
+                    <li><strong>Market Validation:</strong> Understanding demand before inventory investment is crucial.</li>
+                    <li><strong>Data Analysis:</strong> Learning to interpret ad metrics beyond just clicks.</li>
+                    <li><strong>Resource Management:</strong> Maximizing impact with extremely limited capital.</li>
+                    <li><strong>Resilience:</strong> Embracing challenges as learning opportunities rather than failures.</li>
                 </ul>
             </div>
 
@@ -508,8 +456,7 @@
 
         <div id="professional-insta">
             <h3 class="title">Instagram Professional Account</h3>
-            <p>I launched a professional Instagram account with the intention of exploring opportunities for passive income. However, the account has not been growing as expected, and I may choose to discontinue it at any point. Still, I wanted to share it here, as I see value in treating it as a personal experiment and a reminder that not every initiative achieves immediate success.</p>
-            <p>For now, the account remains active as a space where I share projects, ideas, and creative pursuits. I welcome anyone interested to explore the content—there is always the possibility that it may develop in unexpected ways.</p>
+            <p>I launched a professional Instagram account to explore passive income opportunities. While growth has been steady but slow, I see great value in it as a personal experiment. The account remains a space where I share projects and creative pursuits.</p>
             <em>16 Aug 2025</em><br>
             <button onclick="window.location.href='https://www.instagram.com/nikawealth?igsh=d2pwOTlzYnV5dHE0'" class="btn social-btn" style="background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D); color: white; border: none;">
                 <i class="fab fa-instagram me-2"></i> Professional Insta
@@ -544,7 +491,6 @@
             lastScroll = currentScroll;
         });
 
-        // UPDATED JS FOR SMOOTH ANIMATION
         function toggleGallery() {
             const wrapper = document.getElementById('gallery-wrapper');
             const icon = document.getElementById('gallery-icon');
