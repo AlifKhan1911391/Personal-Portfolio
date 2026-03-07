@@ -86,9 +86,18 @@
         }
 
         /* Headings and Paragraphs */
-        #Welcome h1, #learning h2, #research-paper h2, #business-venture .venture-title {
+        #Welcome h1, #learning h2, #business-venture .venture-title {
             font-size: 2.5rem;
             color: #222;
+        }
+
+        /* Specific fix for long research title */
+        #research-paper .rp-title {
+            font-size: 1.85rem;
+            color: #222;
+            font-family: "Mozilla Headline", sans-serif;
+            font-weight: 650;
+            margin-bottom: 10px;
         }
 
         #Welcome h2 {
@@ -357,13 +366,13 @@
 
         <div id="research-paper">
             <span class="rp-badge">📄 Published Research</span>
-            <h2 class="title" style="margin-bottom: 10px;">AI-Assisted Manga Creation</h2>
+            <h2 class="rp-title">AI-Assisted Manga Creation: A Workflow for Non-Artists</h2>
             <div class="rp-meta">
                 <span><i class="fas fa-user"></i> Mahadi Islam Alif</span>
                 <span><i class="fas fa-calendar"></i> March 7, 2026</span>
             </div>
-            <p>Traditional manga production requires years of artistic mastery, often barring storytellers from the medium. This research explores an AI-driven pipeline that bridges this gap. By combining LLMs for narrative and diffusion models for visuals, I successfully produced a five-page manga chapter without formal training.</p>
-            <p>The project demonstrates significantly reduced production times and positive reception, proving AI's potential to empower independent creators and democratize complex artistic mediums.</p>
+            <p>Traditional manga production requires years of artistic mastery, often barring storytellers from the medium. This research explores a five-stage production pipeline that combines Large Language Models (LLMs) for narrative with diffusion-based image synthesis for visuals.</p>
+            <p>To validate the workflow, I produced a five-page manga chapter from scratch using tools like ChatGPT and Midjourney without formal drawing training. The study demonstrates significantly reduced production times and confirms that AI can effectively democratize the medium for non-artists.</p>
             
             <div class="venture-links">
                 <a href="https://zenodo.org/records/18897457" target="_blank" rel="noopener" class="venture-link">
