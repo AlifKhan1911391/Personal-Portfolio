@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
     <title>Mahadi Islam Alif | Web Developer, Entrepreneur & Programmer Portfolio</title>
-    
-    <meta name="description" content="Official portfolio of Mahadi Islam Alif. Professional web developer from Bangladesh specializing in clean code and digital marketing.">
+    <meta name="title" content="Mahadi Islam Alif | Web Developer, Entrepreneur & Programmer Portfolio">
+    <meta name="description" content="Official portfolio of Mahadi Islam Alif. Professional web developer from Bangladesh specializing in clean code, digital marketing, and entrepreneurial ventures.">
     <meta name="author" content="Mahadi Islam Alif">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://mahadiislamalif.netlify.app/">
@@ -44,12 +44,7 @@
     </script>
 
     <style>
-        /* --- General Layout --- */
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
+        /* --- Layout & Sections --- */
         #main {
             display: flex;
             flex-direction: column;
@@ -57,7 +52,6 @@
             align-items: center;
         }
 
-        /* --- Section Styling --- */
         #Welcome,
         #learning,
         #research-paper,
@@ -74,37 +68,27 @@
             font-family: 'Segoe UI', Tahoma, sans-serif;
             color: #333;
             text-align: center;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
+        /* --- Hover Effects --- */
         #Welcome:hover, 
         #learning:hover, 
         #research-paper:hover, 
         #business-venture:hover, 
         #professional-insta:hover {
             transform: translateY(-5px);
+            transition: 0.3s ease-in-out;
             box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
         }
 
-        /* --- Typography --- */
-        #Welcome h1, #learning h2, #business-venture .venture-title {
-            font-size: 2.5rem;
-            color: #222;
+        /* --- Elements --- */
+        #pfp {
+            width: 45%;
+            height: auto;
+            border-radius: 100px;
+            border: 5px solid #007BFF;
         }
 
-        .title {
-            font-family: "Mozilla Headline", sans-serif;
-            font-weight: 650;
-            margin-bottom: 30px;
-        }
-
-        .marked {
-            color: #4570b5;
-            text-decoration: none;
-            font-weight: 700;
-        }
-
-        /* --- Navigation --- */
         #nav {
             position: fixed;
             top: 0;
@@ -138,88 +122,87 @@
             background-color: #4169E1;
         }
 
-        /* --- Custom Styles --- */
-        #pfp {
-            width: 45%;
-            border-radius: 100px;
-            border: 5px solid #007BFF;
-        }
-
-        .status-update {
-            color: #d9534f;
-            font-weight: 600;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
-            margin-top: 15px;
-        }
-
         .social-btn {
             margin: 0.5rem;
             min-width: 300px;
         }
 
+        .status-update {
+            color: #d9534f;
+            font-weight: 600;
+            margin-top: 15px;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
         #networking {
             color: white;
             background: url('https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/1755326883497.jpg');
-            background-size: cover;
         }
 
         a {
             text-decoration: none;
+        }
+
+        .marked {
+            color: #4570b5;
+            font-weight: 700;
+        }
+
+        .title {
+            font-family: "Mozilla Headline", sans-serif;
+            font-weight: 650;
+            margin-bottom: 30px;
         }
     </style>
 </head>
 
 <body>
 
-    <nav id="nav">
+    <div id="nav">
         <ol>
             <li class="activenav"><a href="/">Home</a></li>
             <li><a href='/projects'>Projects</a></li>
             <li><a href='/certificates'>Certificates</a></li>
             <li><a href='/ebooks'>E-books</a></li>
         </ol>
-    </nav>
+    </div>
 
-    <main id="main">
+    <div id="main">
 
-        <section id="Welcome">
+        <div id="Welcome">
             <h1>Welcome to My Portfolio</h1>
             <img src="IMG_20251111_085231_821.webp" alt="Mahadi Islam Alif" id="pfp">
             <h2>Mahadi Islam Alif — <em><a class='marked' href='/projects'>Web Developer</a> & <a href="#business-venture" class="marked">Entrepreneur</a></em></h2>
-            <p>I'm a passionate web developer from Bangladesh, dedicated to creating clean, efficient, and visually engaging digital solutions. My work blends technical precision with creative design to deliver user-friendly, impactful web experiences.</p>
-        </section>
+            <p>I'm a passionate web developer from Bangladesh, dedicated to creating clean, efficient, and visually engaging digital solutions.</p>
+        </div>
 
-        <section id="research-paper">
-            <span class="rp-badge">📄 Published Research</span>
-            <h2 class="rp-title">AI-Assisted Manga Creation: A Workflow for Non-Artists</h2>
-            <p>Traditional manga production requires years of artistic mastery. This research explores a five-stage production pipeline that combines LLMs for narrative with diffusion-based image synthesis for visuals.</p>
-            <div class="venture-links">
-                <a href="https://zenodo.org/records/18909791" target="_blank" class="venture-link">
-                    <i class="fas fa-external-link-alt"></i> Read on Zenodo
-                </a>
-            </div>
-        </section>
+        <div id="research-paper">
+            <span class="rp-badge" style="background: #e9ecef; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem;">📄 Research</span>
+            <h2 class="rp-title" style="margin-top: 10px;">AI-Assisted Manga Creation: A Workflow for Non-Artists</h2>
+            <p>Exploring production pipelines combining LLMs and diffusion-based image synthesis.</p>
+            <a href="https://zenodo.org/records/18909791" target="_blank" class="btn btn-primary">Read on Zenodo</a>
+        </div>
 
-        <section id="professional-insta">
-            <h3 class="title">Strategic Digital Branding: @nikawealth</h3>
+        <div id="professional-insta">
+            <h3 class="title">Professional Instagram Journey</h3>
             
             <p style="text-align: justify;">
-                In August 2025, I launched a professional Instagram project aimed at raising awareness about wealth, victory, and the psychology of money. My mission was to spread the "cutter" that helps people cut through the traps of a 9-5 society, focusing on business, entrepreneurship, and self-help through cinematic movie clips. This project was not just a campaign for financial awareness but a strategic attempt to build a passive income stream and escape the traditional system. It stood as a documented stage in my journey toward becoming a high-level billionaire and a wealthy individual in today's trappy society.
+                I initiated this professional Instagram account with a strategic vision to raise awareness regarding wealth creation, victory, and the psychology of money. By leveraging high-impact movie clips, I aimed to provide a "cutter" to help individuals navigate and escape the systemic traps of a 9-5 society. This project was designed not only as an educational platform for business and entrepreneurship but also as a tactical experiment in building passive income. It serves as a documented milestone in my journey toward achieving top-class billionaire status and financial independence in a traditional economic landscape.
                 <br><em>— 16 Aug 2025</em>
             </p>
 
             <p class="status-update">
-                After extensive testing, I have realized that the growth of this account did not meet expectations, making it a less efficient use of my time. I have decided to prioritize mastering high-value technical skills over maintaining this project, as I believe they offer a more scalable path to my goals. Therefore, I am officially quitting this project to focus on more impactful ventures.
+                After extensive testing, I have concluded that the growth of this project did not meet expectations, and I can better utilize my time by mastering high-value technical skills. While it was a valuable part of my entrepreneurial journey, I am now choosing to focus on more scalable pursuits. Consequently, I am officially quitting this project to prioritize professional growth.
                 <br><em>— 6th Nov 2025</em>
             </p>
 
             <button onclick="window.location.href='https://www.instagram.com/nikawealth'" class="btn social-btn" style="background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #FD1D1D); color: white; border: none;">
-                <i class="fab fa-instagram me-2"></i> View Project
+                <i class="fab fa-instagram me-2"></i> View Instagram
             </button>
-        </section>
+        </div>
 
-        <section id="networking">
+        <div id="networking">
             <h3 class="title">Connect with me:</h3>
             <button onclick="window.location.href='mailto:iamitachi494@gmail.com'" class="btn btn-danger social-btn">
                 <i class="fas fa-envelope me-2"></i> E-mail
@@ -228,15 +211,13 @@
             <button onclick="window.location.href='https://github.com/AlifKhan1911391'" class="btn btn-dark social-btn">
                 <i class="fab fa-github me-2"></i> Github
             </button>
-        </section>
+        </div>
 
-    </main>
+    </div>
 
     <script>
-        // Smooth Scroll Navigation Logic
         let lastScroll = 0;
         const nav = document.getElementById('nav');
-
         window.addEventListener('scroll', () => {
             const currentScroll = window.pageYOffset;
             if (currentScroll > lastScroll && currentScroll > 100) {
@@ -247,6 +228,5 @@
             lastScroll = currentScroll;
         });
     </script>
-
 </body>
 </html>
