@@ -6,7 +6,7 @@
 
     <title>Mahadi Islam Alif | Web Developer, Entrepreneur & Programmer Portfolio</title>
     <meta name="title" content="Mahadi Islam Alif | Web Developer, Entrepreneur & Programmer Portfolio">
-    <meta name="description" content="Official portfolio of Mahadi Islam Alif. Professional web developer from Bangladesh specializing in clean code, digital marketing, and entrepreneurial ventures.">
+    <meta name="description" content="Official portfolio of Mahadi Islam Alif. Professional web developer from Bangladesh specializing in clean code and digital marketing.">
     <meta name="author" content="Mahadi Islam Alif">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://mahadiislamalif.netlify.app/">
@@ -44,7 +44,7 @@
     </script>
 
     <style>
-        /* --- Layout & Sections --- */
+        /* --- Layout --- */
         #main {
             display: flex;
             flex-direction: column;
@@ -52,12 +52,7 @@
             align-items: center;
         }
 
-        #Welcome,
-        #learning,
-        #research-paper,
-        #networking,
-        #professional-insta,
-        #business-venture {
+        #Welcome, #learning, #research-paper, #networking, #professional-insta, #business-venture {
             margin-top: 30px;
             max-width: 800px;
             margin: 80px auto;
@@ -70,90 +65,49 @@
             text-align: center;
         }
 
-        /* --- Hover Effects --- */
-        #Welcome:hover, 
-        #learning:hover, 
-        #research-paper:hover, 
-        #business-venture:hover, 
-        #professional-insta:hover {
+        #Welcome:hover, #learning:hover, #research-paper:hover, #business-venture:hover, #professional-insta:hover {
             transform: translateY(-5px);
             transition: 0.3s ease-in-out;
             box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
         }
 
-        /* --- Elements --- */
-        #pfp {
-            width: 45%;
-            height: auto;
-            border-radius: 100px;
-            border: 5px solid #007BFF;
-        }
-
+        /* --- Components --- */
+        #pfp { width: 45%; height: auto; border-radius: 100px; border: 5px solid #007BFF; }
+        
         #nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #333;
-            z-index: 1000;
+            position: fixed; top: 0; width: 100%; background-color: #333; z-index: 1000;
             transition: transform 0.3s ease;
         }
+        #nav ol { list-style-type: none; margin: 0; padding: 0; overflow: hidden; }
+        #nav li { float: left; }
+        #nav li a { display: block; color: white; text-align: center; padding: 13px 11px; text-decoration: none; font-family: 'Inter', sans-serif; }
+        .activenav { background-color: #4169E1; }
 
-        #nav ol {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
+        .venture-badge, .rp-badge {
+            display: inline-block; background: linear-gradient(90deg, #6ea8fe, #9ad0ff);
+            color: #0a0f1e; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;
         }
 
-        #nav li {
-            float: left;
+        .venture-links { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 30px; justify-content: center; }
+        .venture-link {
+            display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+            background: linear-gradient(90deg, #6ea8fe, #9ad0ff); color: #0a0f1e;
+            font-weight: 600; padding: 12px 20px; border-radius: 12px; transition: all 0.3s ease;
         }
 
-        #nav li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 13px 11px;
-            text-decoration: none;
-            font-family: 'Inter', sans-serif;
-        }
+        .status-update { color: #d9534f; font-weight: 600; border-top: 1px solid #eee; padding-top: 15px; margin-top: 15px; }
 
-        .activenav {
-            background-color: #4169E1;
-        }
+        /* --- Business Gallery --- */
+        .gallery-summary { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: rgba(110, 168, 254, 0.1); border-radius: 10px; cursor: pointer; color: #007bff; font-weight: 600; }
+        .gallery-wrapper { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.4s ease-out; overflow: hidden; }
+        .gallery-wrapper.expanded { grid-template-rows: 1fr; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; padding: 20px 0; }
+        .venture-img { width: 100%; border-radius: 10px; }
 
-        .social-btn {
-            margin: 0.5rem;
-            min-width: 300px;
-        }
-
-        .status-update {
-            color: #d9534f;
-            font-weight: 600;
-            margin-top: 15px;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
-        }
-
-        #networking {
-            color: white;
-            background: url('https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/1755326883497.jpg');
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .marked {
-            color: #4570b5;
-            font-weight: 700;
-        }
-
-        .title {
-            font-family: "Mozilla Headline", sans-serif;
-            font-weight: 650;
-            margin-bottom: 30px;
-        }
+        #networking { color: white; background: url('https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/1755326883497.jpg'); background-size: cover; }
+        .marked { color: #4570b5; text-decoration: none; font-weight: 700; }
+        .title { font-family: "Mozilla Headline", sans-serif; font-weight: 650; margin-bottom: 30px; }
+        a { text-decoration: none; }
     </style>
 </head>
 
@@ -174,21 +128,48 @@
             <h1>Welcome to My Portfolio</h1>
             <img src="IMG_20251111_085231_821.webp" alt="Mahadi Islam Alif" id="pfp">
             <h2>Mahadi Islam Alif — <em><a class='marked' href='/projects'>Web Developer</a> & <a href="#business-venture" class="marked">Entrepreneur</a></em></h2>
-            <p>I'm a passionate web developer from Bangladesh, dedicated to creating clean, efficient, and visually engaging digital solutions.</p>
+            <p>I'm a passionate web developer from Bangladesh, dedicated to creating clean, efficient, and visually engaging digital solutions. My long-term vision is achieving financial freedom through technology while contributing to meaningful projects that make a difference.</p>
         </div>
 
         <div id="research-paper">
-            <span class="rp-badge" style="background: #e9ecef; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem;">📄 Research</span>
-            <h2 class="rp-title" style="margin-top: 10px;">AI-Assisted Manga Creation: A Workflow for Non-Artists</h2>
-            <p>Exploring production pipelines combining LLMs and diffusion-based image synthesis.</p>
-            <a href="https://zenodo.org/records/18909791" target="_blank" class="btn btn-primary">Read on Zenodo</a>
+            <span class="rp-badge">📄 Published Research</span>
+            <h2 class="rp-title">AI-Assisted Manga Creation: A Workflow for Non-Artists</h2>
+            <p>This research explores a five-stage production pipeline combining LLMs and diffusion-based image synthesis to democratize manga creation for non-artists.</p>
+            <div class="venture-links">
+                <a href="https://zenodo.org/records/18909791" target="_blank" class="venture-link"><i class="fas fa-external-link-alt"></i> Read on Zenodo</a>
+                <a href="https://orcid.org/0009-0006-8041-6488" target="_blank" class="venture-link" style="background: #a9b3cf;"><i class="fab fa-orcid"></i> ORCID Profile</a>
+            </div>
+        </div>
+
+        <div id="learning">
+            <span class="venture-badge">Exploration & Growth</span>
+            <h2 class="title">AI & Digital Marketing</h2>
+            <p>I am actively expanding my knowledge base in <strong>Artificial Intelligence</strong> and <strong>Digital Marketing</strong> to broaden my entrepreneurial toolkit. Check out my <a href="/certificates" class="marked">Certificates</a> for more.</p>
+        </div>
+
+        <div id="business-venture">
+            <h2 class="venture-title">Poedagar 613 | E-Commerce</h2>
+            <p>Launched in May 2025, this manual dropshipping venture provided invaluable lessons in sourcing, acquisition, and bootstrapped e-commerce mechanics.</p>
+            
+            <div class="venture-gallery">
+                <div class="gallery-summary" onclick="toggleGallery()">
+                    <span>View Business Images</span>
+                    <span id="gallery-icon">+</span>
+                </div>
+                <div class="gallery-wrapper" id="gallery-wrapper">
+                    <div class="gallery-grid">
+                        <div class="gallery-item"><img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/business/IMG_20250825_140614.jpg" class="venture-img"></div>
+                        <div class="gallery-item"><img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/business/Screenshot_20250821-200403.jpg" class="venture-img"></div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div id="professional-insta">
-            <h3 class="title">Professional Instagram Journey</h3>
+            <h3 class="title">Strategic Digital Branding: @nikawealth</h3>
             
             <p style="text-align: justify;">
-                I initiated this professional Instagram account with a strategic vision to raise awareness regarding wealth creation, victory, and the psychology of money. By leveraging high-impact movie clips, I aimed to provide a "cutter" to help individuals navigate and escape the systemic traps of a 9-5 society. This project was designed not only as an educational platform for business and entrepreneurship but also as a tactical experiment in building passive income. It serves as a documented milestone in my journey toward achieving top-class billionaire status and financial independence in a traditional economic landscape.
+                I initiated this professional Instagram account with a strategic vision to raise awareness regarding wealth creation, victory, and the psychology of money. By leveraging high-impact movie clips, I aimed to provide a "cutter" to help individuals navigate and escape the systemic traps of a 9-5 society, focusing on business, entrepreneurship, and self-help. This project was designed not only as an educational platform but also as a tactical experiment in building passive income streams. It serves as a documented milestone in my journey toward achieving top-class billionaire status and financial independence in a traditional economic landscape.
                 <br><em>— 16 Aug 2025</em>
             </p>
 
@@ -197,36 +178,42 @@
                 <br><em>— 6th Nov 2025</em>
             </p>
 
-            <button onclick="window.location.href='https://www.instagram.com/nikawealth'" class="btn social-btn" style="background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #FD1D1D); color: white; border: none;">
-                <i class="fab fa-instagram me-2"></i> View Instagram
+            <button onclick="window.location.href='https://www.instagram.com/nikawealth'" class="btn social-btn" style="background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #FD1D1D); color: white; border: none; padding: 10px 30px; border-radius: 10px;">
+                <i class="fab fa-instagram me-2"></i> View Archived Project
             </button>
         </div>
 
         <div id="networking">
             <h3 class="title">Connect with me:</h3>
-            <button onclick="window.location.href='mailto:iamitachi494@gmail.com'" class="btn btn-danger social-btn">
-                <i class="fas fa-envelope me-2"></i> E-mail
-            </button>
-            <br>
-            <button onclick="window.location.href='https://github.com/AlifKhan1911391'" class="btn btn-dark social-btn">
-                <i class="fab fa-github me-2"></i> Github
-            </button>
+            <button onclick="window.location.href='mailto:iamitachi494@gmail.com'" class="btn btn-danger social-btn" style="min-width: 250px;"><i class="fas fa-envelope me-2"></i> E-mail</button><br>
+            <button onclick="window.location.href='https://github.com/AlifKhan1911391'" class="btn btn-dark social-btn" style="min-width: 250px; margin-top: 10px;"><i class="fab fa-github me-2"></i> Github</button>
         </div>
 
     </div>
 
     <script>
+        // Scroll Logic
         let lastScroll = 0;
         const nav = document.getElementById('nav');
         window.addEventListener('scroll', () => {
             const currentScroll = window.pageYOffset;
-            if (currentScroll > lastScroll && currentScroll > 100) {
-                nav.style.transform = 'translateY(-100%)';
-            } else {
-                nav.style.transform = 'translateY(0)';
-            }
+            if (currentScroll > lastScroll && currentScroll > 100) { nav.style.transform = 'translateY(-100%)'; } 
+            else { nav.style.transform = 'translateY(0)'; }
             lastScroll = currentScroll;
         });
+
+        // Gallery Logic
+        function toggleGallery() {
+            const wrapper = document.getElementById('gallery-wrapper');
+            const icon = document.getElementById('gallery-icon');
+            if (wrapper.classList.contains('expanded')) {
+                wrapper.classList.remove('expanded');
+                icon.textContent = '+';
+            } else {
+                wrapper.classList.add('expanded');
+                icon.textContent = '×';
+            }
+        }
     </script>
 </body>
 </html>
