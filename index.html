@@ -82,11 +82,12 @@
             align-items: center;
         }
 
-        /* Standardized Section Styles - extended to include new research-v8 */
+        /* Standardized Section Styles - extended to include new research-v8 and professional-insta */
         #Welcome,
         #learning,
         #research-paper,
         #research-v8,
+        #professional-insta,
         #networking,
         #business-venture {
             margin-top: 30px;
@@ -99,6 +100,26 @@
             font-family: 'Segoe UI', Tahoma, sans-serif;
             color: #333;
             text-align: center;
+        }
+
+        /* Professional Insta specific styling - ensures proper background and visibility */
+        #professional-insta {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            text-align: center;
+        }
+        
+        #professional-insta .title {
+            font-family: "Mozilla Headline", sans-serif;
+            font-weight: 650;
+            margin-bottom: 20px;
+            color: #222;
+        }
+        
+        #professional-insta p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 15px 0;
+            color: #333;
         }
 
         /* Headings and Paragraphs */
@@ -130,6 +151,7 @@
         #learning p,
         #research-paper p,
         #research-v8 p,
+        #professional-insta p,
         #business-venture .venture-description {
             font-size: 1rem;
             line-height: 1.6;
@@ -141,6 +163,7 @@
         #learning:hover,
         #research-paper:hover,
         #research-v8:hover,
+        #professional-insta:hover,
         #business-venture:hover {
             transform: translateY(-5px);
             transition: 0.3s ease-in-out;
@@ -361,14 +384,70 @@
         }
 
         /* Helpers */
-        .social-btn { margin: 0.5rem; min-width: 300px; }
-        .title { font-family: "Mozilla Headline", sans-serif; font-weight: 650; margin-bottom: 30px; }
-        .marked { color: #4570b5; text-decoration: none; font-weight: 700; }
-        #networking { color: white; background: url('https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/1755326883497.jpg'); }
+        .social-btn { 
+            margin: 0.5rem; 
+            min-width: 300px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .title { 
+            font-family: "Mozilla Headline", sans-serif; 
+            font-weight: 650; 
+            margin-bottom: 30px; 
+        }
+        
+        .marked { 
+            color: #4570b5; 
+            text-decoration: none; 
+            font-weight: 700; 
+        }
+        
+        .marked:hover {
+            text-decoration: underline;
+        }
+        
+        #networking { 
+            color: white; 
+            background: linear-gradient(135deg, #1e2a3a, #0f172a);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        #networking .title {
+            color: white;
+        }
+        
         html { scroll-behavior: smooth; }
         body { margin: 0; padding: 0; }
+        
         a {
             text-decoration: none;
+        }
+        
+        /* Update text styling for professional-insta */
+        .update-text {
+            color: #d9534f;
+            font-weight: bold;
+            background: rgba(217, 83, 79, 0.1);
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 15px;
+            display: block;
+        }
+        
+        .update-text em {
+            display: block;
+            margin-top: 8px;
+            font-weight: normal;
         }
     </style>
 </head>
@@ -419,7 +498,7 @@
                     <i class="fas fa-globe"></i> View on OpenAIRE
                 </a>
             </div>
-<p class="rp-doi">To download metadata <a href="https://zenodo.org/records/18913179/export/json" rel="noopener">click here</a></p>
+            <p class="rp-doi">To download metadata <a href="https://zenodo.org/records/18913179/export/json" rel="noopener">click here</a></p>
             <p class="rp-doi">DOI: <a href="https://doi.org/10.5281/zenodo.18913179" target="_blank" rel="noopener">10.5281/zenodo.18913179</a></p>
         </div>
 
@@ -525,15 +604,17 @@
             </div>
         </div>
 
+        <!-- Instagram Professional Account Section - Fixed and properly structured -->
         <div id="professional-insta">
             <h3 class="title">Instagram Professional Account</h3>
-            <p>I initiated this professional Instagram account with a strategic vision to raise awareness regarding wealth creation, victory, and the psychology of money. By leveraging high-impact movie clips, I aimed to provide a "cutter" to help individuals navigate and escape the systemic traps of a 9-5 society, focusing on business, entrepreneurship, and self-help. This project was designed not only as an educational platform but also as a tactical experiment in building passive income streams. It serves as a documented milestone in my journey toward achieving top-class billionaire status and financial independence in a traditional economic landscape.
-           <br> <em>16 Aug 2025</em></p>
-<p><span style="color: #d9534f; font-weight: bold;">[Update] After extensive testing, I have concluded that the growth of this project did not meet expectations, and I can better utilize my time by mastering high-value technical skills. While it was a valuable part of my entrepreneurial journey, I am now choosing to focus on more scalable pursuits. Consequently, I am officially quitting this project to prioritize professional growth. Still, I'm keeping it here as a memory & as a part of my journey<br><em> 6th Nov 2025</em></span></p>
-
-
-            <button onclick="window.location.href='https://www.instagram.com/nikawealth?igsh=d2pwOTlzYnV5dHE0'" class="btn social-btn" style="background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D); color: white; border: none;">
-                <i class="fab fa-instagram me-2"></i> Professional Insta
+            <p>I initiated this professional Instagram account with a strategic vision to raise awareness regarding wealth creation, victory, and the psychology of money. By leveraging high-impact movie clips, I aimed to provide a "cutter" to help individuals navigate and escape the systemic traps of a 9-5 society, focusing on business, entrepreneurship, and self-help. This project was designed not only as an educational platform but also as a tactical experiment in building passive income streams. It serves as a documented milestone in my journey toward achieving top-class billionaire status and financial independence in a traditional economic landscape.</p>
+            <p><em>Started: 16 Aug 2025</em></p>
+            <div class="update-text">
+                <span style="color: #d9534f; font-weight: bold;">[Update] After extensive testing, I have concluded that the growth of this project did not meet expectations, and I can better utilize my time by mastering high-value technical skills. While it was a valuable part of my entrepreneurial journey, I am now choosing to focus on more scalable pursuits. Consequently, I am officially quitting this project to prioritize professional growth. Still, I'm keeping it here as a memory & as a part of my journey.</span>
+                <em>6th Nov 2025</em>
+            </div>
+            <button onclick="window.location.href='https://www.instagram.com/nikawealth?igsh=d2pwOTlzYnV5dHE0'" class="btn social-btn" style="background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D); color: white; border: none; margin-top: 20px;">
+                <i class="fab fa-instagram me-2"></i> Visit NikaWealth Instagram
             </button>
         </div>
 
@@ -546,7 +627,7 @@
                 <i class="fab fa-github me-2"></i> Github
             </button><br>
             <button onclick="window.location.href='https://www.instagram.com/joy._.boy69?igsh=ZmNubzBqOGJxZmZi'" class="btn social-btn" style="background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D); color: white; border: none;">
-                <i class="fab fa-instagram me-2"></i> Instagram
+                <i class="fab fa-instagram me-2"></i> Personal Instagram
             </button>
         </div>
     </div>
