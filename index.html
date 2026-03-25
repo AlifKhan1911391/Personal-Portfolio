@@ -82,12 +82,12 @@
             align-items: center;
         }
 
-        /* Standardized Section Styles */
+        /* Standardized Section Styles - extended to include new research-v8 */
         #Welcome,
         #learning,
         #research-paper,
+        #research-v8,
         #networking,
-        #professional-insta,
         #business-venture {
             margin-top: 30px;
             max-width: 800px;
@@ -107,8 +107,9 @@
             color: #222;
         }
 
-        /* Specific fix for long research title */
-        #research-paper .rp-title {
+        /* Specific fix for long research titles - applies to both research papers */
+        #research-paper .rp-title,
+        #research-v8 .rp-title {
             font-size: 1.85rem;
             color: #222;
             font-family: "Mozilla Headline", sans-serif;
@@ -124,13 +125,23 @@
             font-weight: 400;
         }
 
-        #Welcome p, #learning p, #research-paper p, #business-venture .venture-description {
+        /* Paragraph styling for both research sections and others */
+        #Welcome p,
+        #learning p,
+        #research-paper p,
+        #research-v8 p,
+        #business-venture .venture-description {
             font-size: 1rem;
             line-height: 1.6;
             margin: 10px 0;
         }
 
-        #Welcome:hover, #learning:hover, #research-paper:hover, #business-venture:hover {
+        /* Hover effects extended */
+        #Welcome:hover,
+        #learning:hover,
+        #research-paper:hover,
+        #research-v8:hover,
+        #business-venture:hover {
             transform: translateY(-5px);
             transition: 0.3s ease-in-out;
             box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
@@ -223,6 +234,25 @@
 
         .secondary-link {
             background: linear-gradient(90deg, #a9b3cf, #c1c9e0);
+        }
+
+        /* Research Paper Metadata - unified for both papers */
+        #research-paper .rp-meta,
+        #research-v8 .rp-meta {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        #research-paper .rp-doi,
+        #research-v8 .rp-doi {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #6c757d;
         }
 
         /* Business Venture Specifics */
@@ -330,23 +360,6 @@
             text-align: center;
         }
 
-        /* Research Paper Metadata */
-        #research-paper .rp-meta {
-            font-size: 0.9rem;
-            color: #6c757d;
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        #research-paper .rp-doi {
-            margin-top: 15px;
-            font-size: 0.85rem;
-            color: #6c757d;
-        }
-
         /* Helpers */
         .social-btn { margin: 0.5rem; min-width: 300px; }
         .title { font-family: "Mozilla Headline", sans-serif; font-weight: 650; margin-bottom: 30px; }
@@ -354,9 +367,9 @@
         #networking { color: white; background: url('https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/1755326883497.jpg'); }
         html { scroll-behavior: smooth; }
         body { margin: 0; padding: 0; }
-a {
-    text-decoration: none;
-}
+        a {
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -409,6 +422,31 @@ a {
 <p class="rp-doi">To download metadata <a href="https://zenodo.org/records/18913179/export/json" rel="noopener">click here</a></p>
             <p class="rp-doi">DOI: <a href="https://doi.org/10.5281/zenodo.18913179" target="_blank" rel="noopener">10.5281/zenodo.18913179</a></p>
         </div>
+
+        <!-- NEW RESEARCH DIV: Spring-Powered V8 Engine Model, inserted right after the existing research paper -->
+        <div id="research-v8">
+            <span class="rp-badge">📄 Published Research</span>
+            <h2 class="rp-title">Spring-Powered V8 Engine Model: Mechanical Design, Energy Conversion, and Thermodynamic Analysis</h2>
+            <div class="rp-meta">
+                <span>
+                    <i class="fab fa-orcid" style="color: #A6CE39; margin-left: 3px;" title="View ORCID Profile"></i> 
+                    <a href="https://orcid.org/0009-0006-8041-6488" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; font-weight: 600; transition: color 0.3s;">
+                        Mahadi Islam Alif 
+                    </a>
+                </span>
+                <span><i class="fas fa-calendar"></i> March 23, 2026</span>
+            </div>
+            <p>This paper presents a theoretical mechanical design and analytical study of a hand-loaded, spring-powered V8 engine model. The proposed machine converts manually pre-stored elastic potential energy governed by Hooke's Law into sustained rotational mechanical output through a six-stage energy conversion pathway.</p>
+            <p>Analytical energy distribution estimates suggest approximately 40% useful mechanical output, accounting for bearing friction and aerodynamic losses. The study rigorously addresses energy conservation laws and rotational inertia to provide a technical framework for future STEM demonstrators.</p>
+
+            <div class="venture-links">
+                <a href="https://doi.org/10.31224/6657" target="_blank" rel="noopener" class="venture-link">
+                    <i class="fas fa-external-link-alt"></i> Read Full Paper on engrXiv
+                </a>
+            </div>
+            <p class="rp-doi">DOI: <a href="https://doi.org/10.31224/6657" target="_blank" rel="noopener">10.31224/6657</a></p>
+        </div>
+
         <div id="learning">
             <span class="venture-badge">Exploration & Growth</span>
             <h2 class="title" style="margin-bottom: 10px;">AI & Digital Marketing</h2>
