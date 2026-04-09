@@ -2,25 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mahadiislamalif.netlify.app/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <priority>1.00</priority>
   </url>
-  
+
   <url>
     <loc>https://mahadiislamalif.netlify.app/projects</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <priority>0.80</priority>
   </url>
-  
+
   <url>
     <loc>https://mahadiislamalif.netlify.app/certificates</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <priority>0.80</priority>
   </url>
-  
+
   <url>
     <loc>https://mahadiislamalif.netlify.app/ebooks</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://mahadiislamalif.netlify.app/ai</loc>
+    <lastmod>2026-04-10</lastmod>
+    <priority>0.70</priority>
   </url>
 </urlset>
