@@ -94,6 +94,7 @@
         #learning,
         #research-paper,
         #research-v8,
+        #craftly-work,
         #professional-insta,
         #networking,
         #business-venture {
@@ -114,14 +115,14 @@
             background: linear-gradient(135deg, #f8f9fa, #ffffff);
             text-align: center;
         }
-        
+
         #professional-insta .title {
             font-family: "Mozilla Headline", sans-serif;
             font-weight: 650;
             margin-bottom: 20px;
             color: #222;
         }
-        
+
         #professional-insta p {
             font-size: 1rem;
             line-height: 1.6;
@@ -158,6 +159,7 @@
         #learning p,
         #research-paper p,
         #research-v8 p,
+        #craftly-work p,
         #professional-insta p,
         #business-venture .venture-description {
             font-size: 1rem;
@@ -170,6 +172,7 @@
         #learning:hover,
         #research-paper:hover,
         #research-v8:hover,
+        #craftly-work:hover,
         #professional-insta:hover,
         #business-venture:hover {
             transform: translateY(-5px);
@@ -400,46 +403,46 @@
             border-radius: 50px;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        
+
         .social-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
-        
+
         .title { 
             font-family: "Mozilla Headline", sans-serif; 
             font-weight: 650; 
             margin-bottom: 30px; 
         }
-        
+
         .marked { 
             color: #4570b5; 
             text-decoration: none; 
             font-weight: 700; 
         }
-        
+
         .marked:hover {
             text-decoration: underline;
         }
-        
+
         #networking { 
             color: white; 
             background: linear-gradient(135deg, #1e2a3a, #0f172a);
             background-size: cover;
             background-position: center;
         }
-        
+
         #networking .title {
             color: white;
         }
-        
+
         html { scroll-behavior: smooth; }
         body { margin: 0; padding: 0; }
-        
+
         a {
             text-decoration: none;
         }
-        
+
         /* Update text styling for professional-insta */
         .update-text {
             color: #d9534f;
@@ -450,11 +453,101 @@
             margin-top: 15px;
             display: block;
         }
-        
+
         .update-text em {
             display: block;
             margin-top: 8px;
             font-weight: normal;
+        }
+
+        /* ── Craftly Work Section ── */
+        #craftly-work {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cw-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, #1a73e8, #4da3ff);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .cw-logo {
+            height: 64px;
+            width: auto;
+            object-fit: contain;
+            border-radius: 10px;
+            margin: 10px auto 18px;
+            display: block;
+        }
+
+        .cw-title {
+            font-family: "Mozilla Headline", sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #0d1f3c;
+            margin-bottom: 6px;
+        }
+
+        .cw-chips {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 14px 0 20px;
+        }
+
+        .cw-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(26, 115, 232, 0.1);
+            border: 1.5px solid rgba(26, 115, 232, 0.25);
+            color: #1a52b0;
+            padding: 7px 15px;
+            border-radius: 30px;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        .cw-pending-notice {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(255, 160, 0, 0.1);
+            border: 1.5px solid rgba(255, 160, 0, 0.35);
+            color: #a06000;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            margin: 10px 0 18px;
+        }
+
+        .cw-agreement-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(90deg, #1a73e8, #4da3ff);
+            color: #fff;
+            font-weight: 600;
+            padding: 11px 22px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .cw-agreement-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(26,115,232,0.3);
+            color: #fff;
         }
     </style>
 </head>
@@ -531,6 +624,44 @@
                 </a>
             </div>
             <p class="rp-doi">DOI: <a href="https://doi.org/10.31224/6657" target="_blank" rel="noopener">10.31224/6657</a></p>
+        </div>
+
+        <!-- Craftly Work Section -->
+        <div id="craftly-work">
+            <span class="cw-badge">🤝 Active Engagement</span>
+
+            <img src="/craftly/craftly.png" alt="Craftly Logo" class="cw-logo">
+
+            <h2 class="cw-title">Craftly | Operations Engineer</h2>
+
+            <div class="cw-chips">
+                <span class="cw-chip"><i class="fas fa-briefcase"></i> Engineer</span>
+                <span class="cw-chip"><i class="fas fa-cogs"></i> Operations Department</span>
+                <span class="cw-chip"><i class="fas fa-calendar-check"></i> Joined: April 10, 2026</span>
+            </div>
+
+            <div class="cw-pending-notice">
+                <i class="fas fa-hourglass-half"></i>
+                Project Status: Pending Launch — Currently in active development &amp; training phase
+            </div>
+
+            <p>I am currently working at <strong>Craftly</strong> — Bangladesh's first serious attempt to build a homegrown tech company that competes on the world stage with the likes of Google, Microsoft, and Apple.</p>
+
+            <p>The core of Craftly is <strong>Craftly Robot</strong>, an ultra-advanced AI chatbot being engineered to go far beyond what current assistants offer. It is designed to build full Android APKs directly from a mobile phone, generate training datasets, and eventually run on its own proprietary LLM — completely independent of third-party APIs or existing AI systems.</p>
+
+            <p>As of now, the project is in its training and data-collection phase, with the team actively crowdsourcing realistic dataset batches to teach Craftly Robot how to build apps. The platform and its AI have not yet launched publicly.</p>
+
+            <p>In my role as an Operations Engineer, I contribute to the day-to-day workflow of the project — helping coordinate the operational side of building, training, and scaling this ambitious system from the ground up.</p>
+
+            <a href="/craftly/Mahadi_Islam_Alif_Craftly_Agreement_2026-04-10 (1).pdf" target="_blank" rel="noopener" class="cw-agreement-link">
+                <i class="fas fa-file-contract"></i> View Signed Agreement
+            </a>
+
+            <p style="margin-top: 18px;">
+                <a href="https://hello.craftlyrobot.com/" target="_blank" rel="noopener" class="marked">
+                    <i class="fas fa-external-link-alt" style="margin-right: 4px;"></i>Visit Craftly Website
+                </a>
+            </p>
         </div>
 
         <div id="learning">
