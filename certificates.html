@@ -118,7 +118,7 @@
             box-shadow: 0 6px 12px rgba(65, 105, 225, 0.3);
         }
 
-        /* === REDESIGNED ACCORDION – MINIMAL, WIDTH-FRIENDLY === */
+        /* === ACCORDION – WIDTH-FRIENDLY === */
         .accordion-container {
             max-width: 1280px;
             margin: 0 auto 50px;
@@ -129,21 +129,21 @@
         }
 
         .accordion {
-            background: transparent;          /* removed box background */
-            border: none;                     /* removed outer border */
-            border-radius: 0;                  /* no rounding */
-            box-shadow: none;                   /* no shadow */
-            overflow: visible;                  /* allow content to flow */
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            overflow: visible;
         }
 
         .accordion-header {
-            padding: 20px 0;                    /* horizontal padding removed – flush with container */
+            padding: 20px 0;
             display: flex;
             align-items: center;
             cursor: pointer;
             background: transparent;
             user-select: none;
-            border-bottom: 2px solid var(--border-color); /* clean underline */
+            border-bottom: 2px solid var(--border-color);
             transition: border-color 0.2s;
         }
 
@@ -163,7 +163,7 @@
         }
 
         .accordion-title {
-            font-size: 1.5rem;                 /* slightly larger */
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--text-main);
             margin: 0;
@@ -180,12 +180,11 @@
             transform: rotate(180deg);
         }
 
-        /* Transition container – no background */
         .accordion-body {
             display: grid;
             grid-template-rows: 0fr;
             transition: grid-template-rows 0.3s ease-out;
-            background: transparent;            /* no inner background */
+            background: transparent;
         }
 
         .accordion.active .accordion-body {
@@ -196,9 +195,8 @@
             overflow: hidden;
         }
 
-        /* Inner grid – now uses same padding as outer "Other Certifications" */
         .accordion .cert-grid {
-            padding: 30px 0 40px;               /* top/bottom padding, sides 0 (container already pads) */
+            padding: 30px 0 40px;
             margin: 0;
         }
 
@@ -396,7 +394,7 @@
     </header>
 
     <div class="accordion-container">
-
+        <!-- Google Accordion -->
         <div class="accordion" id="acc-google">
             <div class="accordion-header" onclick="toggleAccordion('acc-google')">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" class="accordion-logo">
@@ -406,7 +404,6 @@
             <div class="accordion-body">
                 <div class="accordion-body-inner">
                     <div class="cert-grid">
-
                         <div class="cert-card">
                             <div class="cert-img-container">
                                 <img src="Screenshot_20260302-223501.jpg" alt="Google Analytics Certification" loading="lazy">
@@ -428,7 +425,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="cert-card">
                             <div class="cert-img-container">
                                 <img src="Screenshot_20260301-000358.jpg" alt="Google Ads Display Certification" loading="lazy">
@@ -450,7 +446,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="cert-card">
                             <div class="cert-img-container">
                                 <img src="Screenshot_20260227-232512.jpg" alt="Conversion Optimization Certification" loading="lazy">
@@ -472,7 +467,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="cert-card">
                             <div class="cert-img-container">
                                 <img src="Screenshot_20260227-090858.jpg" alt="Google Ads Video Certification" loading="lazy">
@@ -494,12 +488,12 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Microsoft Accordion -->
         <div class="accordion" id="acc-microsoft">
             <div class="accordion-header" onclick="toggleAccordion('acc-microsoft')">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo" class="accordion-logo">
@@ -509,7 +503,6 @@
             <div class="accordion-body">
                 <div class="accordion-body-inner">
                     <div class="cert-grid">
-
                         <div class="cert-card">
                             <div class="cert-img-container">
                                 <img src="Screenshot_20260305-163647.jpg" alt="Transform ideas into action with Copilot Chat" loading="lazy">
@@ -530,7 +523,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="cert-card">
                             <div class="cert-img-container">
                                 <img src="Screenshot_20260305-164231.jpg" alt="Use AI for everyday tasks" loading="lazy">
@@ -551,7 +543,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="cert-card">
                             <div class="cert-img-container">
                                 <img src="7434a150-17e2-11f1-823d-d1b3bb626f2d.png" alt="Introduction to AI concepts" loading="lazy">
@@ -572,7 +563,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="cert-card">
                             <div class="cert-img-container">
                                 <img src="45b625e0-17e9-11f1-8f5f-c5084baa2115.png" alt="Work smarter with Microsoft 365 Copilot Chat" loading="lazy">
@@ -593,7 +583,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="cert-card">
                             <div class="cert-img-container">
                                 <img src="50894680-13b8-11f1-a6c8-43c9eb6c11ce.png" alt="Introduction to Prompt Engineering with GitHub Copilot" loading="lazy">
@@ -615,17 +604,16 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 
     <h2 class="section-divider">Other Certifications</h2>
 
     <div class="cert-grid">
+        <!-- freeCodeCamp card -->
         <div class="cert-card">
             <div class="cert-img-container">
                 <img src="dea55f30-1723-11f1-9296-5991593cb3b3.png" alt="Web Design" loading="lazy">
@@ -649,6 +637,7 @@
             </div>
         </div>
 
+        <!-- Anthropic Claude Code card -->
         <div class="cert-card">
             <div class="cert-img-container">
                 <img src="certificate-rtgks8mxqg8v-1773076010.jpg" alt="Claude Code in Action" loading="lazy">
@@ -670,6 +659,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Google Cloud + Simplilearn card -->
         <div class="cert-card">
             <div class="cert-img-container">
                 <img src="57ea47b1-13a1-11f1-8ec7-116f7eb89fed.png" alt="Introduction to Generative AI Studio" loading="lazy">
@@ -692,6 +683,7 @@
             </div>
         </div>
 
+        <!-- OpenLearn Mars card -->
         <div class="cert-card">
             <div class="cert-img-container">
                 <img src="Screenshot_20260225-002301.jpg" alt="The Search for Water on Mars" loading="lazy">
@@ -714,6 +706,7 @@
             </div>
         </div>
 
+        <!-- ChatGPT Full Course card -->
         <div class="cert-card">
             <div class="cert-img-container">
                 <img src="certificate (2).png" alt="ChatGPT Full Course" loading="lazy">
@@ -737,6 +730,7 @@
             </div>
         </div>
 
+        <!-- Saylor Python CS105 -->
         <div class="cert-card">
             <div class="cert-img-container">
                 <img src="Screenshot_20260213-233248.jpg" alt="Python" loading="lazy">
@@ -759,6 +753,7 @@
             </div>
         </div>
 
+        <!-- UniAthena Python -->
         <div class="cert-card">
             <div class="cert-img-container">
                 <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/Screenshot_20260212-181521.jpg" alt="Python" loading="lazy">
@@ -781,6 +776,7 @@
             </div>
         </div>
 
+        <!-- Saylor Python for Data Science -->
         <div class="cert-card">
             <div class="cert-img-container">
                 <img src="Screenshot_20260215-000237.jpg" alt="Python for Data Science" loading="lazy">
@@ -803,6 +799,7 @@
             </div>
         </div>
 
+        <!-- Saylor C++ -->
         <div class="cert-card">
             <div class="cert-img-container">
                 <img src="Screenshot_20260214-212149.jpg" alt="C++ Programming" loading="lazy">
@@ -825,6 +822,7 @@
             </div>
         </div>
 
+        <!-- UniAthena ML Basics -->
         <div class="cert-card">
             <div class="cert-img-container">
                 <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/322_1770879551_certificate.jpg%20(850%C3%97606).jpg" alt="ML" loading="lazy">
@@ -847,6 +845,7 @@
             </div>
         </div>
 
+        <!-- HP LIFE Data Science -->
         <div class="cert-card">
             <div class="cert-img-container">
                 <img src="Screenshot_20260211-160828.jpg" alt="Data Science" loading="lazy">
@@ -869,9 +868,10 @@
             </div>
         </div>
 
+        <!-- CV Engineering Masterclass (UPDATED) -->
         <div class="cert-card">
             <div class="cert-img-container">
-                <img src="file_0000000068bc720b968cb938e3d3535c.jpg" alt="CV Engineering Masterclass" loading="lazy">
+                <img src="file_0000000068bc720b968cb938e3d3535c.png" alt="CV Engineering Masterclass" loading="lazy">
             </div>
             <div class="cert-content">
                 <span class="badge-category">Professional Development</span>
@@ -884,32 +884,13 @@
                     <li><span class="meta-label">Date Earned</span><span>Apr 11, 2026</span></li>
                 </ul>
                 <div class="action-group">
-                    <a href="https://drive.google.com/file/d/1mC2dnTiN65pPbkcn25fuIoIGud5mjLwR/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank" style="width: 100%;"><i class="fas fa-file-pdf"></i> View PDF</a>
+                    <span class="btn-custom" style="background:#f1f5f9; color:#64748b; border:1px solid #e2e8f0; pointer-events: none;"><i class="fa-solid fa-check"></i> Verified Participant</span>
+                    <a href="https://drive.google.com/file/d/1mC2dnTiN65pPbkcn25fuIoIGud5mjLwR/view?usp=drivesdk" class="btn-custom btn-pdf" target="_blank"><i class="fas fa-folder-open"></i> View PDF</a>
                 </div>
             </div>
         </div>
 
-        <div class="cert-card">
-            <div class="cert-img-container">
-                <img src="1769436241921.jpg" alt="ACS Medicup" loading="lazy">
-            </div>
-            <div class="cert-content">
-                <span class="badge-category">Competition</span>
-                <div class="cert-title">ACS National Medicup 2025</div>
-                <div class="org-container">
-                    <a href="https://aparsclassroom.com/" target="_blank" class="cert-org-link">Team ACS</a>
-                </div>
-                <p class="cert-desc">Represented as a Divisional Participant in a high-stakes national academic competition. Tested under rigorous constraints in subjects requiring advanced logical reasoning and scientific analysis.</p>
-                <ul class="meta-list">
-                    <li><span class="meta-label">Round</span><span>Divisional</span></li>
-                    <li><span class="meta-label">Date Earned</span><span>Mar 07, 2025</span></li>
-                </ul>
-                <div class="action-group">
-                    <span class="btn-custom" style="background:#f1f5f9; color:#64748b; border:1px solid #e2e8f0;"><i class="fa-solid fa-check"></i> Verified Participant</span>
-                </div>
-            </div>
-        </div>
-
+        <!-- HP LIFE Critical Thinking -->
         <div class="cert-card">
             <div class="cert-img-container">
                 <img src="Screenshot_20260211-142102.jpg" alt="Critical Thinking" loading="lazy">
@@ -932,6 +913,7 @@
             </div>
         </div>
 
+        <!-- OpenLearn Algorithmic Design -->
         <div class="cert-card">
             <div class="cert-img-container">
                 <img src="Screenshot_20260225-141545.jpg" alt="Algorithmic Design" loading="lazy">
@@ -955,6 +937,7 @@
             </div>
         </div>
 
+        <!-- OpenLearn Diagramming -->
         <div class="cert-card">
             <div class="cert-img-container">
                 <img src="Screenshot_20260225-234335.jpg" alt="Diagramming for development 1" loading="lazy">
@@ -980,7 +963,7 @@
     </div>
 
     <script>
-        // Existing Nav Script
+        // Nav hide on scroll
         let lastScroll = 0;
         const nav = document.getElementById('nav');
         window.addEventListener('scroll', () => {
@@ -993,7 +976,7 @@
             lastScroll = currentScroll;
         });
 
-        // New Accordion Toggle Function
+        // Accordion toggle function
         function toggleAccordion(id) {
             const element = document.getElementById(id);
             element.classList.toggle('active');
