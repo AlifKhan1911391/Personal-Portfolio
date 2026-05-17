@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mahadi Islam Alif | Participations</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="Mahadi Islam Alif">
+    <meta name="description" content="Competitions and events participated in by Mahadi Islam Alif — including the Bangladesh Artificial Intelligence Olympiad 2026.">
+    <link rel="icon" href="IMG_20251111_085231_821.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --text-light: #64748b;
+            --accent: #4169E1;
+            --accent-hover: #3153c4;
+            --border-color: #e2e8f0;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* ── Navigation ── */
+        #nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        #nav ol {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #nav li { float: left; }
+
+        #nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 13px 11px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+        }
+
+        #nav li a:hover { background-color: #111; }
+
+        .activenav {
+            background-color: var(--accent);
+            color: white !important;
+        }
+
+        /* ── Page Header ── */
+        .page-header {
+            text-align: center;
+            padding: 130px 20px 60px;
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 60px;
+        }
+
+        .page-header h1 {
+            font-family: "Mozilla Headline", sans-serif;
+            font-size: 2.8rem;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .page-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
+        /* ── Participation Wrapper ── */
+        .participation-wrapper {
+            max-width: 900px;
+            margin: 0 auto 80px;
+            padding: 0 25px;
+        }
+
+        /* ── Main Event Card ── */
+        .event-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 2px solid var(--accent);
+            box-shadow: 0 8px 30px rgba(65, 105, 225, 0.12);
+            padding: 40px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .event-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, #4169E1, #6ea8fe);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+            letter-spacing: 0.04em;
+        }
+
+        .event-title {
+            font-family: "Mozilla Headline", sans-serif;
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        /* ── Achievement Badges ── */
+        .achievement-row {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .achievement-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .chip-gold {
+            background: linear-gradient(135deg, #fff3cd, #ffeaa0);
+            color: #7a5200;
+            border: 2px solid #f0c040;
+        }
+
+        .chip-silver {
+            background: linear-gradient(135deg, #e8e8e8, #f5f5f5);
+            color: #3a3a3a;
+            border: 2px solid #bbb;
+        }
+
+        .event-description {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        /* ── Syllabus Section ── */
+        .syllabus-block {
+            background: rgba(65, 105, 225, 0.05);
+            border: 1.5px solid rgba(65, 105, 225, 0.2);
+            border-radius: 12px;
+            padding: 24px 28px;
+        }
+
+        .syllabus-block h4 {
+            font-family: "Mozilla Headline", sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+
+        .syllabus-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .syllabus-chip {
+            background: rgba(65, 105, 225, 0.1);
+            border: 1.5px solid rgba(65, 105, 225, 0.25);
+            color: #2a50c0;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* ── Slideshow Section ── */
+        .section-block {
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            padding: 36px 40px;
+            margin-bottom: 40px;
+        }
+
+        .section-heading {
+            font-family: "Mozilla Headline", sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .section-subtext {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 28px;
+        }
+
+        /* Slideshow */
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #0f172a;
+            aspect-ratio: 4/3;
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Slideshow Controls */
+        .slideshow-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 18px;
+        }
+
+        .slide-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-btn:hover {
+            background: var(--accent-hover);
+            transform: scale(1.1);
+        }
+
+        .slide-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #cbd5e1;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0;
+        }
+
+        .dot.active {
+            background: var(--accent);
+            transform: scale(1.3);
+        }
+
+        .slide-counter {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* ── Award Section ── */
+        .award-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+        }
+
+        .award-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .award-label {
+            font-family: "Mozilla Headline", sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .award-img-wrap {
+            width: 100%;
+            background: #f1f5f9;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .award-img-wrap:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.13);
+        }
+
+        .award-img-wrap img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 6px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 640px) {
+            .event-card { padding: 28px 22px; }
+            .section-block { padding: 28px 22px; }
+            .event-title { font-size: 1.5rem; }
+            .award-grid { grid-template-columns: 1fr; }
+            .slideshow-container { aspect-ratio: 3/4; }
+            .page-header h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="nav">
+        <ol>
+            <li><a href='/'>Home</a></li>
+            <li><a href='/projects'>Projects</a></li>
+            <li><a href='/certificates'>Certificates</a></li>
+            <li class="activenav"><a href='/participations'>Participations</a></li>
+        </ol>
+    </div>
+
+    <header class="page-header">
+        <h1>Participations</h1>
+        <p>Competitions, olympiads, and events I have participated in.</p>
+    </header>
+
+    <div class="participation-wrapper">
+
+        <!-- ── BDAIO 2026 Event Card ── -->
+        <div class="event-card">
+            <span class="event-badge">🤖 AI Olympiad · 2026</span>
+            <div class="event-title">Bangladesh Artificial Intelligence Olympiad 2026</div>
+
+            <div class="achievement-row">
+                <div class="achievement-chip chip-silver">
+                    🥈 Top-2 &nbsp;·&nbsp; Regional (Dhaka)
+                </div>
+                <div class="achievement-chip chip-gold">
+                    🏅 Top-7 &nbsp;·&nbsp; Nationals
+                </div>
+            </div>
+
+            <p class="event-description">
+                Competed in the <strong>Bangladesh Artificial Intelligence Olympiad 2026 (BDAIO)</strong>, a national-level competition testing knowledge across core AI, machine learning, and data science domains. Placed in the <strong>Top 2 at the Regional round (Dhaka)</strong>, qualifying for the National stage where I ranked in the <strong>Top 7 across Bangladesh</strong> — representing one of the country's highest honors in AI competition for students.
+            </p>
+
+            <div class="syllabus-block">
+                <h4><i class="fas fa-book-open me-2"></i>Syllabus Covered</h4>
+                <div class="syllabus-chips">
+                    <span class="syllabus-chip">Basic Python</span>
+                    <span class="syllabus-chip">Basic NumPy</span>
+                    <span class="syllabus-chip">Basic Pandas</span>
+                    <span class="syllabus-chip">Basic Matplotlib</span>
+                    <span class="syllabus-chip">Basic Scikit-learn</span>
+                    <span class="syllabus-chip">Basic PyTorch</span>
+                    <span class="syllabus-chip">Basics of Artificial Intelligence</span>
+                    <span class="syllabus-chip">History of AI</span>
+                    <span class="syllabus-chip">Applications of AI</span>
+                    <span class="syllabus-chip">Machine Learning Basics</span>
+                    <span class="syllabus-chip">Logic and Algorithms</span>
+                    <span class="syllabus-chip">Data & Bias in AI</span>
+                    <span class="syllabus-chip">AI Ethics and Safety</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Event Photo Slideshow ── -->
+        <div class="section-block">
+            <div class="section-heading"><i class="fas fa-images me-2" style="color: var(--accent);"></i>Event Gallery</div>
+            <p class="section-subtext">Photos from the Bangladesh Artificial Intelligence Olympiad 2026.</p>
+
+            <div class="slideshow-container" id="slideshow">
+                <div class="slide active">
+                    <img src="bdaio/IMG_20260516_074352_144.jpg" alt="BDAIO 2026 Event" loading="eager">
+                </div>
+                <div class="slide">
+                    <img src="bdaio/1778952316860.jpg" alt="BDAIO 2026 Event" loading="lazy">
+                </div>
+                <div class="slide">
+                    <img src="bdaio/Adjust_face_position_looking_dir%23U2026_202605162247.jpeg" alt="BDAIO 2026 Event" loading="lazy">
+                </div>
+                <div class="slide">
+                    <img src="bdaio/Fix_body_posture_202605162350.jpeg" alt="BDAIO 2026 Event" loading="lazy">
+                </div>
+                <div class="slide">
+                    <img src="bdaio/Messenger_creation_1D4D1B03-8AC1-4965-AD9F-5D2F5C59FF7E.jpeg" alt="BDAIO 2026 Event" loading="lazy">
+                </div>
+            </div>
+
+            <div class="slideshow-controls">
+                <button class="slide-btn" onclick="changeSlide(-1)" title="Previous">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="slide-dots" id="slide-dots"></div>
+                <button class="slide-btn" onclick="changeSlide(1)" title="Next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div style="text-align:center; margin-top: 10px;">
+                <span class="slide-counter" id="slide-counter">1 / 5</span>
+            </div>
+        </div>
+
+        <!-- ── Certificate & Medal ── -->
+        <div class="section-block">
+            <div class="section-heading"><i class="fas fa-award me-2" style="color: var(--accent);"></i>Certificate & Medal</div>
+            <p class="section-subtext">Official recognition received at the Bangladesh Artificial Intelligence Olympiad 2026.</p>
+
+            <div class="award-grid">
+                <div class="award-item">
+                    <div class="award-label">
+                        <i class="fas fa-scroll" style="color: var(--accent);"></i> Certificate
+                    </div>
+                    <div class="award-img-wrap">
+                        <img src="bdaio/file_0000000061dc7207af306f444fb62bf1.png" alt="BDAIO 2026 Certificate">
+                    </div>
+                </div>
+                <div class="award-item">
+                    <div class="award-label">
+                        <i class="fas fa-medal" style="color: #c0a030;"></i> Medal
+                    </div>
+                    <div class="award-img-wrap">
+                        <img src="bdaio/file_00000000d1ec7206b1dd1b957b746c72.png" alt="BDAIO 2026 Medal">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- /participation-wrapper -->
+
+    <script>
+        /* ── Nav hide-on-scroll ── */
+        let lastScroll = 0;
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            nav.style.transform = currentScroll > lastScroll && currentScroll > 100
+                ? 'translateY(-100%)' : 'translateY(0)';
+            lastScroll = currentScroll;
+        });
+
+        /* ── Slideshow ── */
+        const slides = document.querySelectorAll('.slide');
+        const dotsContainer = document.getElementById('slide-dots');
+        const counter = document.getElementById('slide-counter');
+        let current = 0;
+        let timer;
+
+        // Build dots
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        });
+
+        function updateUI() {
+            slides.forEach((s, i) => s.classList.toggle('active', i === current));
+            document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+            counter.textContent = `${current + 1} / ${slides.length}`;
+        }
+
+        function goToSlide(n) {
+            current = (n + slides.length) % slides.length;
+            updateUI();
+            resetTimer();
+        }
+
+        function changeSlide(dir) {
+            goToSlide(current + dir);
+        }
+
+        function resetTimer() {
+            clearInterval(timer);
+            timer = setInterval(() => goToSlide(current + 1), 3500);
+        }
+
+        // Auto-advance
+        resetTimer();
+    </script>
+</body>
+</html>
