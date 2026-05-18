@@ -216,23 +216,40 @@
             line-height: 1.6;
             margin-bottom: 12px;
         }
-        .official-link {
-            display: inline-flex;
+        
+        /* Organizer logos row styles - replaces official link */
+        .organizer-logos {
+            display: flex;
+            flex-wrap: wrap;
             align-items: center;
-            gap: 8px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--accent);
+            gap: 28px;
+            margin-top: 24px;
+        }
+        .organizer-logos a {
+            display: inline-block;
+            transition: transform 0.2s ease, opacity 0.2s;
             text-decoration: none;
-            margin-top: 8px;
-            transition: gap 0.2s;
+            background: #f8fafc;
+            padding: 8px 16px;
+            border-radius: 48px;
+            border: 1px solid var(--border-light);
+            background: var(--card-white);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
         }
-        .official-link:hover {
-            gap: 12px;
-            color: var(--accent);
-            text-decoration: underline;
+        .organizer-logos a:hover {
+            transform: scale(1.04);
+            box-shadow: var(--shadow-sm);
+            border-color: var(--accent-light);
         }
-
+        .organizer-logos img {
+            height: 44px;
+            width: auto;
+            max-width: 140px;
+            object-fit: contain;
+            border-radius: 6px;
+            display: block;
+        }
+        
         /* section header */
         .section-header {
             display: flex;
@@ -516,6 +533,16 @@
             .arrow-right {
                 right: 12px;
             }
+            .organizer-logos {
+                gap: 16px;
+            }
+            .organizer-logos a {
+                padding: 6px 12px;
+            }
+            .organizer-logos img {
+                height: 36px;
+                max-width: 100px;
+            }
         }
         @media (max-width: 520px) {
             .syllabus-grid {
@@ -523,6 +550,10 @@
             }
             .content-container {
                 padding: 32px 16px 60px;
+            }
+            .organizer-logos {
+                flex-wrap: wrap;
+                justify-content: center;
             }
         }
     </style>
@@ -562,6 +593,7 @@
 
     <div class="content-container">
 
+        <!-- About card with organizer logos replacing text link -->
         <div class="about-card">
             <div class="about-icon">
                 <i class="fas fa-microchip"></i>
@@ -569,9 +601,19 @@
             <div class="about-text">
                 <h2>About BDAIO 2026</h2>
                 <p>The <strong>Bangladesh Artificial Intelligence Olympiad (BDAIO)</strong> is a national-level competition that tests participants on core AI, machine learning, data science, and ethical reasoning. I secured <strong>Top‑2 at the Regional round (Dhaka)</strong> among 380+ competitors, advancing to the National stage and ranking in the <strong>Top‑7 across Bangladesh</strong> — one of the highest student recognitions in the country's AI landscape.</p>
-                <a href="https://bdaio.org/" target="_blank" rel="noopener noreferrer" class="official-link">
-                    <i class="fas fa-external-link-alt"></i> Official competition: bdaio.org
-                </a>
+                
+                <!-- Three clickable logos instead of the official competition text link -->
+                <div class="organizer-logos">
+                    <a href="https://bdaio.org/" target="_blank" rel="noopener noreferrer" title="BDAIO Official Website">
+                        <img src="bdaio/organizers/1779126246258.jpg" alt="BDAIO">
+                    </a>
+                    <a href="https://bdosn.org/" target="_blank" rel="noopener noreferrer" title="BDOSN Official Website">
+                        <img src="bdaio/organizers/bdosn-logo-128.png" alt="BDOSN">
+                    </a>
+                    <a href="https://bubt.edu.bd/" target="_blank" rel="noopener noreferrer" title="BUBT Official Website">
+                        <img src="bdaio/organizers/bubt.png" alt="BUBT">
+                    </a>
+                </div>
             </div>
         </div>
 
