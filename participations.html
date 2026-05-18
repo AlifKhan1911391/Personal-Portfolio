@@ -43,7 +43,7 @@
             line-height: 1.5;
         }
 
-        /* ----- NAVIGATION (PRESERVED EXACTLY) ----- */
+        /* ----- NAVIGATION ----- */
         #nav {
             position: fixed;
             top: 0;
@@ -79,7 +79,7 @@
             color: white !important;
         }
 
-        /* HERO - LIGHT & AIRY */
+        /* HERO */
         .hero {
             margin-top: 46px;
             background: linear-gradient(105deg, #ffffff 0%, #f0f4fe 100%);
@@ -217,7 +217,7 @@
             margin-bottom: 12px;
         }
         
-        /* Organizer logos row styles - replaces official link */
+        /* Organizer logos */
         .organizer-logos {
             display: flex;
             flex-wrap: wrap;
@@ -331,7 +331,7 @@
             opacity: 0.7;
         }
 
-        /* full width slider */
+        /* slider section */
         .slider-section {
             margin-bottom: 56px;
         }
@@ -360,6 +360,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        /* FIX: Hidden slides do NOT intercept touch/pointer events */
+        .slide:not(.active) {
+            pointer-events: none;
         }
         .slide.active {
             opacity: 1;
@@ -593,7 +597,7 @@
 
     <div class="content-container">
 
-        <!-- About card with organizer logos replacing text link -->
+        <!-- About card -->
         <div class="about-card">
             <div class="about-icon">
                 <i class="fas fa-microchip"></i>
@@ -602,7 +606,6 @@
                 <h2>About BDAIO 2026</h2>
                 <p>The <strong>Bangladesh Artificial Intelligence Olympiad (BDAIO)</strong> is a national-level competition that tests participants on core AI, machine learning, data science, and ethical reasoning. I secured <strong>Top‑2 at the Regional round (Dhaka)</strong> among 380+ competitors, advancing to the National stage and ranking in the <strong>Top‑7 across Bangladesh</strong> — one of the highest student recognitions in the country's AI landscape.</p>
                 
-                <!-- Three clickable logos instead of the official competition text link -->
                 <div class="organizer-logos">
                     <a href="https://bdaio.org/" target="_blank" rel="noopener noreferrer" title="BDAIO Official Website">
                         <img src="bdaio/organizers/1779126246258.jpg" alt="BDAIO">
@@ -657,60 +660,60 @@
             </div>
         </div>
 
-        <!-- Event Gallery - CORRECT ORDER: existing photos first, then new JPGs, then thank you letter LAST -->
+        <!-- Event Gallery -->
         <div class="slider-section">
             <div class="section-header">
                 <i class="fas fa-images"></i> Event Gallery
             </div>
             <div class="gallery-container">
                 <div class="slideshow" id="slideshow">
-                    <!-- Existing photos (in original order) -->
+                    <!-- Existing photos -->
                     <div class="slide active">
-                        <img src="bdaio/FB_IMG_1779055006364.jpg" alt="BdAIO momments" loading="eager">
+                        <img src="bdaio/FB_IMG_1779055006364.jpg" alt="BdAIO moments" loading="eager">
                     </div>
                     <div class="slide">
-                        <img src="bdaio/IMG_20260502_125608_395.jpg" alt="BdAIO momments" loading="lazy">
+                        <img src="bdaio/IMG_20260502_125608_395.jpg" alt="BdAIO moments" loading="lazy">
                     </div>
                     <div class="slide">
-                        <img src="bdaio/1777815361684.jpg" alt="BdAIO momments" loading="lazy">
+                        <img src="bdaio/1777815361684.jpg" alt="BdAIO moments" loading="lazy">
                     </div>
                     <div class="slide">
-                        <img src="bdaio/IMG_20260516_074352_144.jpg" alt="BdAIO momments" loading="lazy">
+                        <img src="bdaio/IMG_20260516_074352_144.jpg" alt="BdAIO moments" loading="lazy">
                     </div>
                     <div class="slide">
-                        <img src="bdaio/FB_IMG_1779051912547.jpg" alt="BdAIO momments" loading="lazy">
+                        <img src="bdaio/FB_IMG_1779051912547.jpg" alt="BdAIO moments" loading="lazy">
                     </div>
                     <div class="slide">
-                        <img src="bdaio/1778952316860.jpg" alt="BdAIO momments" loading="lazy">
+                        <img src="bdaio/1778952316860.jpg" alt="BdAIO moments" loading="lazy">
                     </div>
                     <div class="slide">
-                        <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/bdaio/Adjust_face_position_looking_dir%E2%80%A6_202605162247.jpeg" alt="BdAIO momments" loading="lazy">
+                        <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/bdaio/Adjust_face_position_looking_dir%E2%80%A6_202605162247.jpeg" alt="BdAIO moments" loading="lazy">
                     </div>
                     <div class="slide">
-                        <img src="bdaio/Fix_body_posture_202605162350.jpeg" alt="BdAIO momments" loading="lazy">
+                        <img src="bdaio/Fix_body_posture_202605162350.jpeg" alt="BdAIO moments" loading="lazy">
                     </div>
-                    <!-- Newly added JPG files (in specified order) -->
+                    <!-- New JPG files -->
                     <div class="slide">
-                        <img src="bdaio/14.JPG" alt="BdAIO momments" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="bdaio/4.JPG" alt="BdAIO momments" loading="lazy">
+                        <img src="bdaio/14.JPG" alt="BdAIO moments" loading="lazy">
                     </div>
                     <div class="slide">
-                        <img src="bdaio/DSC01522.JPG" alt="BdAIO momments" loading="lazy">
+                        <img src="bdaio/4.JPG" alt="BdAIO moments" loading="lazy">
                     </div>
                     <div class="slide">
-                        <img src="bdaio/DSC01442.JPG" alt="BdAIO momments" loading="lazy">
+                        <img src="bdaio/DSC01522.JPG" alt="BdAIO moments" loading="lazy">
                     </div>
                     <div class="slide">
-                        <img src="bdaio/DSC00363.JPG" alt="BdAIO momments" loading="lazy">
+                        <img src="bdaio/DSC01442.JPG" alt="BdAIO moments" loading="lazy">
                     </div>
                     <div class="slide">
-                        <img src="bdaio/DSC00804.JPG" alt="BdAIO momments" loading="lazy">
+                        <img src="bdaio/DSC00363.JPG" alt="BdAIO moments" loading="lazy">
                     </div>
-                    <!-- Thank you letter - VERY LAST -->
                     <div class="slide">
-                        <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/bdaio/ChatGPT%20Image%20May%2018%2C%202026%2C%2004_22_49%20AM.png" alt="Thank you letter" loading="lazy">
+                        <img src="bdaio/DSC00804.JPG" alt="BdAIO moments" loading="lazy">
+                    </div>
+                    <!-- Thank you letter - Very last -->
+                    <div class="slide">
+                        <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/bdaio/ChatGPT%20Image%20May%2018%2C%202026%2C%2004_22_49%20AM.png" alt="Thank you letter from BDAIO organizers" loading="lazy">
                     </div>
                 </div>
 
