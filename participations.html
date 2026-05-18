@@ -79,7 +79,7 @@
             color: white !important;
         }
 
-        /* HERO - LIGHT & AIRY (no black/dark background) */
+        /* HERO - LIGHT & AIRY */
         .hero {
             margin-top: 46px;
             background: linear-gradient(105deg, #ffffff 0%, #f0f4fe 100%);
@@ -177,7 +177,7 @@
             padding: 52px 28px 80px;
         }
 
-        /* about card - minimal */
+        /* about card */
         .about-card {
             background: var(--card-white);
             border-radius: 32px;
@@ -254,7 +254,7 @@
             background: var(--border-light);
         }
 
-        /* syllabus grid - clean cards */
+        /* syllabus grid */
         .syllabus-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -314,7 +314,7 @@
             opacity: 0.7;
         }
 
-        /* full width slider - light theme, side arrows */
+        /* full width slider */
         .slider-section {
             margin-bottom: 56px;
         }
@@ -353,7 +353,6 @@
             object-fit: contain;
             background: #f8fafc;
         }
-        /* arrows on sides - light theme elegant */
         .slider-arrow {
             position: absolute;
             top: 50%;
@@ -427,7 +426,7 @@
             border: 1px solid rgba(0,0,0,0.05);
         }
 
-        /* awards grid - now 3 columns for three items */
+        /* awards grid */
         .awards-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -539,7 +538,6 @@
         </ol>
     </div>
 
-    <!-- Hero section – light, fresh, no black background -->
     <section class="hero">
         <div class="hero-inner">
             <div class="hero-eyebrow">
@@ -564,7 +562,6 @@
 
     <div class="content-container">
 
-        <!-- About card with bdaio link -->
         <div class="about-card">
             <div class="about-icon">
                 <i class="fas fa-microchip"></i>
@@ -578,7 +575,6 @@
             </div>
         </div>
 
-        <!-- Syllabus Grid (exactly as requested, 3 columns) -->
         <div class="section-header">
             <i class="fas fa-list-check"></i> Syllabus
         </div>
@@ -619,13 +615,14 @@
             </div>
         </div>
 
-        <!-- Full-width gallery with side arrows - ALL IMAGES ADDED -->
+        <!-- Event Gallery - CORRECT ORDER: existing photos first, then new JPGs, then thank you letter LAST -->
         <div class="slider-section">
             <div class="section-header">
                 <i class="fas fa-images"></i> Event Gallery
             </div>
             <div class="gallery-container">
                 <div class="slideshow" id="slideshow">
+                    <!-- Existing photos (in original order) -->
                     <div class="slide active">
                         <img src="bdaio/FB_IMG_1779055006364.jpg" alt="BDAIO 2026 event photo" loading="eager">
                     </div>
@@ -634,21 +631,6 @@
                     </div>
                     <div class="slide">
                         <img src="bdaio/1777815361684.jpg" alt="BDAIO 2026 event photo" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="bdaio/4.JPG" alt="BDAIO 2026 event photo" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="bdaio/DSC00804.JPG" alt="BDAIO 2026 event photo" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="bdaio/DSC00363.JPG" alt="BDAIO 2026 event photo" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="bdaio/DSC01442.JPG" alt="BDAIO 2026 event photo" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="bdaio/14.JPG" alt="BDAIO 2026 event photo" loading="lazy">
                     </div>
                     <div class="slide">
                         <img src="bdaio/IMG_20260516_074352_144.jpg" alt="BDAIO 2026 event photo" loading="lazy">
@@ -665,6 +647,26 @@
                     <div class="slide">
                         <img src="bdaio/Fix_body_posture_202605162350.jpeg" alt="BDAIO 2026 event photo" loading="lazy">
                     </div>
+                    <!-- Newly added JPG files (in specified order) -->
+                    <div class="slide">
+                        <img src="bdaio/14.JPG" alt="BDAIO 2026 event photo" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="bdaio/4.JPG" alt="BDAIO 2026 event photo" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="bdaio/DSC01522.JPG" alt="BDAIO 2026 event photo" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="bdaio/DSC01442.JPG" alt="BDAIO 2026 event photo" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="bdaio/DSC00363.JPG" alt="BDAIO 2026 event photo" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="bdaio/DSC00804.JPG" alt="BDAIO 2026 event photo" loading="lazy">
+                    </div>
+                    <!-- Thank you letter - VERY LAST -->
                     <div class="slide">
                         <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/bdaio/ChatGPT%20Image%20May%2018%2C%202026%2C%2004_22_49%20AM.png" alt="Thank you letter" loading="lazy">
                     </div>
@@ -678,11 +680,11 @@
                 </button>
 
                 <div class="slider-dots" id="dotsContainer"></div>
-                <div class="slide-counter-badge" id="slideCounter">1 / 14</div>
+                <div class="slide-counter-badge" id="slideCounter">1 / 15</div>
             </div>
         </div>
 
-        <!-- Awards: Regional Certificate + National Certificate + Medal -->
+        <!-- Recognition & Honors -->
         <div class="section-header">
             <i class="fas fa-award"></i> Recognition & Honors
         </div>
@@ -715,7 +717,6 @@
     </div>
 
     <script>
-        // preserve nav hide-on-scroll (unchanged behavior)
         let lastScroll = 0;
         const nav = document.getElementById('nav');
         window.addEventListener('scroll', () => {
@@ -727,7 +728,6 @@
             }
         });
 
-        // full width slider with side arrows + auto slide every 5 seconds
         const slides = document.querySelectorAll('.slide');
         const dotsContainer = document.getElementById('dotsContainer');
         const slideCounterSpan = document.getElementById('slideCounter');
@@ -788,7 +788,6 @@
             resetTimer();
         }
 
-        // pause on hover for better UX
         const galleryContainer = document.querySelector('.gallery-container');
         if (galleryContainer) {
             galleryContainer.addEventListener('mouseenter', () => {
