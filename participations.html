@@ -34,8 +34,6 @@
             --silver: #5a687c;
             --shadow-sm: 0 8px 20px -6px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
             --shadow-md: 0 20px 30px -12px rgba(0, 0, 0, 0.08);
-            --nhspc-accent: #2c7da0;
-            --nhspc-light: #eef7fc;
         }
 
         body {
@@ -81,7 +79,7 @@
             color: white !important;
         }
 
-        /* HERO (BDAIO) */
+        /* HERO */
         .hero {
             margin-top: 46px;
             background: linear-gradient(105deg, #ffffff 0%, #f0f4fe 100%);
@@ -505,79 +503,25 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
-        /* ========== NHSPC independent hero section ========== */
-        .hero-nhspc {
-            margin-top: 20px;
-            background: linear-gradient(105deg, #f8fafc 0%, #e6f2f7 100%);
-            padding: 60px 32px 50px;
-            text-align: center;
-            border-bottom: 1px solid var(--border-light);
-            border-top: 1px solid var(--border-light);
-            position: relative;
+        /* NHSPC inline rank strip (smaller) */
+        .inline-rank {
+            margin: 20px 0 16px;
         }
-        .hero-nhspc .hero-eyebrow {
-            background: rgba(44, 125, 160, 0.08);
-            border-color: rgba(44, 125, 160, 0.25);
-            color: var(--nhspc-accent);
+        .inline-rank .rank-strip {
+            transform: scale(0.9);
+            transform-origin: left center;
         }
-        .hero-nhspc .hero-eyebrow span {
-            background: var(--nhspc-accent);
-        }
-        .hero-nhspc .hero-title em {
-            color: var(--nhspc-accent);
-        }
-        .hero-nhspc .rank-item .rank-number {
-            color: var(--nhspc-accent);
-        }
-        .hero-nhspc .rank-strip {
-            margin-bottom: 24px;
-        }
-        .contest-meta {
+        .contest-details {
             display: flex;
-            justify-content: center;
-            gap: 32px;
             flex-wrap: wrap;
-            margin-top: 24px;
-            margin-bottom: 16px;
-        }
-        .contest-meta span {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--card-white);
-            padding: 6px 18px;
-            border-radius: 40px;
-            font-size: 0.85rem;
-            font-weight: 500;
+            gap: 20px;
+            margin: 16px 0 8px;
             color: var(--text-muted);
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-light);
-        }
-        .contest-meta i {
-            color: var(--nhspc-accent);
             font-size: 0.9rem;
         }
-        .certificate-card {
-            max-width: 500px;
-            margin: 32px auto 0;
-            background: var(--card-white);
-            border-radius: 28px;
-            padding: 18px 18px 12px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-light);
-        }
-        .certificate-card img {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-        .certificate-card p {
-            margin-top: 12px;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: var(--text-light);
-            font-weight: 600;
+        .contest-details i {
+            width: 24px;
+            color: var(--accent);
         }
 
         @media (max-width: 900px) {
@@ -588,9 +532,6 @@
         @media (max-width: 720px) {
             .hero {
                 padding: 50px 20px 42px;
-            }
-            .hero-nhspc {
-                padding: 40px 20px 40px;
             }
             .rank-item {
                 padding: 10px 18px;
@@ -626,8 +567,8 @@
                 height: 36px;
                 max-width: 100px;
             }
-            .contest-meta {
-                gap: 16px;
+            .inline-rank .rank-strip {
+                transform: scale(0.8);
             }
         }
         @media (max-width: 520px) {
@@ -679,7 +620,7 @@
     </section>
 
     <div class="content-container">
-        <!-- About card BDAIO -->
+        <!-- BDAIO About card -->
         <div class="about-card">
             <div class="about-icon">
                 <i class="fas fa-microchip"></i>
@@ -702,6 +643,7 @@
             </div>
         </div>
 
+        <!-- BDAIO Syllabus -->
         <div class="section-header">
             <i class="fas fa-list-check"></i> Syllabus
         </div>
@@ -742,7 +684,7 @@
             </div>
         </div>
 
-        <!-- Event Gallery -->
+        <!-- BDAIO Gallery -->
         <div class="slider-section">
             <div class="section-header">
                 <i class="fas fa-images"></i> Event Gallery
@@ -808,7 +750,7 @@
             </div>
         </div>
 
-        <!-- Recognition & Honors BDAIO -->
+        <!-- BDAIO Recognition & Honors -->
         <div class="section-header">
             <i class="fas fa-award"></i> Recognition & Honors
         </div>
@@ -838,45 +780,62 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- ========== NHSPC 2026 – STANDALONE HERO SECTION ========== -->
-    <section class="hero-nhspc">
-        <div class="hero-inner">
-            <div class="hero-eyebrow">
-                <span></span> National High School Programming Contest · Bangladesh · 2026
+        <!-- ========== NHSPC 2026 – MATCHING THEME & FORMAT ========== -->
+        <div class="section-header" style="margin-top: 64px;">
+            <i class="fas fa-code"></i> National High School Programming Contest 2026
+        </div>
+
+        <!-- About card (exactly like BDAIO's) -->
+        <div class="about-card">
+            <div class="about-icon">
+                <i class="fas fa-laptop-code"></i>
             </div>
-            <h1 class="hero-title">
-                National High School <em>Programming Contest</em><br>2026 – Dhaka Regional
-            </h1>
-            <div class="rank-strip">
-                <div class="rank-item">
-                    <div class="rank-number">4<sup>th</sup></div>
-                    <div class="rank-label">Regional · Dhaka</div>
+            <div class="about-text">
+                <h2>NHSPC 2026 – Dhaka Regional</h2>
+                <p>The <strong>National High School Programming Contest (NHSPC) 2026</strong> challenges young programmers with algorithmic problem‑solving. Competing on <strong>May 16, 2026 (5:00–6:30 PM)</strong>, I secured <strong>4th place in the Dhaka regional round</strong> — a strong performance among many talented participants.</p>
+                
+                <div class="contest-details">
+                    <span><i class="fas fa-calendar-alt"></i> May 16, 2026</span>
+                    <span><i class="fas fa-clock"></i> 5:00 PM – 6:30 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Dhaka Region</span>
+                </div>
+
+                <div class="inline-rank">
+                    <div class="rank-strip">
+                        <div class="rank-item">
+                            <div class="rank-number">4<sup>th</sup></div>
+                            <div class="rank-label">Regional · Dhaka</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="organizer-logos">
+                    <a href="https://ictd.gov.bd/" target="_blank" rel="noopener noreferrer" title="ICT Division">
+                        <img src="nhspc/logo_ict-D4bc56P8.png" alt="ICT Division">
+                    </a>
+                    <a href="https://nhspc.bcc.gov.bd/" target="_blank" rel="noopener noreferrer" title="NHSPC Official">
+                        <img src="nhspc/nhspc_logo-wYM3pEl4.png" alt="NHSPC">
+                    </a>
+                    <a href="https://bcc.gov.bd/" target="_blank" rel="noopener noreferrer" title="BCC Bangladesh">
+                        <img src="nhspc/bcc-logo-DeDA3Ixw.png" alt="BCC">
+                    </a>
                 </div>
             </div>
-            <div class="contest-meta">
-                <span><i class="fas fa-calendar-alt"></i> May 16, 2026</span>
-                <span><i class="fas fa-clock"></i> 5:00 PM – 6:30 PM</span>
-                <span><i class="fas fa-map-marker-alt"></i> Dhaka Region</span>
-            </div>
-            <div class="organizer-logos" style="justify-content: center; margin-top: 28px;">
-                <a href="https://ictd.gov.bd/" target="_blank" rel="noopener noreferrer" title="ICT Division">
-                    <img src="nhspc/logo_ict-D4bc56P8.png" alt="ICT Division">
-                </a>
-                <a href="https://nhspc.bcc.gov.bd/" target="_blank" rel="noopener noreferrer" title="NHSPC Official">
-                    <img src="nhspc/nhspc_logo-wYM3pEl4.png" alt="NHSPC">
-                </a>
-                <a href="https://bcc.gov.bd/" target="_blank" rel="noopener noreferrer" title="BCC Bangladesh">
-                    <img src="nhspc/bcc-logo-DeDA3Ixw.png" alt="BCC">
-                </a>
-            </div>
-            <div class="certificate-card">
-                <img src="nhspc/1779202075816.jpg" alt="NHSPC 2026 Regional Certificate">
-                <p><i class="fas fa-certificate"></i> Regional round certificate · 4th place</p>
+        </div>
+
+        <!-- Recognition card for NHSPC (single award-card, matching the awards grid style) -->
+        <div class="awards-grid" style="grid-template-columns: 1fr; max-width: 400px; margin: 0 auto 56px;">
+            <div class="award-card award-regional">
+                <div class="award-header">
+                    <i class="fas fa-scroll"></i> Regional Round Certificate
+                </div>
+                <div class="award-img">
+                    <img src="nhspc/1779203675420.jpg" alt="NHSPC 2026 Regional Certificate">
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <script>
         let lastScroll = 0;
