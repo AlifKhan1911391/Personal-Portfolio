@@ -43,7 +43,6 @@
             line-height: 1.5;
         }
 
-        /* ----- NAVIGATION ----- */
         #nav {
             position: fixed;
             top: 0;
@@ -79,7 +78,7 @@
             color: white !important;
         }
 
-        /* HERO */
+        /* HERO (BDAIO) */
         .hero {
             margin-top: 46px;
             background: linear-gradient(105deg, #ffffff 0%, #f0f4fe 100%);
@@ -170,14 +169,12 @@
             margin-top: 6px;
         }
 
-        /* MAIN CONTAINER */
         .content-container {
             max-width: 1040px;
             margin: 0 auto;
             padding: 52px 28px 80px;
         }
 
-        /* about card */
         .about-card {
             background: var(--card-white);
             border-radius: 32px;
@@ -216,8 +213,7 @@
             line-height: 1.6;
             margin-bottom: 12px;
         }
-        
-        /* Organizer logos */
+
         .organizer-logos {
             display: flex;
             flex-wrap: wrap;
@@ -249,8 +245,7 @@
             border-radius: 6px;
             display: block;
         }
-        
-        /* section header */
+
         .section-header {
             display: flex;
             align-items: center;
@@ -271,7 +266,6 @@
             background: var(--border-light);
         }
 
-        /* syllabus grid */
         .syllabus-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -331,7 +325,6 @@
             opacity: 0.7;
         }
 
-        /* slider section */
         .slider-section {
             margin-bottom: 56px;
         }
@@ -446,7 +439,6 @@
             border: 1px solid rgba(0,0,0,0.05);
         }
 
-        /* awards grid */
         .awards-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -503,24 +495,37 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
-        /* NHSPC inline rank strip (smaller) */
-        .inline-rank {
-            margin: 20px 0 16px;
+        /* NHSPC specific */
+        .hero-nhspc {
+            margin-top: 20px;
+            background: linear-gradient(105deg, #ffffff 0%, #f0f4fe 100%);
+            padding: 70px 32px 60px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-light);
+            border-top: 1px solid var(--border-light);
         }
-        .inline-rank .rank-strip {
-            transform: scale(0.9);
-            transform-origin: left center;
-        }
-        .contest-details {
+        .contest-meta {
             display: flex;
+            justify-content: center;
+            gap: 32px;
             flex-wrap: wrap;
-            gap: 20px;
-            margin: 16px 0 8px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            margin-top: 24px;
+            margin-bottom: 8px;
         }
-        .contest-details i {
-            width: 24px;
+        .contest-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--card-white);
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        .contest-meta i {
             color: var(--accent);
         }
 
@@ -530,7 +535,7 @@
             }
         }
         @media (max-width: 720px) {
-            .hero {
+            .hero, .hero-nhspc {
                 padding: 50px 20px 42px;
             }
             .rank-item {
@@ -567,8 +572,8 @@
                 height: 36px;
                 max-width: 100px;
             }
-            .inline-rank .rank-strip {
-                transform: scale(0.8);
+            .contest-meta {
+                gap: 16px;
             }
         }
         @media (max-width: 520px) {
@@ -577,10 +582,6 @@
             }
             .content-container {
                 padding: 32px 16px 60px;
-            }
-            .organizer-logos {
-                flex-wrap: wrap;
-                justify-content: center;
             }
         }
     </style>
@@ -596,7 +597,7 @@
         </ol>
     </div>
 
-    <!-- BDAIO HERO (unchanged) -->
+    <!-- BDAIO HERO -->
     <section class="hero">
         <div class="hero-inner">
             <div class="hero-eyebrow">
@@ -620,7 +621,7 @@
     </section>
 
     <div class="content-container">
-        <!-- BDAIO About card -->
+        <!-- BDAIO About -->
         <div class="about-card">
             <div class="about-icon">
                 <i class="fas fa-microchip"></i>
@@ -628,204 +629,103 @@
             <div class="about-text">
                 <h2>About BDAIO 2026</h2>
                 <p>The <strong>Bangladesh Artificial Intelligence Olympiad (BDAIO)</strong> is a national-level competition that tests participants on core AI, machine learning, data science, and ethical reasoning. I secured <strong>Top‑2 at the Regional round (Dhaka)</strong> among 380+ competitors, advancing to the National stage and ranking in the <strong>Top‑7 across Bangladesh</strong> — one of the highest student recognitions in the country's AI landscape.</p>
-                
                 <div class="organizer-logos">
-                    <a href="https://bdaio.org/" target="_blank" rel="noopener noreferrer" title="BDAIO Official Website">
-                        <img src="bdaio/organizers/1779126246258.jpg" alt="BDAIO">
-                    </a>
-                    <a href="https://bdosn.org/" target="_blank" rel="noopener noreferrer" title="BDOSN Official Website">
-                        <img src="bdaio/organizers/bdosn-logo-128.png" alt="BDOSN">
-                    </a>
-                    <a href="https://bubt.edu.bd/" target="_blank" rel="noopener noreferrer" title="BUBT Official Website">
-                        <img src="bdaio/organizers/bubt.png" alt="BUBT">
-                    </a>
+                    <a href="https://bdaio.org/" target="_blank" rel="noopener noreferrer"><img src="bdaio/organizers/1779126246258.jpg" alt="BDAIO"></a>
+                    <a href="https://bdosn.org/" target="_blank" rel="noopener noreferrer"><img src="bdaio/organizers/bdosn-logo-128.png" alt="BDOSN"></a>
+                    <a href="https://bubt.edu.bd/" target="_blank" rel="noopener noreferrer"><img src="bdaio/organizers/bubt.png" alt="BUBT"></a>
                 </div>
             </div>
         </div>
 
         <!-- BDAIO Syllabus -->
-        <div class="section-header">
-            <i class="fas fa-list-check"></i> Syllabus
-        </div>
+        <div class="section-header"><i class="fas fa-list-check"></i> Syllabus</div>
         <div class="syllabus-grid">
-            <div class="syl-card syl-python">
-                <div class="syl-header">
-                    <i class="fas fa-code"></i> Programming & Libraries
-                </div>
-                <div class="syl-list">
-                    <div class="syl-item"><i class="fas fa-circle"></i> Basic Python</div>
-                    <div class="syl-item"><i class="fas fa-circle"></i> Basic NumPy</div>
-                    <div class="syl-item"><i class="fas fa-circle"></i> Basic Pandas</div>
-                    <div class="syl-item"><i class="fas fa-circle"></i> Basic Matplotlib</div>
-                    <div class="syl-item"><i class="fas fa-circle"></i> Basic Scikit-learn</div>
-                    <div class="syl-item"><i class="fas fa-circle"></i> Basic PyTorch</div>
-                </div>
-            </div>
-            <div class="syl-card syl-ai">
-                <div class="syl-header">
-                    <i class="fas fa-robot"></i> AI Fundamentals
-                </div>
-                <div class="syl-list">
-                    <div class="syl-item"><i class="fas fa-circle"></i> Basics of Artificial Intelligence</div>
-                    <div class="syl-item"><i class="fas fa-circle"></i> History of AI</div>
-                    <div class="syl-item"><i class="fas fa-circle"></i> Applications of AI</div>
-                    <div class="syl-item"><i class="fas fa-circle"></i> Machine Learning Basics</div>
-                </div>
-            </div>
-            <div class="syl-card syl-ethics">
-                <div class="syl-header">
-                    <i class="fas fa-scale-balanced"></i> Critical Thinking & Ethics
-                </div>
-                <div class="syl-list">
-                    <div class="syl-item"><i class="fas fa-circle"></i> Logic and Algorithms</div>
-                    <div class="syl-item"><i class="fas fa-circle"></i> Data & Bias in AI</div>
-                    <div class="syl-item"><i class="fas fa-circle"></i> AI Ethics and Safety</div>
-                </div>
-            </div>
+            <div class="syl-card syl-python"><div class="syl-header"><i class="fas fa-code"></i> Programming & Libraries</div><div class="syl-list"><div class="syl-item"><i class="fas fa-circle"></i> Basic Python</div><div class="syl-item"><i class="fas fa-circle"></i> Basic NumPy</div><div class="syl-item"><i class="fas fa-circle"></i> Basic Pandas</div><div class="syl-item"><i class="fas fa-circle"></i> Basic Matplotlib</div><div class="syl-item"><i class="fas fa-circle"></i> Basic Scikit-learn</div><div class="syl-item"><i class="fas fa-circle"></i> Basic PyTorch</div></div></div>
+            <div class="syl-card syl-ai"><div class="syl-header"><i class="fas fa-robot"></i> AI Fundamentals</div><div class="syl-list"><div class="syl-item"><i class="fas fa-circle"></i> Basics of Artificial Intelligence</div><div class="syl-item"><i class="fas fa-circle"></i> History of AI</div><div class="syl-item"><i class="fas fa-circle"></i> Applications of AI</div><div class="syl-item"><i class="fas fa-circle"></i> Machine Learning Basics</div></div></div>
+            <div class="syl-card syl-ethics"><div class="syl-header"><i class="fas fa-scale-balanced"></i> Critical Thinking & Ethics</div><div class="syl-list"><div class="syl-item"><i class="fas fa-circle"></i> Logic and Algorithms</div><div class="syl-item"><i class="fas fa-circle"></i> Data & Bias in AI</div><div class="syl-item"><i class="fas fa-circle"></i> AI Ethics and Safety</div></div></div>
         </div>
 
         <!-- BDAIO Gallery -->
         <div class="slider-section">
-            <div class="section-header">
-                <i class="fas fa-images"></i> Event Gallery
-            </div>
+            <div class="section-header"><i class="fas fa-images"></i> Event Gallery</div>
             <div class="gallery-container">
                 <div class="slideshow" id="slideshow">
-                    <div class="slide active">
-                        <img src="bdaio/FB_IMG_1779055006364.jpg" alt="BdAIO moments" loading="eager">
-                    </div>
-                    <div class="slide">
-                        <img src="bdaio/IMG_20260502_125608_395.jpg" alt="BdAIO moments" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="bdaio/1777815361684.jpg" alt="BdAIO moments" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="bdaio/IMG_20260516_074352_144.jpg" alt="BdAIO moments" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="bdaio/FB_IMG_1779051912547.jpg" alt="BdAIO moments" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="bdaio/1778952316860.jpg" alt="BdAIO moments" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/bdaio/Adjust_face_position_looking_dir%E2%80%A6_202605162247.jpeg" alt="BdAIO moments" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="bdaio/Fix_body_posture_202605162350.jpeg" alt="BdAIO moments" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="bdaio/14.JPG" alt="BdAIO moments" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="bdaio/4.JPG" alt="BdAIO moments" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="bdaio/DSC01522.JPG" alt="BdAIO moments" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="bdaio/DSC01442.JPG" alt="BdAIO moments" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="bdaio/DSC00363.JPG" alt="BdAIO moments" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="bdaio/DSC00804.JPG" alt="BdAIO moments" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/bdaio/ChatGPT%20Image%20May%2018%2C%202026%2C%2004_22_49%20AM.png" alt="Special thanks for my special one" loading="lazy">
-                    </div>
+                    <div class="slide active"><img src="bdaio/FB_IMG_1779055006364.jpg" alt="BdAIO moments" loading="eager"></div>
+                    <div class="slide"><img src="bdaio/IMG_20260502_125608_395.jpg" alt="BdAIO moments" loading="lazy"></div>
+                    <div class="slide"><img src="bdaio/1777815361684.jpg" alt="BdAIO moments" loading="lazy"></div>
+                    <div class="slide"><img src="bdaio/IMG_20260516_074352_144.jpg" alt="BdAIO moments" loading="lazy"></div>
+                    <div class="slide"><img src="bdaio/FB_IMG_1779051912547.jpg" alt="BdAIO moments" loading="lazy"></div>
+                    <div class="slide"><img src="bdaio/1778952316860.jpg" alt="BdAIO moments" loading="lazy"></div>
+                    <div class="slide"><img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/bdaio/Adjust_face_position_looking_dir%E2%80%A6_202605162247.jpeg" alt="BdAIO moments" loading="lazy"></div>
+                    <div class="slide"><img src="bdaio/Fix_body_posture_202605162350.jpeg" alt="BdAIO moments" loading="lazy"></div>
+                    <div class="slide"><img src="bdaio/14.JPG" alt="BdAIO moments" loading="lazy"></div>
+                    <div class="slide"><img src="bdaio/4.JPG" alt="BdAIO moments" loading="lazy"></div>
+                    <div class="slide"><img src="bdaio/DSC01522.JPG" alt="BdAIO moments" loading="lazy"></div>
+                    <div class="slide"><img src="bdaio/DSC01442.JPG" alt="BdAIO moments" loading="lazy"></div>
+                    <div class="slide"><img src="bdaio/DSC00363.JPG" alt="BdAIO moments" loading="lazy"></div>
+                    <div class="slide"><img src="bdaio/DSC00804.JPG" alt="BdAIO moments" loading="lazy"></div>
+                    <div class="slide"><img src="https://raw.githubusercontent.com/AlifKhan1911391/Personal-Portfolio/refs/heads/main/bdaio/ChatGPT%20Image%20May%2018%2C%202026%2C%2004_22_49%20AM.png" alt="Special thanks" loading="lazy"></div>
                 </div>
-
-                <button class="slider-arrow arrow-left" id="prevSlide" aria-label="Previous">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="slider-arrow arrow-right" id="nextSlide" aria-label="Next">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-
+                <button class="slider-arrow arrow-left" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-arrow arrow-right" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
                 <div class="slider-dots" id="dotsContainer"></div>
                 <div class="slide-counter-badge" id="slideCounter">1 / 15</div>
             </div>
         </div>
 
-        <!-- BDAIO Recognition & Honors -->
-        <div class="section-header">
-            <i class="fas fa-award"></i> Recognition & Honors
-        </div>
+        <!-- BDAIO Awards -->
+        <div class="section-header"><i class="fas fa-award"></i> Recognition & Honors</div>
         <div class="awards-grid">
-            <div class="award-card award-regional">
-                <div class="award-header">
-                    <i class="fas fa-scroll"></i> Regional Round Certificate
-                </div>
-                <div class="award-img">
-                    <img src="bdaio/file_0000000061dc7207af306f444fb62bf1.png" alt="BDAIO 2026 Regional Certificate">
+            <div class="award-card award-regional"><div class="award-header"><i class="fas fa-scroll"></i> Regional Round Certificate</div><div class="award-img"><img src="bdaio/file_0000000061dc7207af306f444fb62bf1.png" alt="BDAIO Regional"></div></div>
+            <div class="award-card award-national"><div class="award-header"><i class="fas fa-trophy"></i> National Round Certificate</div><div class="award-img"><img src="bdaio/IMG_20260518_151315.jpg" alt="BDAIO National"></div></div>
+            <div class="award-card award-medal"><div class="award-header"><i class="fas fa-medal"></i> Excellence Medal</div><div class="award-img"><img src="bdaio/file_00000000d1ec7206b1dd1b957b746c72.png" alt="BDAIO Medal"></div></div>
+        </div>
+    </div>
+
+    <!-- ========== NHSPC 2026 – MATCHING BDAIO FORMAT ========== -->
+    <section class="hero-nhspc">
+        <div class="hero-inner">
+            <div class="hero-eyebrow">
+                <span></span> National High School Programming Contest · Bangladesh · 2026
+            </div>
+            <h1 class="hero-title">
+                National High School <em>Programming Contest</em><br>2026 – Dhaka Regional
+            </h1>
+            <div class="rank-strip">
+                <div class="rank-item">
+                    <div class="rank-number">4<sup>th</sup></div>
+                    <div class="rank-label">Regional · Dhaka</div>
                 </div>
             </div>
-            <div class="award-card award-national">
-                <div class="award-header">
-                    <i class="fas fa-trophy"></i> National Round Certificate
-                </div>
-                <div class="award-img">
-                    <img src="bdaio/IMG_20260518_151315.jpg" alt="BDAIO 2026 National Certificate">
-                </div>
-            </div>
-            <div class="award-card award-medal">
-                <div class="award-header">
-                    <i class="fas fa-medal"></i> Excellence Medal
-                </div>
-                <div class="award-img">
-                    <img src="bdaio/file_00000000d1ec7206b1dd1b957b746c72.png" alt="BDAIO 2026 Medal">
-                </div>
+            <div class="contest-meta">
+                <span><i class="fas fa-calendar-alt"></i> May 16, 2026</span>
+                <span><i class="fas fa-clock"></i> 5:00 PM – 6:30 PM</span>
+                <span><i class="fas fa-map-marker-alt"></i> Dhaka Region</span>
             </div>
         </div>
+    </section>
 
-        <!-- ========== NHSPC 2026 – MATCHING THEME & FORMAT ========== -->
-        <div class="section-header" style="margin-top: 64px;">
-            <i class="fas fa-code"></i> National High School Programming Contest 2026
-        </div>
-
-        <!-- About card (exactly like BDAIO's) -->
+    <div class="content-container">
+        <!-- NHSPC About Card (English description from official website) -->
         <div class="about-card">
             <div class="about-icon">
                 <i class="fas fa-laptop-code"></i>
             </div>
             <div class="about-text">
-                <h2>NHSPC 2026 – Dhaka Regional</h2>
-                <p>The <strong>National High School Programming Contest (NHSPC) 2026</strong> challenges young programmers with algorithmic problem‑solving. Competing on <strong>May 16, 2026 (5:00–6:30 PM)</strong>, I secured <strong>4th place in the Dhaka regional round</strong> — a strong performance among many talented participants.</p>
-                
-                <div class="contest-details">
-                    <span><i class="fas fa-calendar-alt"></i> May 16, 2026</span>
-                    <span><i class="fas fa-clock"></i> 5:00 PM – 6:30 PM</span>
-                    <span><i class="fas fa-map-marker-alt"></i> Dhaka Region</span>
-                </div>
-
-                <div class="inline-rank">
-                    <div class="rank-strip">
-                        <div class="rank-item">
-                            <div class="rank-number">4<sup>th</sup></div>
-                            <div class="rank-label">Regional · Dhaka</div>
-                        </div>
-                    </div>
-                </div>
-
+                <h2>About NHSPC 2026</h2>
+                <p>The <strong>National High School Programming Contest (NHSPC)</strong> is Bangladesh's largest programming platform for young tech enthusiasts, organized by the ICT Division under the supervision of Bangladesh Computer Council (BCC). The contest aims to popularize computer programming among students from class 6 to 12 (and equivalent madrasa/vocational levels).</p>
+                <p>Categories: <strong>Junior</strong> (grades 6–8), <strong>Secondary</strong> (grades 9–10), and <strong>Higher Secondary</strong> (grades 11–12). The competition consists of two rounds: a <strong>Regional qualifying round</strong> held simultaneously across 24 venues nationwide, followed by a <strong>National Final</strong> in Dhaka. Participants solve problems using C, C++, or Python.</p>
+                <p>I competed in the <strong>Secondary category</strong> and secured <strong>4th place in the Dhaka regional round</strong> — a strong achievement among hundreds of participants from the region.</p>
                 <div class="organizer-logos">
-                    <a href="https://ictd.gov.bd/" target="_blank" rel="noopener noreferrer" title="ICT Division">
-                        <img src="nhspc/logo_ict-D4bc56P8.png" alt="ICT Division">
-                    </a>
-                    <a href="https://nhspc.bcc.gov.bd/" target="_blank" rel="noopener noreferrer" title="NHSPC Official">
-                        <img src="nhspc/nhspc_logo-wYM3pEl4.png" alt="NHSPC">
-                    </a>
-                    <a href="https://bcc.gov.bd/" target="_blank" rel="noopener noreferrer" title="BCC Bangladesh">
-                        <img src="nhspc/bcc-logo-DeDA3Ixw.png" alt="BCC">
-                    </a>
+                    <a href="https://ictd.gov.bd/" target="_blank" rel="noopener noreferrer"><img src="nhspc/logo_ict-D4bc56P8.png" alt="ICT Division"></a>
+                    <a href="https://nhspc.bcc.gov.bd/" target="_blank" rel="noopener noreferrer"><img src="nhspc/nhspc_logo-wYM3pEl4.png" alt="NHSPC"></a>
+                    <a href="https://bcc.gov.bd/" target="_blank" rel="noopener noreferrer"><img src="nhspc/bcc-logo-DeDA3Ixw.png" alt="BCC"></a>
                 </div>
             </div>
         </div>
 
-        <!-- Recognition card for NHSPC (single award-card, matching the awards grid style) -->
-        <div class="awards-grid" style="grid-template-columns: 1fr; max-width: 400px; margin: 0 auto 56px;">
+        <!-- NHSPC Certificate (single card, centered) -->
+        <div class="awards-grid" style="grid-template-columns: 1fr; max-width: 450px; margin: 0 auto 56px;">
             <div class="award-card award-regional">
                 <div class="award-header">
                     <i class="fas fa-scroll"></i> Regional Round Certificate
@@ -843,8 +743,7 @@
         window.addEventListener('scroll', () => {
             const currentScroll = window.pageYOffset;
             if (nav) {
-                nav.style.transform = currentScroll > lastScroll && currentScroll > 100
-                    ? 'translateY(-100%)' : 'translateY(0)';
+                nav.style.transform = currentScroll > lastScroll && currentScroll > 100 ? 'translateY(-100%)' : 'translateY(0)';
                 lastScroll = currentScroll;
             }
         });
@@ -852,8 +751,7 @@
         const slides = document.querySelectorAll('.slide');
         const dotsContainer = document.getElementById('dotsContainer');
         const slideCounterSpan = document.getElementById('slideCounter');
-        let currentIdx = 0;
-        let slideInterval;
+        let currentIdx = 0, slideInterval;
 
         function buildDots() {
             if (!dotsContainer) return;
@@ -866,57 +764,23 @@
                 dotsContainer.appendChild(dot);
             });
         }
-
         function updateUI() {
-            slides.forEach((slide, idx) => {
-                slide.classList.toggle('active', idx === currentIdx);
-            });
-            const dots = document.querySelectorAll('.dot');
-            dots.forEach((dot, idx) => {
-                dot.classList.toggle('active', idx === currentIdx);
-            });
-            if (slideCounterSpan) {
-                slideCounterSpan.innerText = `${currentIdx + 1} / ${slides.length}`;
-            }
+            slides.forEach((slide, idx) => slide.classList.toggle('active', idx === currentIdx));
+            document.querySelectorAll('.dot').forEach((dot, idx) => dot.classList.toggle('active', idx === currentIdx));
+            if (slideCounterSpan) slideCounterSpan.innerText = `${currentIdx + 1} / ${slides.length}`;
         }
-
-        function goToSlide(index) {
-            currentIdx = (index + slides.length) % slides.length;
-            updateUI();
-            resetTimer();
-        }
-
+        function goToSlide(index) { currentIdx = (index + slides.length) % slides.length; updateUI(); resetTimer(); }
         function nextSlide() { goToSlide(currentIdx + 1); }
         function prevSlide() { goToSlide(currentIdx - 1); }
+        function resetTimer() { if (slideInterval) clearInterval(slideInterval); slideInterval = setInterval(() => goToSlide(currentIdx + 1), 5000); }
 
-        function resetTimer() {
-            if (slideInterval) clearInterval(slideInterval);
-            slideInterval = setInterval(() => {
-                goToSlide(currentIdx + 1);
-            }, 5000);
-        }
-
-        const prevBtn = document.getElementById('prevSlide');
-        const nextBtn = document.getElementById('nextSlide');
-        if (prevBtn && nextBtn) {
-            prevBtn.addEventListener('click', prevSlide);
-            nextBtn.addEventListener('click', nextSlide);
-        }
-
-        if (slides.length) {
-            buildDots();
-            updateUI();
-            resetTimer();
-        }
-
+        document.getElementById('prevSlide')?.addEventListener('click', prevSlide);
+        document.getElementById('nextSlide')?.addEventListener('click', nextSlide);
+        if (slides.length) { buildDots(); updateUI(); resetTimer(); }
         const galleryContainer = document.querySelector('.gallery-container');
         if (galleryContainer) {
-            galleryContainer.addEventListener('mouseenter', () => {
-                if (slideInterval) clearInterval(slideInterval);
-            });
-            galleryContainer.addEventListener('mouseleave', () => {
-                resetTimer();
-            });
+            galleryContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
+            galleryContainer.addEventListener('mouseleave', resetTimer);
         }
     </script>
 </body>
