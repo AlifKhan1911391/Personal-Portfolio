@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="author" content="Mahadi Islam Alif">
-    <meta name="description" content="Competitions and events participated in by Mahadi Islam Alif — including the Bangladesh Artificial Intelligence Olympiad 2026.">
+    <meta name="description" content="Competitions and events participated in by Mahadi Islam Alif — including the Bangladesh Artificial Intelligence Olympiad 2026 and National High School Programming Contest 2026.">
     <link rel="icon" href="bdaio/favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -504,6 +504,38 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
+        /* Additional card for NHSPC */
+        .other-card {
+            margin-top: 56px;
+        }
+        .certificate-display {
+            margin-top: 24px;
+            border-top: 1px solid var(--border-light);
+            padding-top: 24px;
+        }
+        .certificate-display img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        .detail-list {
+            list-style: none;
+            padding: 0;
+            margin: 16px 0 0 0;
+        }
+        .detail-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-muted);
+        }
+        .detail-list i {
+            width: 24px;
+            color: var(--accent);
+        }
+
         @media (max-width: 900px) {
             .awards-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -759,6 +791,46 @@
                 </div>
             </div>
         </div>
+
+        <!-- ========== NEW SECTION: NHSPC 2026 ========== -->
+        <div class="section-header other-header">
+            <i class="fas fa-code"></i> National High School Programming Contest 2026
+        </div>
+        <div class="about-card other-card">
+            <div class="about-icon">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="about-text">
+                <h2>NHSPC 2026 – Dhaka Regional</h2>
+                <p>The <strong>National High School Programming Contest (NHSPC) 2026</strong> was held on <strong>May 16, 2026</strong> from <strong>5:00 PM to 6:30 PM</strong>. Competing among top young programmers, I achieved <strong>4th place in the Dhaka regional round</strong> — a testament to strong problem‑solving and algorithmic skills.</p>
+                
+                <ul class="detail-list">
+                    <li><i class="fas fa-calendar-alt"></i> <strong>Date:</strong> May 16, 2026</li>
+                    <li><i class="fas fa-clock"></i> <strong>Time:</strong> 5:00 PM – 6:30 PM</li>
+                    <li><i class="fas fa-map-marker-alt"></i> <strong>Region:</strong> Dhaka</li>
+                    <li><i class="fas fa-trophy"></i> <strong>Rank:</strong> 4<sup>th</sup> place (Regional Round)</li>
+                </ul>
+
+                <div class="organizer-logos">
+                    <a href="https://ictd.gov.bd/" target="_blank" rel="noopener noreferrer" title="ICT Division">
+                        <img src="nhspc/logo_ict-D4bc56P8.png" alt="ICT Division">
+                    </a>
+                    <a href="https://nhspc.bcc.gov.bd/" target="_blank" rel="noopener noreferrer" title="NHSPC Official">
+                        <img src="nhspc/nhspc_logo-wYM3pEl4.png" alt="NHSPC">
+                    </a>
+                    <a href="https://bcc.gov.bd/" target="_blank" rel="noopener noreferrer" title="BCC Bangladesh">
+                        <img src="nhspc/bcc-logo-DeDA3Ixw.png" alt="BCC">
+                    </a>
+                </div>
+
+                <div class="certificate-display">
+                    <h3 style="font-size:1rem; margin-bottom:12px;"><i class="fas fa-certificate"></i> Regional Certificate</h3>
+                    <img src="nhspc/1779202075816.jpg" alt="NHSPC 2026 Regional Certificate">
+                </div>
+            </div>
+        </div>
+        <!-- ========== END NEW SECTION ========== -->
+
     </div>
 
     <script>
