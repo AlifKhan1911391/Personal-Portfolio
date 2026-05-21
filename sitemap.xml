@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://mahadiislamalif.netlify.app/</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.00</priority>
   </url>
 
   <url>
     <loc>https://mahadiislamalif.netlify.app/projects</loc>
-    <lastmod>2026-05-18</lastmod>
-    <priority>0.80</priority>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://mahadiislamalif.netlify.app/certificates</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://mahadiislamalif.netlify.app/participations</loc>
-    <lastmod>2026-05-18</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://mahadiislamalif.netlify.app/ebooks</loc>
-    <lastmod>2026-05-18</lastmod>
-    <priority>0.70</priority>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://mahadiislamalif.netlify.app/ai</loc>
-    <lastmod>2026-05-18</lastmod>
-    <priority>0.70</priority>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
   </url>
+
 </urlset>
